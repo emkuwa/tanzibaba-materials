@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ['/images/og-brand-image.png'],
   },
   verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+    google: 'Z_ScDUGbP5OYWvLJ-m3k0LS-pAmuKwds5VVkZm-4vcM',
   },
   category: 'construction',
 };

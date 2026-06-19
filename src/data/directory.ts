@@ -40,27 +40,27 @@ export const categories = [
 export const listings: DirectoryListing[] = [
   // ENGINEERS
   { id: 'eng-001', name: 'Tanzania Engineers Registration Board (ERB)', category: 'engineers', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Regulatory body for engineers in Tanzania. Registers and licenses professional engineers across all disciplines.', website: 'https://erb.or.tz', phone: '+255 22 215 0690', email: 'info@erb.or.tz', slug: 'erb-tanzania' },
-  { id: 'eng-002', name: 'Kiwata & Partners Engineers', category: 'engineers', subcategory: 'Structural Engineering', location: 'Dar es Salaam', description: 'Structural and civil engineering consultancy for commercial, residential and infrastructure projects.', phone: '+255 22 211 0000', slug: 'kiwata-engineers' },
+  { id: 'eng-002', name: 'Kiwata & Partners Engineers', category: 'engineers', subcategory: 'Structural Engineering', location: 'Dar es Salaam', description: 'Structural and civil engineering consultancy for commercial, residential and infrastructure projects.', slug: 'kiwata-engineers' },
   { id: 'eng-003', name: 'Arup East Africa', category: 'engineers', subcategory: 'Multi-disciplinary', location: 'Dar es Salaam', description: 'International engineering consultancy offering structural, civil, mechanical and electrical engineering services.', website: 'https://arup.com', slug: 'arup-east-africa' },
-  { id: 'eng-004', name: 'DP Engineers Tanzania', category: 'engineers', subcategory: 'Civil Engineering', location: 'Dar es Salaam', description: 'Civil and structural engineering consultancy specializing in building and infrastructure projects.', phone: '+255 22 212 0000', slug: 'dp-engineers' },
+  { id: 'eng-004', name: 'DP Engineers Tanzania', category: 'engineers', subcategory: 'Civil Engineering', location: 'Dar es Salaam', description: 'Civil and structural engineering consultancy specializing in building and infrastructure projects.', slug: 'dp-engineers' },
   { id: 'eng-005', name: 'Tanzania Institute of Engineers', category: 'engineers', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Professional body representing engineers in Tanzania. Promotes engineering excellence and professional development.', website: 'https://tie.or.tz', slug: 'tie-tanzania' },
 
   // ARCHITECTS
   { id: 'arc-001', name: 'Tanzania Architects Registration Board (ARB)', category: 'architects', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Regulatory body for architects in Tanzania. Registers and licenses professional architects.', website: 'https://arb.or.tz', phone: '+255 22 215 0690', slug: 'arb-tanzania' },
-  { id: 'arc-002', name: 'Architects 67 East Africa', category: 'architects', subcategory: 'Architecture Firm', location: 'Dar es Salaam', description: 'Full-service architecture firm offering design, planning and project management for commercial and residential projects.', phone: '+255 22 213 0000', slug: 'architects-67' },
+  { id: 'arc-002', name: 'Architects 67 East Africa', category: 'architects', subcategory: 'Architecture Firm', location: 'Dar es Salaam', description: 'Full-service architecture firm offering design, planning and project management for commercial and residential projects.', slug: 'architects-67' },
   { id: 'arc-003', name: 'Planning Systems Ltd', category: 'architects', subcategory: 'Architecture & Planning', location: 'Dar es Salaam', description: 'Architecture and urban planning consultancy for commercial, institutional and residential developments.', slug: 'planning-systems' },
   { id: 'arc-004', name: 'Eldy Associates Architects', category: 'architects', subcategory: 'Architecture Firm', location: 'Dodoma', description: 'Architecture firm specializing in government buildings, institutional projects and residential developments.', slug: 'eldy-associates' },
   { id: 'arc-005', name: 'Zanzibar Architecture Studio', category: 'architects', subcategory: 'Architecture Firm', location: 'Zanzibar', description: 'Boutique architecture studio specializing in heritage conservation, hotels and resort developments in Zanzibar.', slug: 'zanzibar-architecture-studio' },
 
   // QUANTITY SURVEYORS
   { id: 'qs-001', name: 'Tanzania Institute of Quantity Surveyors', category: 'quantity-surveyors', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Professional body for quantity surveyors in Tanzania. Promotes cost management and construction economics.', website: 'https://tiqs.or.tz', slug: 'tiqs-tanzania' },
-  { id: 'qs-002', name: 'CostPlan Quantity Surveyors', category: 'quantity-surveyors', subcategory: 'Cost Consultancy', location: 'Dar es Salaam', description: 'Quantity surveying and cost consultancy services for commercial, residential and infrastructure projects.', phone: '+255 22 214 0000', slug: 'costplan-qs' },
+  { id: 'qs-002', name: 'CostPlan Quantity Surveyors', category: 'quantity-surveyors', subcategory: 'Cost Consultancy', location: 'Dar es Salaam', description: 'Quantity surveying and cost consultancy services for commercial, residential and infrastructure projects.', slug: 'costplan-qs' },
   { id: 'qs-003', name: 'Davis Langdon Tanzania', category: 'quantity-surveyors', subcategory: 'Cost Consultancy', location: 'Dar es Salaam', description: 'International quantity surveying and cost management consultancy for large-scale construction projects.', slug: 'davis-langdon-tz' },
   { id: 'qs-004', name: 'Build Quantity Surveyors', category: 'quantity-surveyors', subcategory: 'Quantity Surveying', location: 'Dodoma', description: 'Quantity surveying services for government and commercial construction projects in Dodoma.', slug: 'build-qs-dodoma' },
 
   // LAND SURVEYORS
   { id: 'ls-001', name: 'Tanzania Surveyors Board', category: 'land-surveyors', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Regulatory body for land surveyors in Tanzania. Registers and licenses professional surveyors.', website: 'https://surveyorsboard.or.tz', slug: 'surveyors-board' },
-  { id: 'ls-002', name: 'GeoTech Survey Services', category: 'land-surveyors', subcategory: 'Land Surveying', location: 'Dar es Salaam', description: 'Professional land surveying, topographical mapping and GPS survey services for construction projects.', phone: '+255 22 216 0000', slug: 'geotech-survey' },
+  { id: 'ls-002', name: 'GeoTech Survey Services', category: 'land-surveyors', subcategory: 'Land Surveying', location: 'Dar es Salaam', description: 'Professional land surveying, topographical mapping and GPS survey services for construction projects.', slug: 'geotech-survey' },
   { id: 'ls-003', name: 'Tanzania National Land Survey', category: 'land-surveyors', subcategory: 'Government Agency', location: 'Dodoma', description: 'Government agency responsible for land surveying and mapping across Tanzania.', website: 'https://nls.go.tz', slug: 'national-land-survey' },
   { id: 'ls-004', name: 'Precision Survey Consultants', category: 'land-surveyors', subcategory: 'Surveying', location: 'Zanzibar', description: 'Land surveying and mapping services for development projects across Zanzibar.', slug: 'precision-survey-zanzibar' },
 
@@ -73,14 +73,14 @@ export const listings: DirectoryListing[] = [
   // BUILDING CONTRACTORS
   { id: 'bc-001', name: 'Tanzania Contractors Registration Board (CRB)', category: 'building-contractors', subcategory: 'Regulatory Body', location: 'Dar es Salaam', description: 'Government body that registers and regulates building contractors in Tanzania.', website: 'https://crb.go.tz', phone: '+255 22 215 0690', slug: 'crb-tanzania' },
   { id: 'bc-002', name: 'China Railway Jianchang Engineering', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Dar es Salaam', description: 'Large-scale building contractor specializing in commercial, residential and institutional construction.', slug: 'crje-tanzania' },
-  { id: 'bc-003', name: 'Vineyard Construction Ltd', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Dar es Salaam', description: 'Established building contractor for commercial, residential and industrial construction projects.', phone: '+255 22 217 0000', slug: 'vineyard-construction' },
+  { id: 'bc-003', name: 'Vineyard Construction Ltd', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Dar es Salaam', description: 'Established building contractor for commercial, residential and industrial construction projects.', slug: 'vineyard-construction' },
   { id: 'bc-004', name: 'Monarch Construction Ltd', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Dar es Salaam', description: 'Building contractor offering construction services for commercial and residential developments.', slug: 'monarch-construction' },
   { id: 'bc-005', name: 'Jamali Building Contractors', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Dodoma', description: 'Building contractor specializing in government buildings, schools and institutional projects in Dodoma.', slug: 'jamali-building' },
   { id: 'bc-006', name: 'Zanzibar Construction Company', category: 'building-contractors', subcategory: 'Building Contractor', location: 'Zanzibar', description: 'Local building contractor for residential, commercial and hospitality construction across Zanzibar.', slug: 'zanzibar-construction' },
 
   // CIVIL CONTRACTORS
   { id: 'cc-001', name: 'China Communications Construction Company', category: 'civil-contractors', subcategory: 'Civil Contractor', location: 'Dar es Salaam', description: 'International civil contractor for roads, bridges, ports and infrastructure projects across Tanzania.', slug: 'cccc-tanzania' },
-  { id: 'cc-002', name: 'Raia Construction Ltd', category: 'civil-contractors', subcategory: 'Civil Contractor', location: 'Dar es Salaam', description: 'Civil engineering contractor for roads, drainage, water supply and infrastructure projects.', phone: '+255 22 218 0000', slug: 'raia-construction' },
+  { id: 'cc-002', name: 'Raia Construction Ltd', category: 'civil-contractors', subcategory: 'Civil Contractor', location: 'Dar es Salaam', description: 'Civil engineering contractor for roads, drainage, water supply and infrastructure projects.', slug: 'raia-construction' },
   { id: 'cc-003', name: 'Yapi Merkezi Tanzania', category: 'civil-contractors', subcategory: 'Civil Contractor', location: 'Dar es Salaam', description: 'International civil contractor specializing in railway, road and infrastructure construction.', slug: 'yapi-merkezi-tz' },
   { id: 'cc-004', name: 'Mota-Engil Tanzania', category: 'civil-contractors', subcategory: 'Civil Contractor', location: 'Dar es Salaam', description: 'International civil engineering contractor for roads, bridges and public works projects.', website: 'https://motaengil.com', slug: 'mota-engil-tz' },
 
@@ -92,7 +92,7 @@ export const listings: DirectoryListing[] = [
 
   // MEP CONTRACTORS
   { id: 'mep-001', name: 'Tanzania Electrical Contractors Association', category: 'mep-contractors', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Professional association for electrical and mechanical contractors in Tanzania.', slug: 'teca-tanzania' },
-  { id: 'mep-002', name: 'Volt Tanzania Electrical Contractors', category: 'mep-contractors', subcategory: 'Electrical Contractor', location: 'Dar es Salaam', description: 'Electrical contracting services for commercial, industrial and residential projects.', phone: '+255 22 219 0000', slug: 'volt-electrical' },
+  { id: 'mep-002', name: 'Volt Tanzania Electrical Contractors', category: 'mep-contractors', subcategory: 'Electrical Contractor', location: 'Dar es Salaam', description: 'Electrical contracting services for commercial, industrial and residential projects.', slug: 'volt-electrical' },
   { id: 'mep-003', name: 'AirTech Mechanical Services', category: 'mep-contractors', subcategory: 'HVAC Contractor', location: 'Dar es Salaam', description: 'Mechanical and HVAC contracting for commercial buildings, hotels and industrial facilities.', slug: 'airtech-mechanical' },
   { id: 'mep-004', name: 'PlumbTech Tanzania', category: 'mep-contractors', subcategory: 'Plumbing Contractor', location: 'Dar es Salaam', description: 'Plumbing and fire protection contracting for commercial and residential construction projects.', slug: 'plumbtech-tz' },
 
@@ -103,12 +103,12 @@ export const listings: DirectoryListing[] = [
   { id: 'cem-004', name: 'Simba Cement Tanzania', category: 'cement-manufacturers', subcategory: 'Cement Manufacturer', location: 'Dar es Salaam', description: 'Cement supplier offering various grades of cement for construction projects across Tanzania.', slug: 'simba-cement-tz' },
 
   // STEEL MANUFACTURERS
-  { id: 'stl-001', name: 'Steel & Cement Products Ltd', category: 'steel-manufacturers', subcategory: 'Steel Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of steel reinforcement bars, structural steel and steel products for construction.', phone: '+255 22 220 0000', slug: 'steel-cement-products' },
+  { id: 'stl-001', name: 'Steel & Cement Products Ltd', category: 'steel-manufacturers', subcategory: 'Steel Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of steel reinforcement bars, structural steel and steel products for construction.', slug: 'steel-cement-products' },
   { id: 'stl-002', name: 'Tanzania Steel Rolling Mills', category: 'steel-manufacturers', subcategory: 'Steel Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of steel reinforcement bars (rebar) and structural steel sections.', slug: 'tsrm' },
   { id: 'stl-003', name: 'Kibo Steel Ltd', category: 'steel-manufacturers', subcategory: 'Steel Manufacturer', location: 'Dar es Salaam', description: 'Steel manufacturer producing reinforcement bars and steel products for construction industry.', slug: 'kibo-steel' },
 
   // ALUMINIUM SUPPLIERS
-  { id: 'alu-001', name: 'Aluminium Tanzania Ltd', category: 'aluminium-suppliers', subcategory: 'Aluminium Supplier', location: 'Dar es Salaam', description: 'Supplier of aluminium profiles, sheets and fabrication materials for construction.', phone: '+255 22 221 0000', slug: 'aluminium-tanzania' },
+  { id: 'alu-001', name: 'Aluminium Tanzania Ltd', category: 'aluminium-suppliers', subcategory: 'Aluminium Supplier', location: 'Dar es Salaam', description: 'Supplier of aluminium profiles, sheets and fabrication materials for construction.', slug: 'aluminium-tanzania' },
   { id: 'alu-002', name: 'Aluworks Tanzania', category: 'aluminium-suppliers', subcategory: 'Aluminium Supplier', location: 'Dar es Salaam', description: 'Aluminium products supplier for windows, doors, curtain walls and architectural applications.', slug: 'aluworks-tz' },
   { id: 'alu-003', name: 'Premier Aluminium Ltd', category: 'aluminium-suppliers', subcategory: 'Aluminium Supplier', location: 'Dar es Salaam', description: 'Aluminium supplier offering profiles, hardware and fabrication materials for construction.', slug: 'premier-aluminium' },
 
@@ -118,22 +118,22 @@ export const listings: DirectoryListing[] = [
   { id: 'gl-003', name: 'East Africa Glassworks', category: 'glass-suppliers', subcategory: 'Glass Fabrication', location: 'Dar es Salaam', description: 'Glass fabrication and installation for commercial and residential construction projects.', slug: 'ea-glassworks' },
 
   // ROOFING SUPPLIERS
-  { id: 'rf-001', name: 'Roofing Materials Tanzania', category: 'roofing-suppliers', subcategory: 'Roofing Supplier', location: 'Dar es Salaam', description: 'Supplier of roofing sheets, tiles, accessories and waterproofing materials for construction.', phone: '+255 22 222 0000', slug: 'roofing-materials-tz' },
+  { id: 'rf-001', name: 'Roofing Materials Tanzania', category: 'roofing-suppliers', subcategory: 'Roofing Supplier', location: 'Dar es Salaam', description: 'Supplier of roofing sheets, tiles, accessories and waterproofing materials for construction.', slug: 'roofing-materials-tz' },
   { id: 'rf-002', name: 'Mabati Rolling Mills', category: 'roofing-suppliers', subcategory: 'Roofing Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of galvanized and pre-painted roofing sheets (mabati) for residential and commercial buildings.', website: 'https://mabati.com', slug: 'mabati-rolling-mills' },
   { id: 'rf-003', name: 'ALAF Ltd', category: 'roofing-suppliers', subcategory: 'Roofing Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of corrugated roofing sheets and steel products for construction industry.', slug: 'alaf-ltd' },
 
   // PAINT SUPPLIERS
-  { id: 'pt-001', name: 'Azar Chemical Industries', category: 'paint-suppliers', subcategory: 'Paint Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of Dulux brand paints for interior, exterior and industrial applications.', website: 'https://azar.co.tz', phone: '+255 22 223 0000', slug: 'azar-chemical' },
+  { id: 'pt-001', name: 'Azar Chemical Industries', category: 'paint-suppliers', subcategory: 'Paint Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of Dulux brand paints for interior, exterior and industrial applications.', website: 'https://azar.co.tz', slug: 'azar-chemical' },
   { id: 'pt-002', name: 'Kansai Paints Tanzania', category: 'paint-suppliers', subcategory: 'Paint Manufacturer', location: 'Dar es Salaam', description: 'Manufacturer of Kansai brand paints for residential, commercial and industrial applications.', slug: 'kansai-paints-tz' },
   { id: 'pt-003', name: 'Sadolin Tanzania', category: 'paint-suppliers', subcategory: 'Paint Supplier', location: 'Dar es Salaam', description: 'Supplier of Sadolin brand paints, wood finishes and protective coatings.', slug: 'sadolin-tz' },
 
   // TIMBER SUPPLIERS
-  { id: 'tm-001', name: 'Tanzania Timber Company', category: 'timber-suppliers', subcategory: 'Timber Supplier', location: 'Dar es Salaam', description: 'Supplier of sawn timber, plywood and wood products for construction and manufacturing.', phone: '+255 22 224 0000', slug: 'tanzania-timber' },
+  { id: 'tm-001', name: 'Tanzania Timber Company', category: 'timber-suppliers', subcategory: 'Timber Supplier', location: 'Dar es Salaam', description: 'Supplier of sawn timber, plywood and wood products for construction and manufacturing.', slug: 'tanzania-timber' },
   { id: 'tm-002', name: 'Meru Timber Ltd', category: 'timber-suppliers', subcategory: 'Timber Supplier', location: 'Arusha', description: 'Supplier of hardwood and softwood timber, plywood and construction wood products.', slug: 'meru-timber' },
   { id: 'tm-003', name: 'Forest Products Ltd', category: 'timber-suppliers', subcategory: 'Timber Supplier', location: 'Dar es Salaam', description: 'Supplier of processed timber, plywood, MDF and other wood products for construction.', slug: 'forest-products' },
 
   // BOREHOLE DRILLING
-  { id: 'bh-001', name: 'Tanzania Drilling Company', category: 'borehole-drilling', subcategory: 'Borehole Drilling', location: 'Dar es Salaam', description: 'Professional borehole drilling services for residential, commercial and agricultural water supply.', phone: '+255 22 225 0000', slug: 'tz-drilling' },
+  { id: 'bh-001', name: 'Tanzania Drilling Company', category: 'borehole-drilling', subcategory: 'Borehole Drilling', location: 'Dar es Salaam', description: 'Professional borehole drilling services for residential, commercial and agricultural water supply.', slug: 'tz-drilling' },
   { id: 'bh-002', name: 'Aqua Drill Tanzania', category: 'borehole-drilling', subcategory: 'Borehole Drilling', location: 'Dar es Salaam', description: 'Borehole drilling, well construction and water supply system installation services.', slug: 'aqua-drill' },
   { id: 'bh-003', name: 'Deep Well Drilling Services', category: 'borehole-drilling', subcategory: 'Borehole Drilling', location: 'Dodoma', description: 'Deep borehole drilling for institutional, agricultural and commercial water supply projects.', slug: 'deep-well-drilling' },
 
@@ -143,22 +143,22 @@ export const listings: DirectoryListing[] = [
   { id: 'st-003', name: 'University of Dar es Salaam Soil Lab', category: 'soil-testing', subcategory: 'Testing Laboratory', location: 'Dar es Salaam', description: 'Academic laboratory offering soil testing and geotechnical analysis services.', slug: 'udsm-soil-lab' },
 
   // GEOTECHNICAL SERVICES
-  { id: 'geo-001', name: 'GeoConsult Tanzania', category: 'geotechnical-services', subcategory: 'Geotechnical Engineering', location: 'Dar es Salaam', description: 'Geotechnical investigation, site assessment and foundation design consultancy services.', phone: '+255 22 226 0000', slug: 'geoconsult-tz' },
+  { id: 'geo-001', name: 'GeoConsult Tanzania', category: 'geotechnical-services', subcategory: 'Geotechnical Engineering', location: 'Dar es Salaam', description: 'Geotechnical investigation, site assessment and foundation design consultancy services.', slug: 'geoconsult-tz' },
   { id: 'geo-002', name: 'Tanzania Geotechnical Society', category: 'geotechnical-services', subcategory: 'Professional Body', location: 'Dar es Salaam', description: 'Professional society for geotechnical engineers and practitioners in Tanzania.', slug: 'tgs-tanzania' },
   { id: 'geo-003', name: 'Soil & Rock Engineers Ltd', category: 'geotechnical-services', subcategory: 'Geotechnical Engineering', location: 'Dar es Salaam', description: 'Geotechnical investigation, soil mechanics and foundation engineering consultancy.', slug: 'soil-rock-engineers' },
 
   // MATERIAL TESTING
-  { id: 'mt-001', name: 'Tanzania Building Materials Testing Lab', category: 'material-testing', subcategory: 'Testing Laboratory', location: 'Dar es Salaam', description: 'Laboratory testing of concrete, steel, aggregates and other construction materials.', phone: '+255 22 227 0000', slug: 'tbm-testing' },
+  { id: 'mt-001', name: 'Tanzania Building Materials Testing Lab', category: 'material-testing', subcategory: 'Testing Laboratory', location: 'Dar es Salaam', description: 'Laboratory testing of concrete, steel, aggregates and other construction materials.', slug: 'tbm-testing' },
   { id: 'mt-002', name: 'Quality Assurance Lab Tanzania', category: 'material-testing', subcategory: 'Testing Laboratory', location: 'Dar es Salaam', description: 'Quality assurance testing for concrete, aggregates, cement and construction materials.', slug: 'qa-lab-tz' },
   { id: 'mt-003', name: 'Tanzania Standards (Quality Control)', category: 'material-testing', subcategory: 'Testing Laboratory', location: 'Dar es Salaam', description: 'Material testing and quality control services for construction materials.', slug: 'tz-standards-qc' },
 
   // EQUIPMENT RENTAL
-  { id: 'er-001', name: 'Boels Rental Tanzania', category: 'equipment-rental', subcategory: 'Equipment Rental', location: 'Dar es Salaam', description: 'Construction equipment rental including excavators, loaders, compressors and power tools.', website: 'https://boels.com', phone: '+255 22 228 0000', slug: 'boels-tz' },
+  { id: 'er-001', name: 'Boels Rental Tanzania', category: 'equipment-rental', subcategory: 'Equipment Rental', location: 'Dar es Salaam', description: 'Construction equipment rental including excavators, loaders, compressors and power tools.', website: 'https://boels.com', slug: 'boels-tz' },
   { id: 'er-002', name: 'Kanu Equipment Tanzania', category: 'equipment-rental', subcategory: 'Equipment Rental', location: 'Dar es Salaam', description: 'Construction and mining equipment rental, sales and servicing.', slug: 'kanu-equipment' },
   { id: 'er-003', name: 'Hertz Equipment Tanzania', category: 'equipment-rental', subcategory: 'Equipment Rental', location: 'Dar es Salaam', description: 'Equipment rental services for construction, mining and industrial applications.', slug: 'hertz-equipment-tz' },
 
   // HEAVY MACHINERY RENTAL
-  { id: 'hm-001', name: 'Mantrac Tanzania', category: 'heavy-machinery-rental', subcategory: 'Machinery Rental', location: 'Dar es Salaam', description: 'Caterpillar equipment dealer offering rental of heavy machinery, excavators and construction equipment.', website: 'https://mantrac.co.tz', phone: '+255 22 229 0000', slug: 'mantrac-tz' },
+  { id: 'hm-001', name: 'Mantrac Tanzania', category: 'heavy-machinery-rental', subcategory: 'Machinery Rental', location: 'Dar es Salaam', description: 'Caterpillar equipment dealer offering rental of heavy machinery, excavators and construction equipment.', website: 'https://mantrac.co.tz', slug: 'mantrac-tz' },
   { id: 'hm-002', name: 'Tor Engineering Tanzania', category: 'heavy-machinery-rental', subcategory: 'Machinery Rental', location: 'Dar es Salaam', description: 'Heavy machinery rental including cranes, excavators, loaders and earthmoving equipment.', slug: 'tor-engineering' },
   { id: 'hm-003', name: 'Bamburi Heavy Equipment', category: 'heavy-machinery-rental', subcategory: 'Machinery Rental', location: 'Dar es Salaam', description: 'Heavy construction equipment rental and leasing for major infrastructure projects.', slug: 'bamburi-heavy' },
 

@@ -201,9 +201,42 @@ export default function RootLayout({
         <Script id="whatsapp-tracking" strategy="afterInteractive">
           {`
             document.addEventListener('click', function(e) {
-              var target = e.target.closest('a[href*="wa.me"]');
-              if (target && typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', { 'send_to': '${gaId}/WHATSAPP_CLICK' });
+              // WhatsApp clicks
+              var waTarget = e.target.closest('a[href*="wa.me"]');
+              if (waTarget && typeof gtag !== 'undefined') {
+                gtag('event', 'whatsapp_click', { 'event_category': 'contact', 'event_label': window.location.pathname });
+              }
+              // Phone clicks
+              var telTarget = e.target.closest('a[href^="tel:"]');
+              if (telTarget && typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', { 'event_category': 'contact', 'event_label': telTarget.href.replace('tel:', '') });
+              }
+              // Get Price / Quote buttons
+              var btnTarget = e.target.closest('button');
+              if (btnTarget) {
+                var txt = btnTarget.textContent || '';
+                if ((txt.indexOf('Get Price') !== -1 || txt.indexOf('Get Quote') !== -1 || txt.indexOf('Send via WhatsApp') !== -1) && typeof gtag !== 'undefined') {
+                  gtag('event', 'quote_request', { 'event_category': 'conversion', 'event_label': window.location.pathname });
+                }
+              }
+            });
+          `}
+        </Script>
+        <Script id="scroll-depth" strategy="afterInteractive">
+          {`
+            var tracked = {};
+            window.addEventListener('scroll', function() {
+              var h = document.documentElement.scrollHeight - window.innerHeight;
+              if (h > 0) {
+                var p = Math.round((window.scrollY / h) * 100);
+                [25, 50, 75, 100].forEach(function(t) {
+                  if (p >= t && !tracked[t]) {
+                    tracked[t] = true;
+                    if (typeof gtag !== 'undefined') {
+                      gtag('event', 'scroll_depth', { 'event_category': 'engagement', 'event_label': t + '%', 'value': t });
+                    }
+                  }
+                });
               }
             });
           `}

@@ -147,6 +147,19 @@ function addHreflang(slug: string, meta: Metadata): Metadata {
 export function generateMetadata({ params }: PageProps): Metadata {
   const slug = params.slug;
 
+  // Reject invalid slugs early — return noindex metadata
+  const isValidSlug =
+    overviewSlugs.includes(slug) ||
+    gradeSlugs.includes(slug) ||
+    projectTypeSlugs.includes(slug) ||
+    specialSlugs.has(slug) ||
+    areaSlugs().includes(slug) ||
+    constructionServices.some(s => slug.startsWith(`${s.slug}-`)) ||
+    materialsServices.some(s => slug.startsWith(`${s.slug}-`));
+  if (!isValidSlug) {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
+
   // Handle special pages
   if (slug === 'government-projects-tanzania') {
     return addHreflang(slug, { title: 'Government Projects Tanzania — Public Buildings & Infrastructure | Tanzibaba', description: 'Tanzibaba delivers government construction projects across Tanzania — public buildings, institutional facilities and government infrastructure.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Government Projects Tanzania', description: 'Government construction projects across Tanzania.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });

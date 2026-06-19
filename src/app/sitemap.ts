@@ -42,6 +42,44 @@ const projectTypes = [
 
 const allMaterialsLocations = [...darEsSalaamLocations, ...zanzibarLocations, ...extraLocations];
 
+// === Segmented sitemap data (consolidated from individual sitemap files) ===
+
+const productPages = [
+  'ready-mix-concrete-dar-es-salaam',
+  'ready-mix-concrete-dodoma',
+  'ready-mix-concrete-zanzibar',
+  'aggregates-supplier-dar-es-salaam',
+  'aggregates-supplier-dodoma',
+  'aggregates-supplier-zanzibar',
+  'blocks-supplier-dar-es-salaam',
+  'blocks-supplier-dodoma',
+  'blocks-supplier-zanzibar',
+  'paving-blocks-dar-es-salaam',
+  'paving-blocks-dodoma',
+  'paving-blocks-zanzibar',
+  'culvert-pipes-dar-es-salaam',
+  'culvert-pipes-dodoma',
+  'culvert-pipes-zanzibar',
+];
+
+const locationPages = [
+  'ready-mix-concrete-kinondoni',
+  'ready-mix-concrete-ubungo',
+  'ready-mix-concrete-ilala',
+  'ready-mix-concrete-temeke',
+  'ready-mix-concrete-kigamboni',
+  'commercial-construction-dar-es-salaam',
+  'commercial-construction-dodoma',
+  'commercial-construction-tanzania',
+  'infrastructure-construction-tanzania',
+  'industrial-construction-tanzania',
+  'construction-company-dodoma',
+  'construction-company-tanzania',
+  'construction-company-zanzibar',
+  'construction-materials-zanzibar',
+  'government-construction-projects',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ['', '/get-quote', '/about', '/contact', '/major-projects',
     '/commercial-construction', '/commercial-construction-dar-es-salaam',
@@ -143,10 +181,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...checklists.map(c => ({ url: `${siteUrl}/government/checklist-${c.slug}` as string, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6 })),
   ];
 
+  // === Segmented sitemap entries (consolidated) ===
+
+  const productEntries: MetadataRoute.Sitemap = productPages.map(slug => ({
+    url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.8,
+  }));
+
+  const locationEntries: MetadataRoute.Sitemap = locationPages.map(slug => ({
+    url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
+  }));
+
+  const directoryEntries: MetadataRoute.Sitemap = [
+    { url: `${siteUrl}/directory`, lastModified: today, changeFrequency: 'weekly' as const, priority: 0.8 },
+  ];
+
   return [
     ...mainEntries, ...serviceEntries, ...projectEntries, ...blogEntries,
     ...areaEntries, ...gradeEntries, ...projectTypeEntries, ...overviewEntries,
     ...materialsEntries, ...tzConstructionEntries, ...africaConstructionEntries,
     ...swahiliEntries, ...governmentEntries,
+    ...productEntries, ...locationEntries, ...directoryEntries,
   ];
 }

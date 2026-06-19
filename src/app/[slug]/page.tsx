@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { Truck, CheckCircle, Shield, MapPin, MessageCircle, ArrowRight, Zap, Factory, Scale, HardHat, Building2, Building, Warehouse, Store, Route, Package, CircleDot, Layers, Grid } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -887,11 +886,6 @@ function OverviewContent({ slug }: { slug: string }) {
 
 export default function SEOPage({ params }: PageProps) {
   const slug = params.slug;
-
-  // Return 404 for sitemap files - these should be handled by sitemap route handlers
-  if (slug.startsWith('sitemap') || slug.endsWith('.xml')) {
-    notFound();
-  }
 
   // Special + EA pages
   if (specialSlugs.has(slug)) {

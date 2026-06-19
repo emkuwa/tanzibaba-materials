@@ -17,6 +17,7 @@ const tools = [
 export const metadata = {
   title: 'Free Construction Calculators & AI Tools | Tanzibaba',
   description: 'Free online construction calculators for concrete, blocks, sand, aggregates, tiles, paint and more. AI-powered construction assistant for Tanzania.',
+  alternates: { canonical: 'https://materials.tanzibaba.com/tools' },
 };
 
 export default function ToolsPage() {

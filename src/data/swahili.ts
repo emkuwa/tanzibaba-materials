@@ -164,3 +164,25 @@ export function parseSwahiliSlug(swSlug: string): {
 export function getSwahiliServiceData(enSlug: string) {
   return swahiliServiceMap[enSlug] || null;
 }
+
+export function getSwahiliSlug(enSlug: string): string | null {
+  // Check special pages first
+  for (const sp of Object.values(swahiliSpecialPages)) {
+    if (enSlug === sp.enSlug) return sp.swSlug;
+  }
+  // Check East Africa pages
+  const eaMap: Record<string, string> = {
+    'construction-company-east-africa': 'kampuni-ya-ujenzi-east-africa',
+    'commercial-construction-east-africa': 'ujenzi-wa-majengo-ya-biashara-east-africa',
+    'infrastructure-construction-east-africa': 'ujenzi-wa-miundombinu-east-africa',
+  };
+  if (eaMap[enSlug]) return eaMap[enSlug];
+  // Replace service prefix with Swahili equivalent
+  for (const [enPrefix, swData] of Object.entries(swahiliServiceMap)) {
+    if (enSlug.startsWith(`${enPrefix}-`)) {
+      const location = enSlug.replace(`${enPrefix}-`, '');
+      return `${swData.sw}-${location}`;
+    }
+  }
+  return null;
+}

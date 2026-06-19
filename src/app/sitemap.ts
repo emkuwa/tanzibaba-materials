@@ -8,33 +8,6 @@ import { govPages } from '@/data/government/pages';
 import { checklists } from '@/data/government/links';
 import { allArticles } from '@/data/knowledge/articles';
 
-const existingServicePages = [
-  'ready-mix-concrete-dar-es-salaam',
-  'concrete-supplier-dar-es-salaam',
-  'ready-mix-concrete-kinondoni',
-  'ready-mix-concrete-ubungo',
-  'ready-mix-concrete-ilala',
-  'ready-mix-concrete-temeke',
-  'ready-mix-concrete-kigamboni',
-  'concrete-pump-rental-dar-es-salaam',
-  'c25-concrete-dar-es-salaam',
-  'c30-concrete-dar-es-salaam',
-  'commercial-concrete-supply-dar-es-salaam',
-  'apartment-concrete-supply-dar-es-salaam',
-];
-
-const projectPages = ['vijana-towers', 'viva-towers', 'hotel-verde-zanzibar'];
-
-const blogPages = [
-  'concrete-price-guide-tanzania', 'c25-vs-c30-concrete', 'concrete-pump-guide',
-  'ready-mix-concrete-for-apartments', 'foundation-concrete-guide',
-  'what-is-ready-mix-concrete', 'how-concrete-is-delivered',
-  'aggregate-sizes-guide', 'road-construction-materials-guide',
-  'commercial-construction-guide', 'infrastructure-construction-guide',
-  'building-construction-costs-tanzania', 'hotel-construction-zanzibar',
-  'industrial-construction-tanzania',
-];
-
 const projectTypes = [
   'apartment-concrete-supply', 'commercial-concrete-supply', 'industrial-concrete-supply',
   'warehouse-concrete-supply', 'hotel-concrete-supply', 'hospital-concrete-supply',
@@ -83,6 +56,7 @@ const locationPages = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ['', '/get-quote', '/about', '/contact', '/major-projects',
+    '/tools', '/directory', '/learn',
     '/commercial-construction', '/commercial-construction-dar-es-salaam',
     '/commercial-construction-dodoma', '/infrastructure-construction',
     '/construction-company-dodoma', '/ready-mix-concrete-zanzibar',
@@ -98,18 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: today,
     changeFrequency: page === '' ? 'weekly' as const : 'monthly' as const,
     priority: page === '' ? 1.0 : 0.8,
-  }));
-
-  const serviceEntries: MetadataRoute.Sitemap = existingServicePages.map((slug) => ({
-    url: `${siteUrl}/services/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
-  }));
-
-  const projectEntries: MetadataRoute.Sitemap = projectPages.map((slug) => ({
-    url: `${siteUrl}/projects/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6,
-  }));
-
-  const blogEntries: MetadataRoute.Sitemap = blogPages.map((slug) => ({
-    url: `${siteUrl}/blog/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6,
   }));
 
   // Auto-generated materials pages for all locations
@@ -204,7 +166,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
-    ...mainEntries, ...serviceEntries, ...projectEntries, ...blogEntries,
+    ...mainEntries,
     ...areaEntries, ...gradeEntries, ...projectTypeEntries, ...overviewEntries,
     ...materialsEntries, ...tzConstructionEntries, ...africaConstructionEntries,
     ...swahiliEntries, ...governmentEntries,

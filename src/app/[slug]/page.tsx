@@ -9,6 +9,7 @@ import areas, { getAreaBySlug, materialTypes, getMaterialTypeBySlug, concreteGra
 import { materialsServices, constructionServices } from '@/data/services';
 import { allMaterialsLocations, getMaterialsLocationBySlug } from '@/data/materialsLocations';
 import { tanzaniaRegions, africaCountries, getRegionBySlug, getCountryBySlug } from '@/data/countries';
+import { getSwahiliSlug } from '@/data/swahili';
 
 interface PageProps { params: { slug: string } }
 
@@ -128,24 +129,39 @@ function parseSlug(slug: string): { type: 'area' | 'grade' | 'project' | 'overvi
   return { type: 'overview', mt: slug };
 }
 
+function addHreflang(slug: string, meta: Metadata): Metadata {
+  const swSlug = getSwahiliSlug(slug);
+  if (!swSlug) return meta;
+  return {
+    ...meta,
+    alternates: {
+      ...meta.alternates,
+      languages: {
+        'en': `${siteUrl}/${slug}`,
+        'sw': `${siteUrl}/sw/${swSlug}`,
+      },
+    },
+  };
+}
+
 export function generateMetadata({ params }: PageProps): Metadata {
   const slug = params.slug;
 
   // Handle special pages
   if (slug === 'government-projects-tanzania') {
-    return { title: 'Government Projects Tanzania — Public Buildings & Infrastructure | Tanzibaba', description: 'Tanzibaba delivers government construction projects across Tanzania — public buildings, institutional facilities and government infrastructure.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Government Projects Tanzania', description: 'Government construction projects across Tanzania.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+    return addHreflang(slug, { title: 'Government Projects Tanzania — Public Buildings & Infrastructure | Tanzibaba', description: 'Tanzibaba delivers government construction projects across Tanzania — public buildings, institutional facilities and government infrastructure.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Government Projects Tanzania', description: 'Government construction projects across Tanzania.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
   }
   if (slug === 'turnkey-construction-tanzania') {
-    return { title: 'Turnkey Construction Tanzania — End-to-End Project Delivery | Tanzibaba', description: 'Tanzibaba delivers turnkey construction projects across Tanzania — from design through to completion.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Turnkey Construction Tanzania', description: 'End-to-end turnkey construction projects across Tanzania.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+    return addHreflang(slug, { title: 'Turnkey Construction Tanzania — End-to-End Project Delivery | Tanzibaba', description: 'Tanzibaba delivers turnkey construction projects across Tanzania — from design through to completion.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Turnkey Construction Tanzania', description: 'End-to-end turnkey construction projects across Tanzania.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
   }
   if (slug === 'construction-company-east-africa') {
-    return { title: 'Construction Company East Africa — Major Projects | Tanzibaba', description: 'Tanzibaba undertakes major construction and infrastructure projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Construction Company East Africa', description: 'Major construction projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+    return addHreflang(slug, { title: 'Construction Company East Africa — Major Projects | Tanzibaba', description: 'Tanzibaba undertakes major construction and infrastructure projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Construction Company East Africa', description: 'Major construction projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
   }
   if (slug === 'commercial-construction-east-africa') {
-    return { title: 'Commercial Construction East Africa — Office, Retail & Mixed-Use | Tanzibaba', description: 'Tanzibaba delivers commercial construction projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Commercial Construction East Africa', description: 'Commercial construction projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+    return addHreflang(slug, { title: 'Commercial Construction East Africa — Office, Retail & Mixed-Use | Tanzibaba', description: 'Tanzibaba delivers commercial construction projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Commercial Construction East Africa', description: 'Commercial construction projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
   }
   if (slug === 'infrastructure-projects-east-africa') {
-    return { title: 'Infrastructure Projects East Africa — Roads, Bridges & Public Works | Tanzibaba', description: 'Tanzibaba delivers infrastructure projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Infrastructure Projects East Africa', description: 'Infrastructure projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+    return addHreflang(slug, { title: 'Infrastructure Projects East Africa — Roads, Bridges & Public Works | Tanzibaba', description: 'Tanzibaba delivers infrastructure projects across East Africa.', alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: 'Infrastructure Projects East Africa', description: 'Infrastructure projects across East Africa.', url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
   }
 
   // Auto-generate construction country/region pages
@@ -155,10 +171,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
     const region = getRegionBySlug(rest);
     const country = getCountryBySlug(rest);
     if (region) {
-      return { title: `${constructionService.name} in ${region.name} | Tanzibaba`, description: `Tanzibaba ${constructionService.desc} in ${region.name}, Tanzania. Available to support major commercial, industrial and infrastructure developments.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${constructionService.name} ${region.name} Tanzania`, description: `${constructionService.name} services in ${region.name}, Tanzania.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+      return addHreflang(slug, { title: `${constructionService.name} in ${region.name} | Tanzibaba`, description: `Tanzibaba ${constructionService.desc} in ${region.name}, Tanzania. Available to support major commercial, industrial and infrastructure developments.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${constructionService.name} ${region.name} Tanzania`, description: `${constructionService.name} services in ${region.name}, Tanzania.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
     }
     if (country) {
-      return { title: `${constructionService.name} in ${country.name} | Tanzibaba`, description: `Tanzibaba ${constructionService.desc} in ${country.name}. Available to support major commercial, industrial and infrastructure developments.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${constructionService.name} ${country.name}`, description: `${constructionService.name} services in ${country.name}.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+      return addHreflang(slug, { title: `${constructionService.name} in ${country.name} | Tanzibaba`, description: `Tanzibaba ${constructionService.desc} in ${country.name}. Available to support major commercial, industrial and infrastructure developments.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${constructionService.name} ${country.name}`, description: `${constructionService.name} services in ${country.name}.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
     }
   }
 
@@ -168,7 +184,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     const rest = slug.replace(`${materialsService.slug}-`, '');
     const location = getMaterialsLocationBySlug(rest);
     if (location) {
-      return { title: `${materialsService.name} in ${location.name} | Tanzibaba`, description: `${materialsService.metaDescBase.replace('{location}', location.name)} Contact Tanzibaba for commercial, industrial and infrastructure projects.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${materialsService.name} ${location.name}`, description: `${materialsService.name} supply in ${location.name}, ${location.region}.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } };
+      return addHreflang(slug, { title: `${materialsService.name} in ${location.name} | Tanzibaba`, description: `${materialsService.metaDescBase.replace('{location}', location.name)} Contact Tanzibaba for commercial, industrial and infrastructure projects.`, alternates: { canonical: `${siteUrl}/${slug}` }, openGraph: { title: `${materialsService.name} ${location.name}`, description: `${materialsService.name} supply in ${location.name}, ${location.region}.`, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' } });
     }
   }
 
@@ -209,11 +225,11 @@ export function generateMetadata({ params }: PageProps): Metadata {
     }
   }
 
-  return {
+  return addHreflang(slug, {
     title, description,
     alternates: { canonical: `${siteUrl}/${slug}` },
     openGraph: { title, description, url: `${siteUrl}/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'en_TZ' },
-  };
+  });
 }
 
 const projectTypeData: Record<string, { name: string; desc: string; grade: string; content: string }> = {
@@ -941,5 +957,5 @@ export default function SEOPage({ params }: PageProps) {
     return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } } ] }) }} /></>);
   }
 
-  return null;
+  notFound();
 }

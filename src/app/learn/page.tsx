@@ -21,6 +21,7 @@ const colorMap: Record<string, string> = {
 export const metadata = {
   title: 'Construction Education Hub | Tanzibaba',
   description: `Free educational resources on construction materials, methods, engineering, cost guides, safety and project planning in Tanzania. ${allArticles.length}+ expert guides.`,
+  alternates: { canonical: 'https://materials.tanzibaba.com/learn' },
 };
 
 export default function LearnPage() {

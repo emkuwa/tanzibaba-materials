@@ -96,6 +96,22 @@ export default function CostCalculator() {
               </div>
             </div>
           </div>
+          <div className="mt-4 flex flex-col sm:flex-row gap-3">
+            <a
+              href={`https://wa.me/255716002790?text=${encodeURIComponent(`Hi Tanzibaba, I need help with cost estimation for my project.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all text-center"
+            >
+              WhatsApp Us
+            </a>
+            <a
+              href="/get-quote"
+              className="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-all text-center"
+            >
+              Get Quote
+            </a>
+          </div>
         </div>
       </div>
       </div>

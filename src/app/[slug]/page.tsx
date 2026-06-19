@@ -922,6 +922,11 @@ export default function SEOPage({ params }: PageProps) {
     notFound();
   }
 
+  // Overview pages — check BEFORE materials/construction to avoid false matches
+  if (overviewSlugs.includes(slug)) {
+    return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } } ] }) }} /></>);
+  }
+
   // Special + EA pages
   if (specialSlugs.has(slug)) {
     return (<><Navbar /><main><ConstructionContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: slug.endsWith('tanzania') ? 'Tanzania' : 'East Africa' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
@@ -967,12 +972,6 @@ export default function SEOPage({ params }: PageProps) {
   if (parsed.type === 'project') {
     const pt = projectTypeData[parsed.projectKey!];
     if (pt) return (<><Navbar /><main><ProjectContent projectKey={parsed.projectKey!} pt={pt} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: `${pt.name} Materials`, provider: { '@id': `${siteUrl}/#business` } }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: pt.name, item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
-  }
-  if (parsed.type === 'overview') {
-    if (!overviewSlugs.includes(slug)) {
-      notFound();
-    }
-    return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } } ] }) }} /></>);
   }
 
   notFound();

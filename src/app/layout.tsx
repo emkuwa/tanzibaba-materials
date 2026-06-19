@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import { AuthProvider } from '@/lib/auth';
+import { AnalyticsProviders } from '@/lib/analytics/providers';
 
 const siteUrl = 'https://materials.tanzibaba.com';
 const gaId = 'G-7KYD1RMSV9';
@@ -194,7 +195,9 @@ export default function RootLayout({
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} alt="" src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`} />
         </noscript>
-        <AuthProvider>{children}</AuthProvider>
+        <AnalyticsProviders>
+          <AuthProvider>{children}</AuthProvider>
+        </AnalyticsProviders>
         <Script id="schema-org" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(jsonLd)}
         </Script>

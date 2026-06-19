@@ -1,68 +1,93 @@
 import Link from 'next/link';
-import { BookOpen, HardHat, Package, BookText, DollarSign, Shield, ClipboardList, ArrowRight } from 'lucide-react';
+import { BookOpen, HardHat, Package, Zap, Mountain, Grid3x3, Route, Building2, Factory, Newspaper, Brain, ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { knowledgeCategories, type KnowledgeCategory } from '@/data/knowledge/categories';
+import { allArticles } from '@/data/knowledge/articles';
 
-const categories = [
-  { icon: Package, title: 'Building Materials', desc: 'Everything about concrete, aggregates, blocks, paving and construction materials.', slug: 'building-materials', color: 'bg-orange-50 text-orange-600' },
-  { icon: HardHat, title: 'Construction Methods', desc: 'Step-by-step guides on construction techniques, processes and best practices.', slug: 'construction-methods', color: 'bg-blue-50 text-blue-600' },
-  { icon: BookText, title: 'Engineering Basics', desc: 'Fundamental engineering concepts for construction projects.', slug: 'engineering-basics', color: 'bg-indigo-50 text-indigo-600' },
-  { icon: DollarSign, title: 'Cost Guides', desc: 'Construction cost estimates, material pricing and budget planning guides.', slug: 'cost-guides', color: 'bg-green-50 text-green-600' },
-  { icon: Shield, title: 'Safety & PPE', desc: 'Construction safety practices, PPE requirements and site safety guidelines.', slug: 'safety-ppe', color: 'bg-red-50 text-red-600' },
-  { icon: ClipboardList, title: 'Project Planning', desc: 'Project management, planning, scheduling and execution guides.', slug: 'project-planning', color: 'bg-purple-50 text-purple-600' },
-];
+const iconMap: Record<string, React.ElementType> = { HardHat, Package, Zap, Mountain, Grid3x3, Route, Building2, Factory, Newspaper, Brain };
 
-const articles = [
-  { title: 'Concrete Grade Guide: C10 to C50', desc: 'Complete guide to concrete grades, their strengths, applications and when to use each.', category: 'Building Materials', href: '/learn/concrete-grade-guide' },
-  { title: 'How Concrete Is Delivered', desc: 'From batch plant to pour — understanding the concrete delivery process.', category: 'Construction Methods', href: '/blog/how-concrete-is-delivered' },
-  { title: 'Concrete Price Guide Tanzania', desc: 'Current concrete prices in Dar es Salaam, factors affecting cost and how to budget.', category: 'Cost Guides', href: '/blog/concrete-price-guide-tanzania' },
-  { title: 'Aggregate Sizes Guide', desc: 'Complete guide to crushed stone sizes, grading and applications in construction.', category: 'Building Materials', href: '/blog/aggregate-sizes-guide' },
-  { title: 'Road Construction Materials Guide', desc: 'Materials used in road construction — from sub-base to asphalt.', category: 'Building Materials', href: '/blog/road-construction-materials-guide' },
-  { title: 'Hotel Construction in Zanzibar', desc: 'Guide to building hotels and resorts in Zanzibar — regulations, materials and logistics.', category: 'Construction Methods', href: '/blog/hotel-construction-zanzibar' },
-  { title: 'Building Construction Costs Tanzania', desc: 'Comprehensive guide to construction costs in Tanzania — materials, labour and more.', category: 'Cost Guides', href: '/blog/building-construction-costs-tanzania' },
-  { title: 'Building Permits Guide', desc: 'Step-by-step guide to obtaining building permits in Tanzania.', category: 'Project Planning', href: '/government/building-permits-tanzania' },
-];
+const colorMap: Record<string, string> = {
+  'construction-guides': 'bg-blue-50 text-blue-600',
+  'building-materials-guides': 'bg-orange-50 text-orange-600',
+  'ready-mix-concrete-academy': 'bg-green-50 text-green-600',
+  'aggregates-gravel-academy': 'bg-amber-50 text-amber-600',
+  'blocks-paving-academy': 'bg-purple-50 text-purple-600',
+  'infrastructure-academy': 'bg-red-50 text-red-600',
+  'commercial-construction-academy': 'bg-indigo-50 text-indigo-600',
+  'industrial-construction-academy': 'bg-cyan-50 text-cyan-600',
+  'tanzania-construction-news': 'bg-pink-50 text-pink-600',
+  'ai-tools-for-construction': 'bg-violet-50 text-violet-600',
+};
 
 export const metadata = {
   title: 'Construction Education Hub | Tanzibaba',
-  description: 'Free educational resources on construction materials, methods, engineering, cost guides, safety and project planning in Tanzania.',
+  description: `Free educational resources on construction materials, methods, engineering, cost guides, safety and project planning in Tanzania. ${allArticles.length}+ expert guides.`,
 };
 
 export default function LearnPage() {
+  const categoriesWithCounts = knowledgeCategories.map(c => ({
+    ...c,
+    count: allArticles.filter(a => a.category === c.slug).length,
+  }));
+
+  const featured = allArticles.slice(0, 8);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-brand-600/20 text-brand-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4 border border-brand-500/20">
-            <BookOpen className="w-4 h-4" /> Education Hub
+            <BookOpen className="w-4 h-4" /> {allArticles.length}+ Articles
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Construction Education Hub</h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">Free educational resources to help you understand construction materials, methods, costs and best practices in Tanzania.</p>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">Expert guides on construction materials, methods, costs, safety and project planning in Tanzania. Written by industry professionals.</p>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {categories.map(c => (
-            <Link key={c.slug} href={`/learn?category=${c.slug}`} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
-              <div className={`w-14 h-14 ${c.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <c.icon className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">{c.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{c.desc}</p>
-              <span className="text-sm font-semibold text-brand-600 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Browse <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-16">
+          {categoriesWithCounts.map(c => {
+            const Icon = iconMap[c.icon] || Package;
+            return (
+              <Link key={c.slug} href={`/learn?category=${c.slug}`} className="bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
+                <div className={`w-12 h-12 ${colorMap[c.slug] || 'bg-gray-50 text-gray-600'} rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-sm mb-1">{c.name}</h3>
+                <p className="text-xs text-gray-500 mb-2 line-clamp-2">{c.description}</p>
+                <span className="text-xs font-semibold text-brand-600">{c.count} articles</span>
+              </Link>
+            );
+          })}
         </div>
 
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Articles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {articles.map(a => (
-            <Link key={a.href} href={a.href} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg hover:border-brand-200 transition-all duration-300">
-              <span className="text-xs font-semibold text-brand-600 uppercase tracking-wider">{a.category}</span>
-              <h3 className="font-bold text-gray-900 mt-1 mb-2">{a.title}</h3>
-              <p className="text-sm text-gray-500">{a.desc}</p>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {featured.map(a => {
+            const cat = knowledgeCategories.find(c => c.slug === a.category);
+            return (
+              <Link key={a.slug} href={`/learn/${a.slug}`} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg hover:border-brand-200 transition-all duration-300 group">
+                <span className="text-xs font-semibold text-brand-600 uppercase tracking-wider">{cat?.name || a.category}</span>
+                <h3 className="font-bold text-gray-900 mt-1 mb-2 group-hover:text-brand-600 transition-colors">{a.title}</h3>
+                <p className="text-sm text-gray-500 line-clamp-2">{a.description}</p>
+                <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                  <span>{a.readingTime}</span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="bg-brand-600 rounded-2xl p-8 md:p-12 text-white text-center">
+          <h2 className="text-2xl font-bold mb-3">Have A Construction Question?</h2>
+          <p className="text-brand-100 mb-6 max-w-xl mx-auto">Our technical team is ready to help with any construction question. Get expert advice on materials, methods and project planning.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="https://wa.me/255716002790" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors flex items-center justify-center gap-2">
+              <MessageCircle className="w-5 h-5" /> Ask on WhatsApp
+            </a>
+            <a href="tel:+255716002790" className="bg-white/10 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" /> Call +255 716 002 790
+            </a>
+          </div>
         </div>
       </div>
     </div>

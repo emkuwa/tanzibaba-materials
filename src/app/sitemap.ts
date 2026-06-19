@@ -6,6 +6,7 @@ import { tanzaniaRegions, africaCountries } from '@/data/countries';
 import { generateSwahiliSlugs } from '@/data/swahili';
 import { govPages } from '@/data/government/pages';
 import { checklists } from '@/data/government/links';
+import { allArticles } from '@/data/knowledge/articles';
 
 const existingServicePages = [
   'ready-mix-concrete-dar-es-salaam',
@@ -195,11 +196,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/directory`, lastModified: today, changeFrequency: 'weekly' as const, priority: 0.8 },
   ];
 
+  const learnEntries: MetadataRoute.Sitemap = [
+    { url: `${siteUrl}/learn`, lastModified: today, changeFrequency: 'weekly' as const, priority: 0.8 },
+    ...allArticles.map(a => ({
+      url: `${siteUrl}/learn/${a.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
+    })),
+  ];
+
   return [
     ...mainEntries, ...serviceEntries, ...projectEntries, ...blogEntries,
     ...areaEntries, ...gradeEntries, ...projectTypeEntries, ...overviewEntries,
     ...materialsEntries, ...tzConstructionEntries, ...africaConstructionEntries,
     ...swahiliEntries, ...governmentEntries,
     ...productEntries, ...locationEntries, ...directoryEntries,
+    ...learnEntries,
   ];
 }

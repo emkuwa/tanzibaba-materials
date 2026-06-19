@@ -66,7 +66,7 @@ export function getAreaBySlug(slug: string): SEOArea | undefined {
   return areas.find(a => a.slug === slug);
 }
 
-export const siteUrl = 'https://tanzibaba.co.tz';
+export const siteUrl = 'https://materials.tanzibaba.com';
 
 export const materialTypes = [
   { slug: 'ready-mix-concrete', name: 'Ready-Mix Concrete', badge: 'Ready-Mix Concrete', icon: 'Truck', metaDescSuffix: 'premium ready-mix concrete supply', descPrefix: 'supplies premium ready-mix concrete' },

@@ -23,7 +23,13 @@ export default function ConcreteCalculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <head>
+        <title>Concrete Calculator | Calculate Concrete Volume | Tanzibaba</title>
+        <meta name="description" content="Calculate exact concrete volume for slabs, columns, beams and footings. Free online concrete calculator for construction projects in Tanzania." />
+        <link rel="canonical" href="https://materials.tanzibaba.com/tools/concrete-calculator" />
+      </head>
+      <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <Link href="/tools" className="inline-flex items-center gap-1 text-gray-400 hover:text-white text-sm mb-4 transition-colors"><ArrowLeft className="w-4 h-4" /> All Tools</Link>
@@ -72,6 +78,6 @@ export default function ConcreteCalculator() {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 }

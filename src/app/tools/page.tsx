@@ -21,7 +21,13 @@ export const metadata = {
 
 export default function ToolsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <head>
+        <title>Construction Calculators & Tools | Tanzibaba</title>
+        <meta name="description" content="Free online construction calculators — concrete, blocks, sand, aggregate, tile, paint calculators and material estimators for Tanzania." />
+        <link rel="canonical" href="https://materials.tanzibaba.com/tools" />
+      </head>
+      <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-brand-600/20 text-brand-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4 border border-brand-500/20">
@@ -48,5 +54,6 @@ export default function ToolsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

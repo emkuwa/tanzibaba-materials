@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Building2, ArrowRight, CheckCircle, MapPin, Phone, Mail } from 'lucide-react';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Construction Company Dodoma — Commercial & Government Projects | Tanzibaba',

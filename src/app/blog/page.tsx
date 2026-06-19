@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, Clock, MessageCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Concrete Blog | Ready-Mix Guide & Tips | Tanzibaba',

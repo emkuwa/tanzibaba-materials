@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import ProjectQualificationForm from '@/components/ProjectQualificationForm';
 import { Building2, FlaskConical, HardHat, ArrowRight, CheckCircle } from 'lucide-react';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Major Projects — Commercial & Infrastructure Construction | Tanzibaba',

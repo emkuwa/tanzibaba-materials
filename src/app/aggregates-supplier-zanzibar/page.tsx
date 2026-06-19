@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MapPin, ArrowRight, CheckCircle, Mountain } from 'lucide-react';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Aggregates Supplier Zanzibar | Quality Materials | Tanzibaba',

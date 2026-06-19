@@ -5,7 +5,7 @@ import { ArrowRight, MessageCircle, Zap, HardHat, CheckCircle, Droplets, Thermom
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Foundation Concrete Guide | Right Mix for Your Project | Tanzibaba',

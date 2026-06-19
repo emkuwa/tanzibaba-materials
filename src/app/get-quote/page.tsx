@@ -966,6 +966,11 @@ export default function GetQuotePage() {
 
   return (
     <>
+      <head>
+        <title>Get a Quote | Tanzibaba — Premium Building Materials</title>
+        <meta name="description" content="Get an instant price estimate for ready mix concrete, aggregates, blocks and building materials. WhatsApp response within minutes." />
+        <link rel="canonical" href="https://materials.tanzibaba.com/get-quote" />
+      </head>
       <Navbar />
       <main className="pt-20 pb-28 px-4 bg-gray-50 min-h-screen">
         <div className="max-w-lg mx-auto">

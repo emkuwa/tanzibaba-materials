@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle, Zap, DollarSign, CheckCircle } from 'lucide-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Building Construction Costs Tanzania — 2026 Guide | Tanzibaba',

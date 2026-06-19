@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MapPin, ArrowRight, CheckCircle, Building2 } from 'lucide-react';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Ready Mix Concrete Zanzibar — Supply & Delivery | Tanzibaba',

@@ -53,6 +53,7 @@ export default function SupplierRegisterPage() {
 
   return (
     <>
+      <head><meta name="robots" content="noindex, nofollow" /></head>
       <Navbar />
       <main className="pt-24 pb-16 px-4 bg-gray-50 min-h-screen">
         <div className="max-w-2xl mx-auto">

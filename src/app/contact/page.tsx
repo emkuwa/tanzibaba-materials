@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, MessageCircle, Send, Clock, ArrowRight } from 'luc
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Contact Tanzibaba | Premium Ready-Mix Concrete Dar es Salaam',

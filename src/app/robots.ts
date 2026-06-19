@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = 'https://tanzibaba.co.tz';
+  const siteUrl = 'https://materials.tanzibaba.com';
   return {
     rules: [
       {

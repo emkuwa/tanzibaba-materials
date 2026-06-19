@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import { AuthProvider } from '@/lib/auth';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 const gaId = 'G-7KYD1RMSV9';
 const pixelId = '984823598215170';
 
@@ -154,12 +154,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href={siteUrl} />
-        <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
         <link rel="preload" as="image" href="/images/new/mobile-hero.webp" fetchPriority="high" />
         <link rel="icon" type="image/svg+xml" href="/images/logo/tanzibaba.svg" />
         <link rel="alternate icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#22c55e" />
         <Script id="gtm-base" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>

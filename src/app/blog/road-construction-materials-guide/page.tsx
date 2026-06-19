@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle, Zap, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Road Construction Materials Guide — Aggregates, Concrete & Base Course | Tanzibaba',

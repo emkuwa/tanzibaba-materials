@@ -5,7 +5,7 @@ import { ArrowRight, MessageCircle, Truck, Zap, DollarSign, Building2, HardHat, 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Concrete Price Guide Tanzania 2026 | Ready-Mix Costs | Tanzibaba',

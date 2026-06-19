@@ -5,7 +5,7 @@ import { ArrowRight, MessageCircle, Zap, Building2, CheckCircle, HardHat, Ruler,
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Ready-Mix Concrete for Apartment Buildings | Guide | Tanzibaba',

@@ -5,7 +5,7 @@ import { ArrowRight, MessageCircle, Zap, Truck, Building2, DollarSign, CheckCirc
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Concrete Pump Guide | When & Why You Need One | Tanzibaba',

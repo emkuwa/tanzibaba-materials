@@ -89,6 +89,11 @@ export default function DirectoryPage() {
 
   return (
     <>
+      <head>
+        <title>Tanzania Construction Directory | Find Contractors, Engineers, Suppliers | Tanzibaba</title>
+        <meta name="description" content="Find contractors, architects, engineers, quantity surveyors, material suppliers and service providers for your construction project in Tanzania." />
+        <link rel="canonical" href="https://materials.tanzibaba.com/directory" />
+      </head>
       <Navbar />
       <main>
         <section className="relative bg-gray-950 text-white py-20 px-4">

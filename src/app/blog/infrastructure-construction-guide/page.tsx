@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle, Zap, HardHat, CheckCircle } from 'lucide-rea
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Infrastructure Construction Guide Tanzania — Roads, Bridges & Public Works | Tanzibaba',

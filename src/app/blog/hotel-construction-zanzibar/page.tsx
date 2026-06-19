@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle, Zap, Building2, CheckCircle, MapPin } from '
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Hotel Construction Zanzibar — Resorts, Villas & Hospitality Projects | Tanzibaba',

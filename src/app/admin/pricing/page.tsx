@@ -108,7 +108,9 @@ export default function AdminPricingPage() {
   if (!user || user.role !== 'ADMIN') return null;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <head><meta name="robots" content="noindex, nofollow" /></head>
+      <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2"><DollarSign className="w-6 h-6 text-brand-600" /> Pricing Engine</h1>
@@ -341,6 +343,7 @@ export default function AdminPricingPage() {
         )}
       </main>
     </div>
+    </>
   );
 }
 

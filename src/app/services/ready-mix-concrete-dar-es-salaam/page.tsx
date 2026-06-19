@@ -5,7 +5,7 @@ import { Truck, Zap, CheckCircle, Shield, MapPin, MessageCircle, ArrowRight, Fac
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const siteUrl = 'https://tanzibaba.co.tz';
+const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Dar es Salaam | Premium Supply | Tanzibaba',

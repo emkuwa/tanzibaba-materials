@@ -923,6 +923,7 @@ export default function SEOPage({ params }: PageProps) {
     if (region || country) {
       return (<><Navbar /><main><ConstructionContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: region ? `${region.name}, Tanzania` : country?.name || '' }, { '@type': 'Service', name: `${constructionService.name} ${region?.name || country?.name || ''}`, provider: { '@id': `${siteUrl}/#business` } }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: `${constructionService.name} ${region?.name || country?.name || ''}`, item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
     }
+    notFound();
   }
 
   // Auto-generated materials location pages (Zanzibar, Dodoma, extended DSM)
@@ -933,6 +934,7 @@ export default function SEOPage({ params }: PageProps) {
     if (location && !overviewData[slug] && !districtPages[slug]) {
       return (<><Navbar /><main><MaterialsLocationContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: `${location.name}, ${location.region}` }, { '@type': 'Service', name: `${materialsService.name} ${location.name}`, provider: { '@id': `${siteUrl}/#business` }, areaServed: `${location.name}, ${location.region}` }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: `${materialsService.name} ${location.name}`, item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
     }
+    notFound();
   }
 
   // Existing page types
@@ -954,6 +956,9 @@ export default function SEOPage({ params }: PageProps) {
     if (pt) return (<><Navbar /><main><ProjectContent projectKey={parsed.projectKey!} pt={pt} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: `${pt.name} Materials`, provider: { '@id': `${siteUrl}/#business` } }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: pt.name, item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
   }
   if (parsed.type === 'overview') {
+    if (!overviewSlugs.includes(slug)) {
+      notFound();
+    }
     return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } } ] }) }} /></>);
   }
 

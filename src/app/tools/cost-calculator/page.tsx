@@ -29,11 +29,6 @@ export default function CostCalculator() {
 
   return (
     <>
-      <head>
-        <title>Construction Cost Calculator | Estimate Building Costs | Tanzibaba</title>
-        <meta name="description" content="Estimate total construction costs for your building project in Tanzania. Free online cost calculator with current material prices." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/cost-calculator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -102,6 +97,7 @@ export default function CostCalculator() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

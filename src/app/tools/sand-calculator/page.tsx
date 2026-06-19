@@ -23,11 +23,6 @@ export default function SandCalculator() {
 
   return (
     <>
-      <head>
-        <title>Sand Calculator | Calculate Sand Quantity | Tanzibaba</title>
-        <meta name="description" content="Calculate sand quantity needed for concrete mixing, plastering and construction. Free online sand calculator for Tanzania." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/sand-calculator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -73,6 +68,7 @@ export default function SandCalculator() {
             </div>
           )}
         </div>
+      </div>
       </div>
     </>
   );

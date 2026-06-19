@@ -22,11 +22,6 @@ export const metadata = {
 export default function ToolsPage() {
   return (
     <>
-      <head>
-        <title>Construction Calculators & Tools | Tanzibaba</title>
-        <meta name="description" content="Free online construction calculators — concrete, blocks, sand, aggregate, tile, paint calculators and material estimators for Tanzania." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

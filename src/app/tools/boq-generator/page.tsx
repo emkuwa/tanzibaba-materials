@@ -30,11 +30,6 @@ export default function BOQGenerator() {
 
   return (
     <>
-      <head>
-        <title>BOQ Generator | Bill of Quantities | Tanzibaba</title>
-        <meta name="description" content="Generate a Bill of Quantities (BOQ) for your construction project. Free online BOQ generator with material quantities and cost estimates." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/boq-generator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -105,6 +100,7 @@ export default function BOQGenerator() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

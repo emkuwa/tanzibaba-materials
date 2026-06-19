@@ -26,11 +26,6 @@ export default function TileCalculator() {
 
   return (
     <>
-      <head>
-        <title>Tile Calculator | Calculate Tiles Needed | Tanzibaba</title>
-        <meta name="description" content="Calculate the number of tiles needed for floors and walls. Free online tile calculator for construction projects in Tanzania." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/tile-calculator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -90,6 +85,7 @@ export default function TileCalculator() {
             </div>
           )}
         </div>
+      </div>
       </div>
     </>
   );

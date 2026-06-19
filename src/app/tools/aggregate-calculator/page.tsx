@@ -25,11 +25,6 @@ export default function AggregateCalculator() {
 
   return (
     <>
-      <head>
-        <title>Aggregate Calculator | Calculate Gravel &amp; Stone | Tanzibaba</title>
-        <meta name="description" content="Determine aggregate quantities for concrete mixing and road base construction. Free online aggregate calculator for Tanzania." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/aggregate-calculator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -83,6 +78,7 @@ export default function AggregateCalculator() {
             </div>
           )}
         </div>
+      </div>
       </div>
     </>
   );

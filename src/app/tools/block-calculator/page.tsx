@@ -33,11 +33,6 @@ export default function BlockCalculator() {
 
   return (
     <>
-      <head>
-        <title>Block Calculator | Estimate Blocks Needed | Tanzibaba</title>
-        <meta name="description" content="Estimate the number of concrete blocks needed for your walls and partitions. Free online block calculator for Tanzania construction." />
-        <link rel="canonical" href="https://materials.tanzibaba.com/tools/block-calculator" />
-      </head>
       <div className="min-h-screen bg-gray-50">
       <div className="bg-gray-950 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -92,6 +87,7 @@ export default function BlockCalculator() {
             </div>
           )}
         </div>
+      </div>
       </div>
     </>
   );

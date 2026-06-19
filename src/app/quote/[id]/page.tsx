@@ -105,7 +105,6 @@ export default function QuoteDetailPage() {
 
   return (
     <>
-      <head><meta name="robots" content="noindex, nofollow" /></head>
       <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 h-16 flex items-center">

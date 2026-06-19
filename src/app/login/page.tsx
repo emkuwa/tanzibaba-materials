@@ -35,7 +35,6 @@ export default function LoginPage() {
 
   return (
     <>
-      <head><meta name="robots" content="noindex, nofollow" /></head>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
@@ -74,6 +73,7 @@ export default function LoginPage() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

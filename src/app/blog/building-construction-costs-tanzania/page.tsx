@@ -26,12 +26,34 @@ export default function BuildingConstructionCosts() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Concrete Price Guide</h2>
             <p className="text-gray-600 mb-4">Concrete is one of the largest material costs in any construction project. Prices vary by grade, volume, and delivery distance. Use our Quick Price tool for an instant estimate tailored to your project.</p>
-            <p className="text-gray-600">Ready-mix concrete prices in Dar es Salaam typically range from approximately 130,000 TZS per m³ for C10 to 400,000 TZS per m³ for C50, including 18% VAT. Volume discounts are available for larger orders.</p>
+            <p className="text-gray-600">Ready-mix concrete prices in Dar es Salaam typically range from approximately 130,000 TZS per m³ for C10 to 400,000 TZS per m³ for C50, including 18% VAT. Volume discounts are available for larger orders. See our full <Link href="/services/ready-mix-concrete-dar-es-salaam" className="text-brand-600 font-semibold hover:underline">ready-mix concrete supply page →</Link></p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost Factors</h2>
             <p className="text-gray-600 mb-4">Several factors influence overall construction costs: material selection and quality, project location and accessibility, foundation requirements, structural complexity, labour availability, and project timeline. Engaging a qualified contractor early in the planning process helps identify cost drivers and optimize the budget.</p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/services/ready-mix-concrete-dar-es-salaam" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Ready-Mix Concrete</h3>
+                <p className="text-xs text-gray-500">C10–C50 grades delivered to your site</p>
+              </Link>
+              <Link href="/aggregates-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Aggregates</h3>
+                <p className="text-xs text-gray-500">Gravel, crushed stone &amp; all grades</p>
+              </Link>
+              <Link href="/blocks-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Concrete Blocks</h3>
+                <p className="text-xs text-gray-500">Standard &amp; custom blocks for construction</p>
+              </Link>
+              <Link href="/get-quote" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Get a Quote</h3>
+                <p className="text-xs text-gray-500">Instant pricing for your project</p>
+              </Link>
+            </div>
           </section>
 
           <section className="bg-brand-600 rounded-2xl p-8 text-center">

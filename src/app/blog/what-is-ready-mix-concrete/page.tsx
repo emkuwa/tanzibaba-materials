@@ -117,7 +117,7 @@ export default function WhatIsReadyMixConcrete() {
               The key difference between ready-mix and site-mixed concrete is where and how the mixing happens. With site-mixed concrete, cement, sand, and aggregate are measured manually or with basic equipment on the construction site, often leading to inconsistencies in quality and strength. Ready-mix concrete, by contrast, is produced in a factory environment where every ingredient is precisely controlled, from the moisture content of the sand to the temperature of the water.
             </p>
             <p>
-              In Dar es Salaam, where construction quality standards are rising and projects are becoming more ambitious, ready-mix concrete offers the reliability that site-mixing simply cannot match. Tanzibaba operates a modern batching plant on the outskirts of the city, supplying ready-mix concrete to construction sites across Dar es Salaam, including Mbezi Beach, Mikocheni, Kariakoo, Upanga, and beyond.
+              In Dar es Salaam, where construction quality standards are rising and projects are becoming more ambitious, ready-mix concrete offers the reliability that site-mixing simply cannot match. Tanzibaba operates a modern batching plant on the outskirts of the city, supplying <Link href="/services/ready-mix-concrete-dar-es-salaam" className="text-brand-600 font-semibold hover:underline">ready-mix concrete</Link> to construction sites across Dar es Salaam, including Mbezi Beach, Mikocheni, Kariakoo, Upanga, and beyond.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-700 mt-12 mb-6">How Ready-Mix Concrete Is Made</h2>
@@ -304,7 +304,29 @@ export default function WhatIsReadyMixConcrete() {
           </div>
         </article>
 
-        <section className="py-12 px-4 bg-gray-50">
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/services/ready-mix-concrete-dar-es-salaam" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Ready-Mix Concrete</h3>
+                <p className="text-xs text-gray-500">C10–C50 grades delivered to your site</p>
+              </Link>
+              <Link href="/aggregates-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Aggregates</h3>
+                <p className="text-xs text-gray-500">Gravel, crushed stone &amp; all grades</p>
+              </Link>
+              <Link href="/blocks-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Concrete Blocks</h3>
+                <p className="text-xs text-gray-500">Standard &amp; custom blocks for construction</p>
+              </Link>
+              <Link href="/get-quote" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Get a Quote</h3>
+                <p className="text-xs text-gray-500">Instant pricing for your project</p>
+              </Link>
+            </div>
+          </section>
+
+          <section className="py-12 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

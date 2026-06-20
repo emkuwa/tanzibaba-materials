@@ -363,7 +363,47 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. QUOTE CTA */}
+        {/* 8. FAQ */}
+        <section className="py-12 md:py-20 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+              <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <CheckCircle className="w-4 h-4" /> FAQ
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Quick answers to common questions about Tanzibaba products and services.</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What is ready mix concrete?', a: 'Ready mix concrete is concrete that is batched at a central plant and delivered to your construction site in a ready-to-use state. It ensures consistent quality, precise mix ratios and saves time compared to on-site mixing. Tanzibaba produces ready mix concrete using computerized batching and washed sand technology for superior strength and performance.' },
+                { q: 'What concrete grades does Tanzibaba supply?', a: 'We supply a full range of concrete grades from C10 to C50, including C15, C20, C25, C30, C35, C40 and C45. Each grade is designed for specific applications — from lean blinding (C10) to high-strength structural concrete (C50). Our team can help you select the right grade for your project requirements.' },
+                { q: 'Do you deliver to Zanzibar and Dodoma?', a: 'Yes, we deliver to Dar es Salaam, Zanzibar, Dodoma, Arusha, Mwanza and other locations across Tanzania. Our strategic plant locations and modern fleet ensure reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling in your area.' },
+                { q: 'What is washed sand technology?', a: 'Washed sand technology involves thoroughly cleaning sand to remove silt, clay and other impurities before it is used in concrete production. Cleaner sand produces stronger, more durable concrete with better workability. Tanzibaba uses washed sand across all our concrete products to deliver consistent, premium-quality results.' },
+                { q: 'How do I get a quote?', a: 'Getting a quote is quick and easy. Click the "Get Price" button on our website, select your product, location and quantity, and we\'ll send you a price estimate via WhatsApp within minutes. You can also call us at +255 716 002 790 or message us directly on WhatsApp for an immediate response.' },
+                { q: 'What payment methods do you accept?', a: 'We accept bank transfers, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash payments. For large orders, we offer flexible payment terms including partial payment on delivery. Contact our team to discuss the best payment option for your project.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: 'What is ready mix concrete?', acceptedAnswer: { '@type': 'Answer', text: 'Ready mix concrete is concrete that is batched at a central plant and delivered to your construction site in a ready-to-use state. It ensures consistent quality, precise mix ratios and saves time compared to on-site mixing. Tanzibaba produces ready mix concrete using computerized batching and washed sand technology for superior strength and performance.' } },
+          { '@type': 'Question', name: 'What concrete grades does Tanzibaba supply?', acceptedAnswer: { '@type': 'Answer', text: 'We supply a full range of concrete grades from C10 to C50, including C15, C20, C25, C30, C35, C40 and C45. Each grade is designed for specific applications — from lean blinding (C10) to high-strength structural concrete (C50). Our team can help you select the right grade for your project requirements.' } },
+          { '@type': 'Question', name: 'Do you deliver to Zanzibar and Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver to Dar es Salaam, Zanzibar, Dodoma, Arusha, Mwanza and other locations across Tanzania. Our strategic plant locations and modern fleet ensure reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling in your area.' } },
+          { '@type': 'Question', name: 'What is washed sand technology?', acceptedAnswer: { '@type': 'Answer', text: 'Washed sand technology involves thoroughly cleaning sand to remove silt, clay and other impurities before it is used in concrete production. Cleaner sand produces stronger, more durable concrete with better workability. Tanzibaba uses washed sand across all our concrete products to deliver consistent, premium-quality results.' } },
+          { '@type': 'Question', name: 'How do I get a quote?', acceptedAnswer: { '@type': 'Answer', text: 'Getting a quote is quick and easy. Click the "Get Price" button on our website, select your product, location and quantity, and we\'ll send you a price estimate via WhatsApp within minutes. You can also call us at +255 716 002 790 or message us directly on WhatsApp for an immediate response.' } },
+          { '@type': 'Question', name: 'What payment methods do you accept?', acceptedAnswer: { '@type': 'Answer', text: 'We accept bank transfers, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash payments. For large orders, we offer flexible payment terms including partial payment on delivery. Contact our team to discuss the best payment option for your project.' } },
+        ] }) }} />
+
+        {/* 9. QUOTE CTA */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">

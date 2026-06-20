@@ -856,10 +856,10 @@ function OverviewContent({ slug }: { slug: string }) {
       <section className="py-14 px-4 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Delivery Coverage</h2>
-          <p className="text-gray-500 text-center mb-8 max-w-xl mx-auto text-sm">We deliver to all districts of Dar es Salaam and surrounding areas.</p>
+          <p className="text-gray-500 text-center mb-8 max-w-xl mx-auto text-sm">{slug.includes('dodoma') ? 'We deliver to Dodoma and surrounding areas.' : slug.includes('zanzibar') ? 'We deliver to all areas of Zanzibar including Stone Town, beaches and surrounding islands.' : 'We deliver to all districts of Dar es Salaam and surrounding areas.'}</p>
           <div className="flex flex-wrap justify-center gap-2">
-            {['Kinondoni', 'Ubungo', 'Ilala', 'Temeke', 'Kigamboni', 'Bagamoyo', 'Kibaha'].map((d, i) => (
-              <Link key={i} href={`/ready-mix-concrete-${d.toLowerCase()}`} className="inline-flex items-center gap-1.5 bg-gray-50 rounded-xl px-4 py-2.5 border border-gray-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-gray-700 hover:text-brand-700">
+            {(slug.includes('dodoma') ? ['Dodoma'] : slug.includes('zanzibar') ? ['Zanzibar', 'Stone Town', 'Paje', 'Nungwi', 'Kiwengwa', 'Matemwe', 'Jambiani', 'Fumba'] : ['Kinondoni', 'Ubungo', 'Ilala', 'Temeke', 'Kigamboni', 'Bagamoyo', 'Kibaha']).map((d, i) => (
+              <Link key={i} href={slug.includes('dodoma') ? `/ready-mix-concrete-dodoma` : slug.includes('zanzibar') ? `/ready-mix-concrete-zanzibar` : `/ready-mix-concrete-${d.toLowerCase()}`} className="inline-flex items-center gap-1.5 bg-gray-50 rounded-xl px-4 py-2.5 border border-gray-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-gray-700 hover:text-brand-700">
                 <MapPin className="w-4 h-4 text-brand-600 shrink-0" /> {d}
               </Link>
             ))}

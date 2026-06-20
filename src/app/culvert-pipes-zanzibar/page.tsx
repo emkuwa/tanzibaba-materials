@@ -88,6 +88,43 @@ export default function CulvertPipesZanzibarPage() {
           </div>
         </section>
 
+        <section className="py-12 md:py-20 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+              <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <CheckCircle className="w-4 h-4" /> FAQ
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm">Quick answers to common questions about culvert pipe supply in Zanzibar.</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What culvert pipe sizes do you supply in Zanzibar?', a: 'We supply precast concrete culvert pipes in a range of diameters including 450mm, 600mm, 750mm, 900mm, 1050mm and 1200mm. Pipes are available in standard and heavy-duty configurations to suit different drainage and infrastructure requirements across Zanzibar.' },
+                { q: 'Are pipes suitable for road drainage?', a: 'Yes, our precast concrete culvert pipes are designed for road drainage, highway crossings and transport infrastructure projects. They meet load rating requirements for road applications and are engineered to withstand traffic loads and environmental conditions in Zanzibar.' },
+                { q: 'Do you deliver across all of Zanzibar?', a: 'Yes, we deliver culvert pipes to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery of large-diameter pipes to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery scheduling.' },
+                { q: 'What is the load rating for your pipes?', a: 'Our precast concrete culvert pipes are manufactured to meet AASHTO and local road authority load rating standards. Standard pipes suit normal traffic conditions while heavy-duty variants handle high-traffic and deep burial applications. Contact our team for specific load rating certifications for your Zanzibar project.' },
+                { q: 'How do I get a quote for culvert pipes?', a: 'Getting a quote is quick and easy. Click the "Get a Quote" button on our website, provide your project details including pipe diameter, quantity and delivery location, and we will send you a price estimate via WhatsApp. You can also message us directly at +255 716 002 790 for an immediate response.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: 'What culvert pipe sizes do you supply in Zanzibar?', acceptedAnswer: { '@type': 'Answer', text: 'We supply precast concrete culvert pipes in a range of diameters including 450mm, 600mm, 750mm, 900mm, 1050mm and 1200mm. Pipes are available in standard and heavy-duty configurations to suit different drainage and infrastructure requirements across Zanzibar.' } },
+          { '@type': 'Question', name: 'Are pipes suitable for road drainage?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, our precast concrete culvert pipes are designed for road drainage, highway crossings and transport infrastructure projects. They meet load rating requirements for road applications and are engineered to withstand traffic loads and environmental conditions in Zanzibar.' } },
+          { '@type': 'Question', name: 'Do you deliver across all of Zanzibar?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver culvert pipes to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery of large-diameter pipes to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery scheduling.' } },
+          { '@type': 'Question', name: 'What is the load rating for your pipes?', acceptedAnswer: { '@type': 'Answer', text: 'Our precast concrete culvert pipes are manufactured to meet AASHTO and local road authority load rating standards. Standard pipes suit normal traffic conditions while heavy-duty variants handle high-traffic and deep burial applications. Contact our team for specific load rating certifications for your Zanzibar project.' } },
+          { '@type': 'Question', name: 'How do I get a quote for culvert pipes?', acceptedAnswer: { '@type': 'Answer', text: 'Getting a quote is quick and easy. Click the "Get a Quote" button on our website, provide your project details including pipe diameter, quantity and delivery location, and we will send you a price estimate via WhatsApp. You can also message us directly at +255 716 002 790 for an immediate response.' } },
+        ] }) }} />
+
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Need Culvert Pipes in Zanzibar?</h2>

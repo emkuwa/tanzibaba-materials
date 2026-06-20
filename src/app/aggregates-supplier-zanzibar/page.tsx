@@ -123,6 +123,43 @@ export default function AggregatesZanzibarPage() {
           </div>
         </section>
 
+        <section className="py-12 md:py-20 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+              <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <CheckCircle className="w-4 h-4" /> FAQ
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm">Quick answers to common questions about aggregates supply in Zanzibar.</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What aggregates do you supply in Zanzibar?', a: 'We supply a full range of construction aggregates including gravel, crushed stone, sand and ballast. Our materials are suitable for concrete production, road construction, drainage and general building projects across Zanzibar. All aggregates meet quality standards for residential, commercial and infrastructure applications.' },
+                { q: 'Do you deliver to Stone Town and beaches?', a: 'Yes, we deliver aggregates to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling in your area.' },
+                { q: 'What aggregate sizes are available?', a: 'We offer aggregates in multiple sizes including fine sand, coarse sand, 6mm, 10mm, 14mm, 20mm and 40mm crushed stone, as well as ballast mixes. Our team can help you select the right size and grade for your specific project requirements.' },
+                { q: 'What is the minimum order quantity?', a: 'Minimum order quantities vary by product and delivery location. For smaller projects we offer flexible quantities, while bulk orders for larger developments receive preferential pricing. Contact our team for specific MOQ details and volume discounts for your Zanzibar project.' },
+                { q: 'How do I get a quote?', a: 'Getting a quote is quick and easy. Click the "Get a Quote" button on our website, provide your project details including product type, quantity and delivery location, and we will send you a price estimate via WhatsApp. You can also message us directly at +255 716 002 790 for an immediate response.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: 'What aggregates do you supply in Zanzibar?', acceptedAnswer: { '@type': 'Answer', text: 'We supply a full range of construction aggregates including gravel, crushed stone, sand and ballast. Our materials are suitable for concrete production, road construction, drainage and general building projects across Zanzibar. All aggregates meet quality standards for residential, commercial and infrastructure applications.' } },
+          { '@type': 'Question', name: 'Do you deliver to Stone Town and beaches?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver aggregates to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling in your area.' } },
+          { '@type': 'Question', name: 'What aggregate sizes are available?', acceptedAnswer: { '@type': 'Answer', text: 'We offer aggregates in multiple sizes including fine sand, coarse sand, 6mm, 10mm, 14mm, 20mm and 40mm crushed stone, as well as ballast mixes. Our team can help you select the right size and grade for your specific project requirements.' } },
+          { '@type': 'Question', name: 'What is the minimum order quantity?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum order quantities vary by product and delivery location. For smaller projects we offer flexible quantities, while bulk orders for larger developments receive preferential pricing. Contact our team for specific MOQ details and volume discounts for your Zanzibar project.' } },
+          { '@type': 'Question', name: 'How do I get a quote?', acceptedAnswer: { '@type': 'Answer', text: 'Getting a quote is quick and easy. Click the "Get a Quote" button on our website, provide your project details including product type, quantity and delivery location, and we will send you a price estimate via WhatsApp. You can also message us directly at +255 716 002 790 for an immediate response.' } },
+        ] }) }} />
+
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Need Aggregates in Zanzibar?</h2>

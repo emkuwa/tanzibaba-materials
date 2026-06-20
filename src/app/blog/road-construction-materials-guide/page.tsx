@@ -45,7 +45,29 @@ export default function RoadConstructionMaterialsGuide() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Concrete for Road Construction</h2>
             <p className="text-gray-600 mb-4">Concrete roads (rigid pavements) require high-strength concrete grades. C30 is the minimum for residential roads, while C35 to C50 are specified for highways, truck routes and industrial access roads. Concrete is also essential for bridges, box culverts, and drainage channels.</p>
-            <p className="text-gray-600">Tanzibaba supplies concrete grades C10 to C50 from our production facilities, with washed sand technology for superior strength and durability in road applications.</p>
+            <p className="text-gray-600">Tanzibaba supplies concrete grades C10 to C50 from our production facilities, with washed sand technology for superior strength and durability in road applications. We also supply <Link href="/aggregates-supplier-zanzibar" className="text-brand-600 font-semibold hover:underline">aggregates for road base and sub-base →</Link></p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/services/ready-mix-concrete-dar-es-salaam" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Ready-Mix Concrete</h3>
+                <p className="text-xs text-gray-500">C10–C50 grades delivered to your site</p>
+              </Link>
+              <Link href="/aggregates-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Aggregates</h3>
+                <p className="text-xs text-gray-500">Gravel, crushed stone &amp; all grades</p>
+              </Link>
+              <Link href="/blocks-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Concrete Blocks</h3>
+                <p className="text-xs text-gray-500">Standard &amp; custom blocks for construction</p>
+              </Link>
+              <Link href="/get-quote" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Get a Quote</h3>
+                <p className="text-xs text-gray-500">Instant pricing for your project</p>
+              </Link>
+            </div>
           </section>
 
           <section className="bg-brand-600 rounded-2xl p-8 text-center">

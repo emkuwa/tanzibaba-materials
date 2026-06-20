@@ -144,7 +144,7 @@ export default function FoundationConcreteGuide() {
               <li><strong>Workability</strong> — Foundation concrete should have a slump of 50–100 mm for trench fill and 75–125 mm if a pump is being used.</li>
             </ul>
             <p>
-              Tanzibaba uses advanced washed sand technology that removes silt and clay from the aggregate, producing cleaner concrete with superior bond strength. This is especially important for foundations where long-term durability is critical.
+              Tanzibaba uses advanced washed sand technology that removes silt and clay from the aggregate, producing cleaner concrete with superior bond strength. This is especially important for foundations where long-term durability is critical. Order <Link href="/services/ready-mix-concrete-dar-es-salaam" className="text-brand-600 font-semibold hover:underline">ready-mix concrete for your foundation →</Link>
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Curing Foundation Concrete</h2>
@@ -248,7 +248,29 @@ export default function FoundationConcreteGuide() {
           </div>
         </article>
 
-        <section className="py-12 px-4 bg-gray-50">
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/services/ready-mix-concrete-dar-es-salaam" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Ready-Mix Concrete</h3>
+                <p className="text-xs text-gray-500">C10–C50 grades delivered to your site</p>
+              </Link>
+              <Link href="/aggregates-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Aggregates</h3>
+                <p className="text-xs text-gray-500">Gravel, crushed stone &amp; all grades</p>
+              </Link>
+              <Link href="/blocks-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Concrete Blocks</h3>
+                <p className="text-xs text-gray-500">Standard &amp; custom blocks for construction</p>
+              </Link>
+              <Link href="/get-quote" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Get a Quote</h3>
+                <p className="text-xs text-gray-500">Instant pricing for your project</p>
+              </Link>
+            </div>
+          </section>
+
+          <section className="py-12 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

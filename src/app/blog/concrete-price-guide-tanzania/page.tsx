@@ -71,7 +71,7 @@ export default function ConcretePriceGuide() {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">How Concrete Pricing Works</h2>
             <p>
-              Ready-mix concrete prices in Tanzania are determined by several factors. The most significant is the concrete grade, which specifies the compressive strength measured in megapascals (MPa). Higher strength grades require more cement and stricter quality control, which increases the cost per cubic metre.
+              Ready-mix concrete prices in Tanzania are determined by several factors. The most significant is the concrete grade, which specifies the compressive strength measured in megapascals (MPa). Higher strength grades require more cement and stricter quality control, which increases the cost per cubic metre. View our <Link href="/services/ready-mix-concrete-dar-es-salaam" className="text-brand-600 font-semibold hover:underline">ready-mix concrete supply options →</Link>
             </p>
             <p>
               Beyond the grade, your final price includes delivery charges (based on distance from the nearest production facility), optional pump service fees, and mandatory 18% VAT. Volume discounts are available for larger orders, typically above 20 m³.
@@ -221,7 +221,29 @@ export default function ConcretePriceGuide() {
           </div>
         </article>
 
-        <section className="py-12 px-4 bg-gray-50">
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/services/ready-mix-concrete-dar-es-salaam" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Ready-Mix Concrete</h3>
+                <p className="text-xs text-gray-500">C10–C50 grades delivered to your site</p>
+              </Link>
+              <Link href="/aggregates-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Aggregates</h3>
+                <p className="text-xs text-gray-500">Gravel, crushed stone &amp; all grades</p>
+              </Link>
+              <Link href="/blocks-supplier-zanzibar" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Concrete Blocks</h3>
+                <p className="text-xs text-gray-500">Standard &amp; custom blocks for construction</p>
+              </Link>
+              <Link href="/get-quote" className="group border border-gray-200 rounded-xl p-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-600 transition-colors mb-1">Get a Quote</h3>
+                <p className="text-xs text-gray-500">Instant pricing for your project</p>
+              </Link>
+            </div>
+          </section>
+
+          <section className="py-12 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

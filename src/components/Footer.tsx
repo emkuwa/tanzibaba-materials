@@ -70,7 +70,7 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Company</h4>
             <div className="flex flex-col gap-3">
               <Link href="/about" className="text-sm hover:text-brand-400 transition-colors">About Us</Link>
-              <Link href="/major-projects" className="text-sm hover:text-brand-400 transition-colors">Projects</Link>
+              <Link href="/projects" className="text-sm hover:text-brand-400 transition-colors">Projects</Link>
               <Link href="/get-quote" className="text-sm hover:text-brand-400 transition-colors">Get a Quote</Link>
               <Link href="/contact" className="text-sm hover:text-brand-400 transition-colors">Contact</Link>
             </div>

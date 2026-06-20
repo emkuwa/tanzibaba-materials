@@ -16,6 +16,7 @@ export const darEsSalaamLocations: MaterialsLocation[] = [
 ];
 
 export const zanzibarLocations: MaterialsLocation[] = [
+  { slug: 'zanzibar', name: 'Zanzibar', region: 'Zanzibar', description: 'Zanzibar islands including Stone Town, beaches and all areas across Unguja and Pemba' },
   { slug: 'zanzibar-city', name: 'Zanzibar City', region: 'Zanzibar', description: 'Zanzibar City including Stone Town, Ngambo, and the urban areas of Unguja island' },
   { slug: 'paje', name: 'Paje', region: 'Zanzibar', description: 'Paje village on the southeast coast of Zanzibar, known for beach resorts and tourism developments' },
   { slug: 'jambiani', name: 'Jambiani', region: 'Zanzibar', description: 'Jambiani village on the southeast coast of Zanzibar, with beachfront resorts and hospitality projects' },

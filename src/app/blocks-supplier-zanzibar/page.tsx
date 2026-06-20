@@ -123,6 +123,43 @@ export default function BlocksZanzibarPage() {
           </div>
         </section>
 
+        <section className="py-12 md:py-20 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+              <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <CheckCircle className="w-4 h-4" /> FAQ
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm">Quick answers to common questions about concrete blocks supply in Zanzibar.</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What types of concrete blocks do you supply in Zanzibar?', a: 'We supply both hollow and solid concrete blocks suitable for residential, commercial and infrastructure projects across Zanzibar. Our blocks are manufactured to meet construction standards and are available in various grades and densities to suit different structural requirements.' },
+                { q: 'What block sizes are available?', a: 'We offer concrete blocks in standard sizes including 400x200x200mm, 400x200x150mm and 400x200x100mm. Hollow blocks come in 2-cell and 3-cell configurations. Our team can help you select the right size and type for your specific project requirements.' },
+                { q: 'Do you deliver to all areas of Zanzibar?', a: 'Yes, we deliver concrete blocks to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling.' },
+                { q: 'What is the difference between hollow and solid blocks?', a: 'Hollow blocks have cavities that reduce weight and improve thermal insulation, making them ideal for partition walls and non-load-bearing applications. Solid blocks are denser and stronger, suitable for load-bearing walls and structural applications. Both types are available in various grades for different project needs.' },
+                { q: 'How do I calculate how many blocks I need?', a: 'To calculate blocks needed, measure your wall area in square metres and multiply by the number of blocks per square metre based on your chosen block size. For a 400x200x200mm block, you need approximately 12.5 blocks per square metre. Contact our team for a free quantity estimate for your Zanzibar project.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: 'What types of concrete blocks do you supply in Zanzibar?', acceptedAnswer: { '@type': 'Answer', text: 'We supply both hollow and solid concrete blocks suitable for residential, commercial and infrastructure projects across Zanzibar. Our blocks are manufactured to meet construction standards and are available in various grades and densities to suit different structural requirements.' } },
+          { '@type': 'Question', name: 'What block sizes are available?', acceptedAnswer: { '@type': 'Answer', text: 'We offer concrete blocks in standard sizes including 400x200x200mm, 400x200x150mm and 400x200x100mm. Hollow blocks come in 2-cell and 3-cell configurations. Our team can help you select the right size and type for your specific project requirements.' } },
+          { '@type': 'Question', name: 'Do you deliver to all areas of Zanzibar?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver concrete blocks to Stone Town, Nungwi, Paje, Kendwa, Jambiani and all areas across Zanzibar. Our established logistics network ensures reliable delivery to your construction site. Contact us on WhatsApp at +255 716 002 790 for delivery availability and scheduling.' } },
+          { '@type': 'Question', name: 'What is the difference between hollow and solid blocks?', acceptedAnswer: { '@type': 'Answer', text: 'Hollow blocks have cavities that reduce weight and improve thermal insulation, making them ideal for partition walls and non-load-bearing applications. Solid blocks are denser and stronger, suitable for load-bearing walls and structural applications. Both types are available in various grades for different project needs.' } },
+          { '@type': 'Question', name: 'How do I calculate how many blocks I need?', acceptedAnswer: { '@type': 'Answer', text: 'To calculate blocks needed, measure your wall area in square metres and multiply by the number of blocks per square metre based on your chosen block size. For a 400x200x200mm block, you need approximately 12.5 blocks per square metre. Contact our team for a free quantity estimate for your Zanzibar project.' } },
+        ] }) }} />
+
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Need Blocks in Zanzibar?</h2>

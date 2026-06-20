@@ -3,18 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Building2, ArrowRight, CheckCircle, MapPin } from 'lucide-react';
+import { Building2, ArrowRight, CheckCircle, MapPin, HelpCircle, Phone } from 'lucide-react';
 
 const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
-  title: 'Commercial Construction Dodoma — Office, Retail & Government Projects | Tanzibaba',
-  description: 'Commercial construction contractor in Dodoma — office complexes, retail centers, government buildings and mixed-use developments. Preferred project value from USD 2M+.',
-  keywords: ['commercial construction Dodoma', 'construction company Dodoma', 'building contractor Dodoma', 'government construction Dodoma', 'office construction Dodoma'],
+  title: 'Commercial Construction Dodoma — Ofisi & Biashara | Tanzibaba',
+  description: 'Commercial construction contractor in Dodoma. Office complexes, retail centers, government buildings and mixed-use developments. Class 1 contractor. Preferred project value from USD 2M+.',
+  keywords: ['commercial construction Dodoma', 'construction company Dodoma', 'building contractor Dodoma', 'government construction Dodoma', 'office construction Dodoma', 'ujenzi wa biashara Dodoma', 'majengo ya ofisi Dodoma', 'commercial contractor Tanzania'],
   alternates: { canonical: `${siteUrl}/commercial-construction-dodoma` },
   openGraph: {
-    title: 'Commercial Construction Dodoma | Tanzibaba',
-    description: 'Commercial construction services in Dodoma, Tanzania\'s capital city. Office, retail, government and mixed-use developments.',
+    title: 'Commercial Construction Dodoma — Ofisi & Biashara | Tanzibaba',
+    description: 'Commercial construction contractor in Dodoma. Office complexes, retail centers and government buildings.',
     url: `${siteUrl}/commercial-construction-dodoma`,
     siteName: 'Tanzibaba',
     type: 'website',
@@ -88,17 +88,95 @@ export default function CommercialDodomaPage() {
           </div>
         </section>
 
+        {/* Service Coverage Section */}
+        <section className="py-14 px-4 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Commercial Construction Coverage</h2>
+              <p className="text-gray-500 max-w-xl mx-auto text-sm">We provide commercial construction services across Dodoma region and surrounding areas.</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { area: 'Dodoma City', swahili: 'Jiji la Dodoma', coverage: 'Primary operations' },
+                { area: 'Chamwino', swahili: 'Chamwino', coverage: 'Full coverage' },
+                { area: 'Bahi', swahili: 'Bahi', coverage: 'Full coverage' },
+                { area: 'Kongwa', swahili: 'Kongwa', coverage: 'Full coverage' },
+                { area: 'Mpwapwa', swahili: 'Mpwapwa', coverage: 'Full coverage' },
+                { area: 'Kondoa', swahili: 'Kondoa', coverage: 'On request' },
+                { area: 'Dodoma Region', swahili: 'Mkoa wa Dodoma', coverage: 'Full coverage' },
+                { area: 'Central Tanzania', swahili: 'Katikati ya Tanzania', coverage: 'On request' },
+              ].map((loc, i) => (
+                <div key={i} className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+                  <MapPin className="w-5 h-5 text-brand-500 mx-auto mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">{loc.area}</p>
+                  <p className="text-gray-400 text-xs">{loc.swahili}</p>
+                  <p className="text-green-600 text-xs mt-1">{loc.coverage}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs Section */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 text-sm">Common questions about commercial construction in Dodoma</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What commercial construction projects do you handle in Dodoma?', a: 'We handle office complexes, retail centers, government buildings, hotels, mixed-use developments and commercial infrastructure projects in Dodoma. Our Class 1 contractor capabilities ensure international standards.' },
+                { q: 'Do you build government facilities in Dodoma?', a: 'Yes, we are experienced in constructing government buildings, administrative offices, public facilities and civic infrastructure in Dodoma. We work with government procurement requirements and specifications.' },
+                { q: 'What is the minimum project size for commercial construction in Dodoma?', a: 'Our preferred project value is from USD 2M+ for commercial construction projects in Dodoma. Contact us to discuss your specific project requirements.' },
+                { q: 'How long does commercial construction take in Dodoma?', a: 'Timeline varies by project scope. Office complexes typically take 12-18 months, retail centers 10-14 months, and government buildings 12-24 months. We provide detailed schedules during proposal stage.' },
+                { q: 'Do you use local materials for construction in Dodoma?', a: 'Yes, we source materials locally where possible including ready-mix concrete, aggregates, blocks and paving from our own production facilities. This ensures quality control and cost efficiency.' },
+                { q: 'Can you design and build commercial projects in Dodoma?', a: 'Yes, we offer design-build services for commercial projects in Dodoma. We work with architects and engineers to deliver complete solutions from concept to completion.' },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-6">
+                  <div className="flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-brand-500 mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
+                      <p className="text-gray-500 text-sm">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Planning a Project in Dodoma?</h2>
-            <p className="text-gray-500 max-w-lg mx-auto mb-8">Submit your project for qualification and our team will respond within 1-2 business days.</p>
-            <Link href="/major-projects#qualify" className="inline-flex items-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/30">
-              Qualify Your Project <ArrowRight className="w-5 h-5" />
-            </Link>
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Planning a Commercial Project in Dodoma?</h2>
+            <p className="text-gray-500 max-w-lg mx-auto mb-8">Submit your project for qualification and our team will respond within 1-2 business days. Wasiliana nasi leo!</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Link href="/major-projects#qualify" className="inline-flex items-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/30">
+                Qualify Your Project <ArrowRight className="w-5 h-5" />
+              </Link>
+              <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-all">
+                WhatsApp Us
+              </a>
+              <a href="tel:+255716002790" className="inline-flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all">
+                <Phone className="w-4 h-4" /> Call Now
+              </a>
+            </div>
           </div>
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What commercial construction projects do you handle in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'We handle office complexes, retail centers, government buildings, hotels, mixed-use developments and commercial infrastructure projects in Dodoma.' } },
+          { '@type': 'Question', name: 'Do you build government facilities in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we are experienced in constructing government buildings, administrative offices, public facilities and civic infrastructure in Dodoma.' } },
+          { '@type': 'Question', name: 'What is the minimum project size for commercial construction in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Our preferred project value is from USD 2M+ for commercial construction projects in Dodoma.' } },
+          { '@type': 'Question', name: 'Do you use local materials for construction in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we source materials locally including ready-mix concrete, aggregates, blocks and paving from our own production facilities.' } },
+        ]
+      }) }} />
     </>
   );
 }

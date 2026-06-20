@@ -3,18 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Building2, ArrowRight, CheckCircle, MapPin, Phone, Mail } from 'lucide-react';
+import { Building2, ArrowRight, CheckCircle, MapPin, Phone, Mail, HelpCircle, Truck, DollarSign } from 'lucide-react';
 
 const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
-  title: 'Construction Company Dodoma — Commercial & Government Projects | Tanzibaba',
-  description: 'Tanzibaba is a premier construction company serving Dodoma, Tanzania\'s capital city. Commercial, government and infrastructure projects. Preferred project value from USD 2M+.',
-  keywords: ['construction company Dodoma', 'building contractor Dodoma', 'construction Dodoma Tanzania', 'government projects Dodoma', 'commercial construction Dodoma', 'civil engineering Dodoma'],
+  title: 'Construction Company Dodoma — Mkandarasi & Government Projects | Tanzibaba',
+  description: 'Premier construction company in Dodoma, Tanzania\'s capital. Commercial, government and infrastructure projects. Class 1 contractor. Preferred project value from USD 2M+.',
+  keywords: ['construction company Dodoma', 'building contractor Dodoma', 'construction Dodoma Tanzania', 'government projects Dodoma', 'commercial construction Dodoma', 'civil engineering Dodoma', 'mkandarasi Dodoma', 'kampuni ya ujenzi Dodoma', 'ujenzi wa majengo Dodoma', 'contractor Dodoma'],
   alternates: { canonical: `${siteUrl}/construction-company-dodoma` },
   openGraph: {
-    title: 'Construction Company Dodoma | Tanzibaba',
-    description: 'Premier construction company serving Dodoma. Commercial, government and infrastructure projects in Tanzania\'s capital.',
+    title: 'Construction Company Dodoma — Mkandarasi & Government Projects | Tanzibaba',
+    description: 'Premier construction company in Dodoma. Commercial, government and infrastructure projects.',
     url: `${siteUrl}/construction-company-dodoma`,
     siteName: 'Tanzibaba',
     type: 'website',
@@ -83,12 +83,105 @@ export default function DodomaPage() {
           </div>
         </section>
 
+        {/* Project Types Section */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Construction Projects in Dodoma</h2>
+              <p className="text-gray-500 max-w-xl mx-auto text-sm">We deliver commercial, government and infrastructure projects across Dodoma region.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { title: 'Government Buildings', desc: 'Administrative offices, public facilities, government housing and civic infrastructure.', swahili: 'Majengo ya serikali, ofisi za utawala' },
+                { title: 'Commercial Complexes', desc: 'Office towers, shopping centers, hotels and mixed-use developments.', swahili: 'Majengo ya biashara, maduka, hoteli' },
+                { title: 'Infrastructure Projects', desc: 'Roads, bridges, drainage systems, water supply and public utilities.', swahili: 'Barabara, madaraja, mifereji, maji' },
+                { title: 'Institutional Buildings', desc: 'Schools, hospitals, universities and community facilities.', swahili: 'Shule, hospitali, vyuo, vituo vya jamii' },
+                { title: 'Industrial Facilities', desc: 'Warehouses, processing plants, factories and industrial infrastructure.', swahili: 'Maghala, viwanda, kiwanda' },
+                { title: 'Residential Developments', desc: 'Housing estates, apartment blocks and residential compounds.', swahili: 'Nyumba za kulala, apartimenti' },
+              ].map((item, i) => (
+                <div key={i} className="bg-gray-50 rounded-2xl border border-gray-100 p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                      <Building2 className="w-5 h-5 text-brand-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                      <p className="text-gray-500 text-sm mb-1">{item.desc}</p>
+                      <p className="text-gray-400 text-xs italic">{item.swahili}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Coverage Section */}
+        <section className="py-14 px-4 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Construction Service Coverage</h2>
+              <p className="text-gray-500 max-w-xl mx-auto text-sm">We provide construction services across Dodoma region and surrounding areas.</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { area: 'Dodoma City', swahili: 'Jiji la Dodoma', coverage: 'Primary operations' },
+                { area: 'Chamwino', swahili: 'Chamwino', coverage: 'Full coverage' },
+                { area: 'Bahi', swahili: 'Bahi', coverage: 'Full coverage' },
+                { area: 'Kongwa', swahili: 'Kongwa', coverage: 'Full coverage' },
+                { area: 'Mpwapwa', swahili: 'Mpwapwa', coverage: 'Full coverage' },
+                { area: 'Kondoa', swahili: 'Kondoa', coverage: 'On request' },
+                { area: 'Dodoma Region', swahili: 'Mkoa wa Dodoma', coverage: 'Full coverage' },
+                { area: 'Central Tanzania', swahili: 'Katikati ya Tanzania', coverage: 'On request' },
+              ].map((loc, i) => (
+                <div key={i} className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+                  <MapPin className="w-5 h-5 text-brand-500 mx-auto mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">{loc.area}</p>
+                  <p className="text-gray-400 text-xs">{loc.swahili}</p>
+                  <p className="text-green-600 text-xs mt-1">{loc.coverage}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs Section */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p className="text-gray-500 text-sm">Common questions about construction services in Dodoma</p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What construction services does Tanzibaba offer in Dodoma?', a: 'Tanzibaba offers commercial buildings, government projects, infrastructure development, institutional buildings, industrial facilities and residential projects in Dodoma. We are a Class 1 contractor with primary operations in Dar es Salaam, Zanzibar and Dodoma.' },
+                { q: 'Do you handle government construction projects in Dodoma?', a: 'Yes, we are experienced in delivering government construction projects in Dodoma including administrative offices, public facilities, government housing and civic infrastructure. We provide documentation and compliance with government procurement requirements.' },
+                { q: 'What is the minimum project value for Tanzibaba in Dodoma?', a: 'Our preferred project value is from USD 2M+ for construction projects in Dodoma. However, we may consider smaller projects on a case-by-case basis. Contact us to discuss your project.' },
+                { q: 'Do you provide construction materials supply in Dodoma?', a: 'Yes, we supply ready-mix concrete, aggregates, blocks, paving blocks and culvert pipes for construction projects in Dodoma. Our materials division supports both our construction projects and third-party contractors.' },
+                { q: 'How long does a typical construction project take in Dodoma?', a: 'Project timelines vary by scope and complexity. A typical commercial building takes 12-18 months, while infrastructure projects may take 6-24 months. We provide detailed project schedules during the proposal stage.' },
+                { q: 'Do you work with international partners in Dodoma?', a: 'Yes, we collaborate with international architects, engineers and consultants for large-scale projects in Dodoma. We have experience working with international standards and specifications.' },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-6">
+                  <div className="flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-brand-500 mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
+                      <p className="text-gray-500 text-sm">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-white rounded-2xl border border-gray-200 p-8">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Contact Our Dodoma Team</h3>
-                <p className="text-gray-500 text-sm">Reach out to discuss your project in Dodoma.</p>
+                <p className="text-gray-500 text-sm">Reach out to discuss your construction project in Dodoma. Piga simu au WhatsApp!</p>
               </div>
               <div className="flex gap-3">
                 <a href="tel:+255716002790" className="inline-flex items-center gap-2 bg-brand-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-brand-700 transition-all">
@@ -103,6 +196,16 @@ export default function DodomaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What construction services does Tanzibaba offer in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Tanzibaba offers commercial buildings, government projects, infrastructure development, institutional buildings, industrial facilities and residential projects in Dodoma. We are a Class 1 contractor.' } },
+          { '@type': 'Question', name: 'Do you handle government construction projects in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we are experienced in delivering government construction projects in Dodoma including administrative offices, public facilities and civic infrastructure.' } },
+          { '@type': 'Question', name: 'What is the minimum project value for Tanzibaba in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Our preferred project value is from USD 2M+ for construction projects in Dodoma. Contact us to discuss your project.' } },
+          { '@type': 'Question', name: 'Do you provide construction materials supply in Dodoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we supply ready-mix concrete, aggregates, blocks, paving blocks and culvert pipes for construction projects in Dodoma.' } },
+        ]
+      }) }} />
     </>
   );
 }

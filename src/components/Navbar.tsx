@@ -73,6 +73,15 @@ const navItems = [
     ],
   },
   {
+    label: 'About', icon: Users, href: '/about',
+  },
+  {
+    label: 'FAQ', icon: FileText, href: '/faq',
+  },
+  {
+    label: 'Government', icon: FileText, href: '/government',
+  },
+  {
     label: 'Contact', icon: Mail, href: '/contact',
   },
 ];

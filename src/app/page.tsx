@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 const trustBadges = [
   { icon: Award, label: 'Premium Concrete Quality' },
@@ -82,6 +83,7 @@ const locationOptions = [
 
 export default function Home() {
   const [showQuote, setShowQuote] = useState(false);
+  const [showLeadCapture, setShowLeadCapture] = useState(false);
   const [form, setForm] = useState({ product: '', location: '', quantity: '', phone: '' });
 
   const handleQuickQuote = () => {
@@ -116,7 +118,7 @@ export default function Home() {
                 <button onClick={() => setShowQuote(true)} className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg shadow-brand-600/30 text-sm md:text-base">
                   Get Price <ArrowRight className="w-4 h-4" />
                 </button>
-                <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base">
+                <a onClick={() => setShowLeadCapture(true)} className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base cursor-pointer">
                   <MessageCircle className="w-4 h-4 md:w-5 md:h-5" /> WhatsApp Us
                 </a>
                 <a href="tel:+255716002790" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all border border-white/20 text-sm md:text-base">
@@ -130,6 +132,71 @@ export default function Home() {
                       <b.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-brand-400" />
                     </div>
                     <span className="text-xs md:text-sm font-medium text-gray-300">{b.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 1b. TRUST SECTION */}
+        <section className="py-16 md:py-20 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-4">Why Choose Tanzibaba?</h2>
+            <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 text-sm md:text-base">Trusted by contractors, developers and homeowners across Tanzania for premium building materials and reliable supply.</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12">
+              {[
+                { icon: Award, title: 'Premium Concrete', desc: 'Engineered for consistency and superior strength across all grades.' },
+                { icon: Droplets, title: 'Washed Sand Technology', desc: 'Cleaner sand removes impurities for stronger, more durable concrete.' },
+                { icon: Beaker, title: 'Laboratory Tested', desc: 'Every batch verified through rigorous laboratory testing.' },
+                { icon: Truck, title: 'Reliable Supply', desc: 'Modern fleet and strategic plants ensure on-time delivery.' },
+                { icon: CheckCircle, title: 'Transparent Pricing', desc: 'Direct factory pricing with no hidden costs. VAT included.' },
+              ].map(item => (
+                <div key={item.title} className="text-center p-5 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <item.icon className="w-6 h-6 text-brand-600" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-1 text-sm">{item.title}</h3>
+                  <p className="text-xs text-gray-500">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+              <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full border border-green-200">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm font-semibold">Response within 2 hours</span>
+              </div>
+              <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full border border-blue-200">
+                <Truck className="w-4 h-4" />
+                <span className="text-sm font-semibold">Free delivery over 50m³</span>
+              </div>
+              <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full border border-purple-200">
+                <Shield className="w-4 h-4" />
+                <span className="text-sm font-semibold">100% quality guaranteed</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
+              <h3 className="text-lg font-bold text-gray-900 text-center mb-6">What Our Customers Say</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                {[
+                  { name: 'James M.', role: 'Contractor, Kinondoni', text: 'Tanzibaba delivered C30 concrete to our apartment project on time and at the right consistency. Their washed sand technology makes a real difference in strength.' },
+                  { name: 'Sarah K.', role: 'Developer, Ilala', text: 'We switched to Tanzibaba for our commercial building project. The quality is consistent and their pricing is transparent — no hidden costs.' },
+                  { name: 'David L.', role: 'Project Manager, Temeke', text: 'Reliable supply and great customer support. They responded to our WhatsApp inquiry within minutes and had concrete delivered the next day.' },
+                ].map(t => (
+                  <div key={t.name} className="bg-white rounded-xl border border-gray-200 p-5">
+                    <div className="flex items-center gap-1 mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" /></svg>
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-600 mb-3">&ldquo;{t.text}&rdquo;</p>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">{t.name}</p>
+                      <p className="text-xs text-gray-500">{t.role}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -308,7 +375,7 @@ export default function Home() {
                   <button onClick={() => setShowQuote(true)} className="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl hover:bg-brand-50 transition-all shadow-lg text-sm md:text-base">
                     Get Price <ArrowRight className="w-4 h-4" />
                   </button>
-                  <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base">
+                  <a onClick={() => setShowLeadCapture(true)} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base cursor-pointer">
                     <MessageCircle className="w-4 h-4 md:w-5 md:h-5" /> WhatsApp Us
                   </a>
                   <a href="tel:+255716002790" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all text-sm md:text-base">
@@ -329,7 +396,7 @@ export default function Home() {
         <a href="tel:+255716002790" className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 rounded-xl text-sm flex items-center justify-center gap-2 transition-all">
           <Phone className="w-4 h-4" /> Call
         </a>
-        <a href="https://wa.me/255716002790" target="_blank" className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-sm flex items-center justify-center gap-2 transition-all">
+        <a onClick={() => setShowLeadCapture(true)} className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-xl text-sm flex items-center justify-center gap-2 transition-all cursor-pointer">
           <MessageCircle className="w-4 h-4" /> WhatsApp
         </a>
       </div>
@@ -382,6 +449,16 @@ export default function Home() {
 
               <p className="text-xs text-gray-400 text-center">We&apos;ll respond with a price estimate within minutes</p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* LEAD CAPTURE MODAL */}
+      {showLeadCapture && (
+        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4" onClick={() => setShowLeadCapture(false)}>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative bg-white w-full md:max-w-md md:rounded-2xl rounded-t-2xl shadow-2xl animate-in slide-in-from-bottom duration-300" onClick={e => e.stopPropagation()}>
+            <LeadCaptureForm onClose={() => setShowLeadCapture(false)} />
           </div>
         </div>
       )}

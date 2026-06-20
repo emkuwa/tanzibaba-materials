@@ -32,8 +32,6 @@ export default function LearnArticlePage({ params }: PageProps) {
 
   const category = getCategoryBySlug(article.category);
   const related = getRelatedArticles(article);
-  const siteUrlBase = 'https://materials.tanzibaba.com';
-
   const faqSchema = article.faqs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -52,8 +50,10 @@ export default function LearnArticlePage({ params }: PageProps) {
     datePublished: article.publishedDate,
     dateModified: article.updatedDate,
     author: { '@type': 'Organization', name: 'Tanzibaba' },
-    publisher: { '@type': 'Organization', name: 'Tanzibaba', logo: { '@type': 'ImageObject', url: `${siteUrlBase}/images/logo/tanzibaba.svg` } },
-    url: `${siteUrlBase}/learn/${article.slug}`,
+    publisher: { '@type': 'Organization', name: 'Tanzibaba', logo: { '@type': 'ImageObject', url: `${siteUrl}/images/logo/tanzibaba.svg` } },
+    url: `${siteUrl}/learn/${article.slug}`,
+    image: `${siteUrl}/images/og-brand-image.png`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}/learn/${article.slug}` },
   };
 
   return (

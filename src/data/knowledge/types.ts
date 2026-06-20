@@ -3,6 +3,17 @@ export interface ContentSection {
   body: string;
 }
 
+export interface InternalLink {
+  text: string;
+  url: string;
+}
+
+export interface ArticleCTA {
+  type: 'get-quote' | 'whatsapp';
+  text: string;
+  url: string;
+}
+
 export interface KnowledgeArticle {
   slug: string;
   title: string;
@@ -16,4 +27,6 @@ export interface KnowledgeArticle {
   faqs: { q: string; a: string }[];
   keywords: string[];
   relatedArticles: string[];
+  internalLinks?: InternalLink[];
+  ctas?: ArticleCTA[];
 }

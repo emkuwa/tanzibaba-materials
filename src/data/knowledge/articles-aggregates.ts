@@ -44,7 +44,14 @@ export const aggregatesArticles: KnowledgeArticle[] = [
       { q: 'Are all aggregates the same?', a: 'No, aggregates vary significantly in size, shape, strength and chemical composition. Different sources produce aggregates with different properties. Angular crushed stone bonds better with cement paste than smooth river gravel. Some aggregates contain reactive minerals that can cause damaging chemical reactions in concrete. Always use tested aggregates from reputable suppliers like Tanzibaba.' }
     ],
     keywords: ['what are aggregates', 'construction aggregates', 'types of aggregates', 'aggregates in concrete', 'aggregates Tanzania', 'gravel and aggregates supplier'],
-    relatedArticles: ['gravel-sizes-explained', 'crusher-dust-guide', 'road-base-guide']
+    relatedArticles: ['gravel-sizes-explained', 'crusher-dust-guide', 'road-base-guide'],
+    internalLinks: [
+      { text: 'Aggregates Supplier Dar es Salaam', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Ready-Mix Concrete', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'gravel-sizes-explained',
@@ -93,7 +100,14 @@ export const aggregatesArticles: KnowledgeArticle[] = [
       { q: 'What size gravel is best for drainage?', a: 'For drainage applications, clean single-sized gravel between 20mm and 40mm is best. The uniform size creates open voids that allow water to flow freely. Washed gravel or crushed stone is preferred because it contains no fines that could clog the drainage system over time.' }
     ],
     keywords: ['gravel sizes explained', 'gravel size chart', 'crusher dust size', '14mm aggregate', '20mm aggregate', '40mm aggregate', 'aggregate sizes Tanzania'],
-    relatedArticles: ['what-are-aggregates', 'crusher-dust-guide', 'road-base-guide']
+    relatedArticles: ['what-are-aggregates', 'crusher-dust-guide', 'road-base-guide'],
+    internalLinks: [
+      { text: 'Aggregates Supplier Dar es Salaam', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Ready-Mix Concrete', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'crusher-dust-guide',
@@ -138,7 +152,14 @@ export const aggregatesArticles: KnowledgeArticle[] = [
       { q: 'Can crusher dust be used for paving?', a: 'Absolutely. Crusher dust is the preferred material for bedding paving blocks and interlocking stones. When compacted, it creates a stable, level base that locks the pavers in place while allowing water drainage through the joints. It is widely used for paving projects in Tanzania.' }
     ],
     keywords: ['crusher dust guide', 'what is crusher dust', 'crusher dust uses', 'crusher dust for concrete', 'crusher dust Tanzania', 'quarry dust'],
-    relatedArticles: ['gravel-sizes-explained', 'what-are-aggregates', 'washed-sand-benefits']
+    relatedArticles: ['gravel-sizes-explained', 'what-are-aggregates', 'washed-sand-benefits'],
+    internalLinks: [
+      { text: 'Aggregates Supplier Dar es Salaam', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Ready-Mix Concrete', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'road-base-guide',
@@ -183,7 +204,14 @@ export const aggregatesArticles: KnowledgeArticle[] = [
       { q: 'How much does road base cost in Tanzania?', a: 'Road base prices in Tanzania vary by location, quantity and quality. In Dar es Salaam, prices typically range from TZS 40,000 to 70,000 per tonne delivered, depending on the distance from the quarry. Larger quantities attract volume discounts. Contact Tanzibaba for current pricing and delivery options.' }
     ],
     keywords: ['road base guide', 'what is road base', 'road base material', 'road base construction', 'road base Tanzania', 'gravel road base'],
-    relatedArticles: ['what-are-aggregates', 'gravel-sizes-explained', 'aggregates-for-roads']
+    relatedArticles: ['what-are-aggregates', 'gravel-sizes-explained', 'aggregates-for-roads'],
+    internalLinks: [
+      { text: 'Aggregates Supplier Dar es Salaam', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Ready-Mix Concrete', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'washed-sand-benefits',
@@ -232,7 +260,14 @@ export const aggregatesArticles: KnowledgeArticle[] = [
       { q: 'Does Tanzibaba use washed sand?', a: 'Yes, Tanzibaba uses only washed sand in our ready mix concrete production. We operate modern sand washing plants that ensure all sand meets strict quality specifications. Every batch of concrete we deliver contains clean, consistent washed sand for maximum strength and durability.' }
     ],
     keywords: ['washed sand benefits', 'what is washed sand', 'washed sand for concrete', 'washed sand vs unwashed sand', 'washed sand Tanzania', 'construction sand'],
-    relatedArticles: ['crusher-dust-guide', 'what-are-aggregates', 'how-aggregates-affect-concrete-quality']
+    relatedArticles: ['crusher-dust-guide', 'what-are-aggregates', 'how-aggregates-affect-concrete-quality'],
+    internalLinks: [
+      { text: 'Aggregates Supplier Dar es Salaam', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Ready-Mix Concrete', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'how-aggregates-affect-concrete-quality',
@@ -380,5 +415,95 @@ export const aggregatesArticles: KnowledgeArticle[] = [
     ],
     keywords: ['aggregates for buildings', 'building construction aggregates', 'concrete aggregates for buildings', 'building aggregate sizes', 'construction aggregates Tanzania'],
     relatedArticles: ['what-are-aggregates', 'gravel-sizes-explained', 'how-aggregates-affect-concrete-quality']
+  },
+  {
+    slug: 'aggregates-complete-guide',
+    title: 'Aggregates Guide: Types, Sizes and Uses in Tanzania',
+    description: 'Complete guide to construction aggregates in Tanzania. Learn about crushed stone, gravel, sand types, sizes, quality requirements and how to choose the right aggregates for concrete, roads and building.',
+    h1: 'Aggregates Guide: Types, Sizes and Uses — Everything You Need to Know',
+    category: 'aggregates-gravel-academy',
+    readingTime: '11 min read',
+    publishedDate: '2025-06-01',
+    updatedDate: '2025-06-01',
+    content: [
+      {
+        heading: 'What Are Construction Aggregates?',
+        body: 'Construction aggregates are naturally occurring or manufactured granular materials used as fundamental building components in a vast array of construction applications. They include sand, gravel, crushed stone, slag, recycled concrete, and other geologically derived materials that are processed and graded to meet specific size and quality requirements. Aggregates constitute approximately 60 to 80 percent of the total volume of concrete, making them the single most consumed construction material in the world. Beyond concrete, aggregates serve as essential components in asphalt pavements, road base and sub-base layers, drainage systems, mortar, plaster, and many other construction products. In Tanzania, the construction industry depends on a reliable supply of quality aggregates to support everything from residential home building in Dar es Salaam suburbs to major national infrastructure projects such as highways, bridges, airports and ports. The quality, type, size and gradation of aggregates directly influence the strength, durability, workability and cost-effectiveness of every construction project, which is why understanding aggregates is essential knowledge for builders, engineers, architects and homeowners alike.'
+      },
+      {
+        heading: 'Types of Aggregates: Crushed Stone, Gravel and Sand',
+        body: 'Aggregates are classified into three primary types based on their source, production method and particle characteristics. Crushed stone is produced by mechanically breaking large rocks into smaller, angular particles using jaw crushers, cone crushers and impact crushers at quarry operations. The crushing process creates particles with rough, angular surfaces that bond well with cement paste in concrete, making crushed stone the preferred aggregate for structural applications. Crushed stone is available in a wide range of sizes from crusher dust at 0-4mm up to large railway ballast at 50-75mm and bigger. In Tanzania, crushed stone is produced from hard rock quarries in Pugu, Kisarawe, Mkuranga and other areas near Dar es Salaam, with sources including granite, quartzite, gneiss and basalt. Gravel is a naturally occurring aggregate formed by the weathering and erosion of rock over geological time periods. Unlike crushed stone, gravel particles are typically rounded or sub-rounded due to the abrasive action of water transport in rivers, streams and glacial deposits. Gravel is available in various sizes from fine pea gravel at 2-6mm up to large cobbles exceeding 100mm. Natural gravel deposits are found across Tanzania in riverbeds, floodplains and ancient terraces, with significant sources along the Ruvu, Wami, Pangani and Rufiji river systems. Sand is the finest form of aggregate, with particle sizes typically ranging from 0.075mm to 4.75mm. Sand is classified by its source — river sand from riverbeds is smooth and rounded, pit sand from sand deposits is coarser and more angular, and manufactured sand or crusher dust is produced as a byproduct of rock crushing. Each type of sand has different properties that affect its suitability for concrete, mortar, plaster and other applications. In Tanzania, river sand from the Ruvu and Wami rivers has traditionally been the primary fine aggregate for construction, though crusher dust is increasingly used as an economical alternative.'
+      },
+      {
+        heading: 'Aggregate Sizes and Their Applications',
+        body: 'Aggregate sizes are measured in millimetres and refer to the diameter of individual particles. The size of aggregate selected for a project has a direct impact on the strength, workability and finish quality of the construction material. Fine aggregates, classified as particles passing the 4.75mm sieve, include sand and crusher dust and are used in mortar, plaster, concrete fine aggregate component, floor screeds and bedding materials. Fine aggregates fill the voids between coarse particles and work with cement paste to bind the concrete mass together. Medium aggregates ranging from 6mm to 10mm are commonly used in concrete blocks, precast elements, thin concrete sections and exposed aggregate finishes. Their smaller size allows them to fit into moulds and around closely spaced reinforcement. Standard concrete aggregates of 14mm and 20mm are the workhorses of the construction industry, used for reinforced concrete in foundations, slabs, columns, beams and other structural elements. The 20mm size is the most widely used aggregate for general reinforced concrete construction in Tanzania because it provides an optimal balance between strength, workability and compatibility with standard reinforcement spacing. Coarse aggregates of 25mm to 40mm are used in mass concrete applications where large volumes of concrete are placed with wider reinforcement spacing, such as large foundations, retaining walls, bridge abutments and dam construction. These larger particles reduce the total cement paste required, making mass concrete more economical. Speciality aggregates exceeding 40mm, including riprap stone, gabion stone and armour stone, are used for erosion control, riverbank protection, coastal defences and landscaping where large, heavy particles are required to resist water flow and environmental forces.'
+      },
+      {
+        heading: 'Quality Requirements for Construction Aggregates',
+        body: 'The quality of aggregates has a profound impact on the performance and longevity of construction materials and finished structures. Aggregates must meet stringent quality requirements across several key parameters to be suitable for construction use. Particle strength is fundamental — aggregates must be hard and durable enough to withstand the loads they will carry in service without crushing or degrading. The aggregate crushing value and 10 percent fines value tests measure the resistance of aggregate particles to compressive loading, with lower values indicating stronger aggregates. Particle shape and texture affect the workability and strength of concrete. Angular, rough-textured crushed stone provides better mechanical interlock and higher bond strength with cement paste, while rounded gravel improves workability but may produce lower bond strength. Flaky and elongated particles are undesirable because they create weak planes in concrete, increase water demand and reduce strength. Gradation, or the distribution of particle sizes within an aggregate sample, is critical for achieving maximum density and minimum voids. Well-graded aggregates contain a balanced range of particle sizes that pack tightly together, reducing the amount of cement paste needed to fill voids and producing stronger, more economical concrete. Cleanliness is essential — aggregates must be free from clay, silt, organic matter, salts and other contaminants that can interfere with cement hydration, weaken the bond between aggregate and paste, or cause long-term durability problems such as efflorescence, staining or reinforcement corrosion. Durability encompasses the ability of aggregates to resist weathering, chemical attack, abrasion and volume changes over the service life of the structure. Aggregates must be chemically stable and not contain reactive silica minerals that could cause alkali-silica reaction, a destructive expansion that can crack concrete. In Tanzania, the Tanzania Bureau of Standards and TANROADS specifications define the quality requirements for aggregates used in buildings and infrastructure, and reputable suppliers like Tanzibaba test every batch to ensure compliance with these standards.'
+      },
+      {
+        heading: 'How to Choose the Right Aggregates for Your Project',
+        body: 'Selecting the right aggregates for a construction project requires consideration of the application, structural requirements, environmental exposure, availability and budget. For structural concrete in buildings — foundations, columns, beams and slabs — the standard specification is 20mm well-graded crushed stone combined with clean, well-graded sand or crusher dust as fine aggregate. The concrete grade required determines the aggregate quality — higher strength concrete grades above C30 require stronger, cleaner aggregates with tighter gradation control. For road construction, the base course requires high-quality crushed stone meeting specific gradation and strength requirements set by TANROADS, while the sub-base can use natural gravel or lower-grade crushed stone that is more economical. For drainage applications, clean single-sized gravel in the 20-40mm range provides excellent water flow through open voids between particles. For mortar and plaster, fine washed sand with controlled gradation produces smooth, workable mixes that apply easily and finish well. For paving block bedding, crusher dust compacts tightly to create a stable, level base that locks pavers in place. Environmental exposure affects aggregate selection — coastal areas with salt spray require aggregates with low absorption to resist chloride penetration, while areas with freeze-thaw exposure need aggregates that are resistant to scaling. Budget considerations are always important — using locally sourced aggregates reduces transport costs, and selecting the right aggregate size can reduce cement consumption, which is typically the most expensive component of concrete. Tanzibaba provides free technical advice to help customers select the optimal aggregates for any project anywhere in Tanzania, ensuring the right balance of quality, performance and cost-effectiveness.'
+      },
+      {
+        heading: 'Tanzibaba\'s Aggregate Range and Services',
+        body: 'Tanzibaba supplies a comprehensive range of construction aggregates sourced from carefully selected quarries and suppliers across Tanzania. Our product range includes crushed stone in all standard sizes from crusher dust to 40mm, natural gravel from screened deposits, river sand and crusher dust for fine aggregate applications, and speciality aggregates for drainage and erosion control. Every aggregate we supply is tested at our laboratory for gradation, strength, cleanliness and other quality parameters, with test certificates available for customers who require quality assurance documentation. We deliver aggregates anywhere in Dar es Salaam and surrounding regions using our fleet of tipper trucks and dump trucks, with capacity for loads from small residential quantities to large commercial and industrial volumes. Our technical team can advise on aggregate selection, quantity estimation and optimised concrete mix designs for any project. Whether you need aggregates for a house foundation in Mbezi Beach, a commercial building in the CBD, a road project in Morogoro, or a drainage system in Arusha, Tanzibaba has the products, quality assurance and logistics to deliver. Contact us today for a free quote on your aggregate requirements and let our experts help you select the right materials for your project.'
+      }
+    ],
+    faqs: [
+      { q: 'What are the main types of construction aggregates?', a: 'The three main types of construction aggregates are crushed stone (angular particles from mechanical rock crushing), gravel (rounded particles from natural weathering and erosion), and sand (fine particles under 5mm). Each type has different properties and is suited to different construction applications.' },
+      { q: 'What size aggregate is best for concrete?', a: 'For most reinforced concrete construction in Tanzania, 20mm crushed stone is the standard coarse aggregate size. It provides good strength while working well with typical reinforcement spacing. For thin sections and precast elements, 10mm aggregate is preferred. A well-graded combination of sizes produces the strongest concrete.' },
+      { q: 'How do I know if aggregates are good quality?', a: 'Good quality aggregates are clean, strong, well-graded and free from contaminants. They should have consistent colour, minimal clay or silt content, angular particle shape for crushed stone, and meet the strength requirements for your application. Request test certificates from your supplier to verify quality.' },
+      { q: 'Can I use gravel instead of crushed stone in concrete?', a: 'Gravel can be used in concrete, but its rounded shape provides lower bond strength compared to angular crushed stone. For structural concrete, crushed stone is generally preferred. For non-structural applications like mass fill and lean concrete, rounded gravel is acceptable and may improve workability.' },
+      { q: 'Where can I buy quality aggregates in Tanzania?', a: 'Tanzibaba supplies tested, quality-assured aggregates from our quarries to anywhere in Dar es Salaam and surrounding regions. We offer crushed stone, gravel, sand and crusher dust in all standard sizes with delivery and technical support. Contact us for a free quote on your aggregate requirements.' }
+    ],
+    keywords: ['aggregates complete guide', 'construction aggregates types', 'aggregate sizes Tanzania', 'crushed stone gravel sand', 'aggregate quality requirements', 'building aggregates guide', 'aggregates for concrete Tanzania'],
+    relatedArticles: ['what-are-aggregates', 'gravel-sizes-explained', 'how-aggregates-affect-concrete-quality', 'crusher-dust-guide', 'aggregates-for-buildings']
+  },
+  {
+    slug: 'gravel-sizes-uses',
+    title: 'Gravel Sizes and Their Uses in Construction',
+    description: 'Complete guide to gravel sizes for construction in Tanzania. Learn about dust, 6mm, 12mm, 25mm, 40mm gravel and their applications for concrete, drainage, roads and landscaping.',
+    h1: 'Gravel Sizes and Their Uses in Construction — The Complete Guide',
+    category: 'aggregates-gravel-academy',
+    readingTime: '10 min read',
+    publishedDate: '2025-06-01',
+    updatedDate: '2025-06-01',
+    content: [
+      {
+        heading: 'Understanding Gravel Sizes',
+        body: 'Gravel is one of the most versatile and widely used construction materials in Tanzania, valued for its availability, affordability and suitability for a wide range of applications. Gravel sizes are classified by the diameter of individual particles, measured in millimetres, and each size category serves specific purposes in construction. Understanding the different gravel sizes available and their appropriate applications is essential for selecting the right material for your project, ensuring optimal performance, structural integrity and cost-effectiveness. Gravel sizes used in Tanzanian construction typically range from the finest crusher dust at 0-4mm through intermediate sizes of 6mm, 10mm, 14mm and 20mm, up to coarse gravel of 25mm, 40mm and larger. Each size has distinct characteristics — particle shape, void content, drainage capacity and load-bearing ability — that make it suitable for particular applications. Choosing the wrong gravel size for an application can result in poor performance, structural failure, unnecessary expense or construction delays. This guide explains each gravel size category, its properties, typical applications and how to select the right size for your specific construction needs anywhere in Tanzania.'
+      },
+      {
+        heading: 'Gravel Dust (0-4mm): The Fine Aggregate Workhorse',
+        body: 'Gravel dust, commonly known as crusher dust, stone dust or quarry screenings, is the finest grade of gravel material with particles ranging from microscopic dust up to 4mm in diameter. This material is produced as a byproduct during the rock crushing process at quarries, where large stones are progressively broken down to produce coarser aggregate sizes. The fines generated at each crushing stage are collected and graded to produce crusher dust. Crusher dust has a distinctive grey or blue-grey colour depending on the parent rock, and its particles are angular and rough-textured due to the mechanical crushing process. These angular particles interlock tightly when compacted, creating a dense, stable material with minimal voids. Crusher dust is one of the most versatile construction materials available in Tanzania. Its primary application is as a bedding and levelling material for paving blocks and interlocking stones, where it compacts tightly to create a firm, even base that holds pavers securely in position while allowing water drainage through the joints. It is also used as a fine aggregate component in concrete production, particularly for grades up to C25, where its angular shape provides good bond with cement paste. Other applications include backfill material around pipes and foundations, fill for low-lying areas, base material for synthetic grass installation, floor screeds when mixed with cement, and manufacturing of concrete blocks and bricks. In Tanzania, crusher dust is more economical than river sand in many areas, particularly for projects located close to quarries, making it an increasingly popular choice for cost-conscious builders.'
+      },
+      {
+        heading: '6mm and 10mm Gravel: Small but Mighty',
+        body: '6mm and 10mm gravel sizes occupy the smaller end of the coarse aggregate spectrum and serve important roles in construction where precision and fine detail are required. 6mm gravel, sometimes called pea gravel or fine aggregate, consists of particles ranging from 6mm down to the upper limit of crusher dust. This size is commonly used in concrete production for precast elements, concrete blocks, screeds and thin concrete sections where larger aggregates cannot fit into the mould or around dense reinforcement. The small particle size allows for smooth finishes and detailed work in decorative concrete, exposed aggregate surfaces and architectural elements. 10mm gravel is one of the most commonly used coarse aggregate sizes in Tanzanian construction. It is the standard size for concrete blocks and hollow blocks, where the smaller particles work well within the block mould dimensions and produce a dense, strong finished product. In structural concrete, 10mm aggregate is often combined with 20mm aggregate to create a well-graded blend that achieves maximum density and minimum voids. 10mm aggregate is also widely used in asphalt production for surface courses, where its smaller size creates a smoother road surface with better ride quality. In drainage applications, clean 10mm gravel is used in filter layers, French drains and around perforated pipes where its relatively uniform size allows water to pass through while preventing fine soil particles from entering the drainage system. For landscaping and decorative purposes, 10mm gravel is popular for garden paths, decorative borders, water features and exposed aggregate concrete finishes where the small stones create an attractive, textured surface.'
+      },
+      {
+        heading: '12mm, 14mm and 20mm Gravel: The Standard Construction Sizes',
+        body: 'The 12mm, 14mm and 20mm gravel sizes represent the core range of coarse aggregates used in general construction across Tanzania, and understanding their characteristics and applications is essential for any construction project. 12mm gravel is a versatile intermediate size used in concrete for thin sections, closely spaced reinforcement, precast manufacturing, and concrete blocks. Its smaller size compared to 20mm allows it to flow more easily into tight spaces and around reinforcement bars, making it ideal for complex formwork and heavily reinforced elements. 14mm gravel serves a similar role to 12mm but is slightly coarser, providing a good balance between workability and strength in concrete mixes. It is frequently specified for concrete columns, beams and slabs where the reinforcement spacing requires a smaller maximum aggregate size than the standard 20mm. 20mm gravel is the most widely used coarse aggregate size in Tanzania and across the construction industry globally. It is the standard maximum aggregate size for general reinforced concrete in foundations, ground slabs, suspended slabs, columns, beams, retaining walls and most other structural applications. The 20mm size provides excellent concrete strength while remaining small enough to work well with typical reinforcement spacing of 150mm or greater. In Tanzania, 20mm crushed stone from hard rock quarries is the benchmark aggregate against which all other concrete aggregate sizes are compared. For road construction, 14mm and 20mm aggregates are used in asphalt concrete for wearing and binder courses, and in cement-treated base materials where their size and shape provide good compaction and load distribution. For residential and commercial building projects, these sizes form the bulk of aggregate requirements for all structural concrete elements.'
+      },
+      {
+        heading: '25mm, 40mm and Larger Gravel: Heavy Duty Applications',
+        body: 'Gravel sizes of 25mm, 40mm and larger are classified as coarse aggregates used in heavy construction applications where maximum load-bearing capacity, drainage performance or erosion resistance is required. 25mm gravel is used in concrete for mass fill applications, larger structural elements with wide reinforcement spacing, and precast products. Its larger size compared to 20mm reduces the total surface area of particles, which in turn reduces the amount of cement paste required, making it more economical for mass concrete pours. 40mm gravel is the standard size for several important construction applications. In road construction, 40mm crushed stone is commonly used for sub-base and base course materials, where its large size provides excellent load distribution and drainage characteristics. In building construction, 40mm aggregate is specified for mass concrete foundations, strip footings, retaining wall foundations and other large-volume pours where reinforcement spacing permits the use of larger particles. For drainage applications, clean 40mm gravel is ideal for French drains, soakaway systems, septic tank drainage fields and subsurface drainage layers where maximum water flow capacity is needed. The large particle size creates substantial voids between stones that allow water to flow freely while maintaining structural stability. Beyond 40mm, larger aggregates including 50mm, 75mm, 100mm and bigger are classified as riprap, gabion stone or armour stone. These large, heavy stones are used for erosion protection on riverbanks, shorelines, embankments and coastal defences, where their size and weight resist the forces of flowing or standing water. Gabion stone is used to fill wire mesh baskets that form retaining walls, bridge abutments and erosion control structures. In Tanzania, large aggregates are essential for infrastructure projects in hilly terrain and coastal areas where erosion control is a critical engineering concern.'
+      },
+      {
+        heading: 'How to Choose the Right Gravel Size for Your Project',
+        body: 'Choosing the correct gravel size for your construction project requires understanding the relationship between particle size, void content, load-bearing capacity, drainage characteristics and workability. The first step is to identify the primary function the gravel will serve — structural support, drainage, bedding, fill or decorative finish. For structural concrete, the maximum aggregate size should not exceed one-quarter of the minimum concrete member thickness or three-quarters of the clear spacing between reinforcement bars. This rule of thumb ensures that aggregate particles can be properly placed and compacted around reinforcement without creating honeycombing or voids. For road base and sub-base, a well-graded blend of sizes from crusher dust up to 40mm provides the best compaction and load distribution, as the smaller particles fill the voids between larger ones to create a dense, stable layer. For drainage applications, clean single-sized gravel in the 20mm to 40mm range provides the best water flow, with the uniform size creating maximum interconnected voids. Avoid using graded or dusty gravel in drainage applications as the fine particles will clog the voids and impede water flow. For paving block bedding, crusher dust (0-4mm) is the preferred material because its angular particles compact tightly to create a firm, level surface that holds pavers in place. For decorative landscaping, the choice depends on aesthetic preference — 10mm gravel provides a fine, neat appearance for paths and borders, while 20mm to 40mm gravel creates a more natural, rustic look for garden features and driveways. Tanzibaba offers free expert advice to help customers select the optimal gravel size for any application, ensuring the right material for every project across Tanzania.'
+      }
+    ],
+    faqs: [
+      { q: 'What is the most common gravel size for construction?', a: 'The most common gravel size for general construction in Tanzania is 20mm crushed stone, which is the standard coarse aggregate for reinforced concrete in foundations, slabs, columns and beams. For road construction, a well-graded blend from crusher dust to 40mm is standard for base and sub-base layers.' },
+      { q: 'What size gravel is used for drainage?', a: 'For drainage applications, clean single-sized gravel in the 20mm to 40mm range is best. The uniform size creates open voids that allow water to flow freely. Washed or screened gravel without fines is essential to prevent clogging the drainage system over time.' },
+      { q: 'Can crusher dust be used for paving?', a: 'Yes, crusher dust is the preferred bedding material for paving blocks and interlocking stones. When compacted, it creates a stable, level base that locks pavers in place while allowing water drainage through the joints. It is widely used for paving projects throughout Tanzania.' },
+      { q: 'What is the difference between 14mm and 20mm aggregate?', a: 'The main difference is particle size — 14mm aggregate has particles up to 14mm while 20mm has particles up to 20mm. 14mm is used for thinner concrete sections and closely spaced reinforcement. 20mm is the standard size for general reinforced concrete construction with typical reinforcement spacing.' },
+      { q: 'How do I calculate how much gravel I need?', a: 'Calculate the volume of the area to be filled in cubic metres by multiplying length × width × depth. Multiply by the density of the gravel type (typically 1.5-1.8 tonnes per cubic metre) to get the weight required. Add 10-15 percent for compaction and wastage. Contact Tanzibaba for help with quantity calculations.' }
+    ],
+    keywords: ['gravel sizes and uses', 'gravel size chart construction', 'crusher dust uses', '6mm gravel', '12mm gravel', '20mm gravel', '40mm gravel Tanzania', 'which gravel size for concrete', 'gravel for drainage'],
+    relatedArticles: ['gravel-sizes-explained', 'what-are-aggregates', 'crusher-dust-guide', 'road-base-guide', 'aggregates-complete-guide']
   }
 ];

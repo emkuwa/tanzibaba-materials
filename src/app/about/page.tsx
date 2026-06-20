@@ -41,47 +41,6 @@ export default function About() {
     <>
       <Navbar />
       <main>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@graph': [
-              {
-                '@type': 'Organization',
-                '@id': `${siteUrl}/#organization`,
-                name: 'Tanzibaba',
-                url: siteUrl,
-                logo: `${siteUrl}/images/logo/tanzibaba.svg`,
-                description: 'Tanzania\'s premium building materials supplier — ready-mix concrete, aggregates, blocks and construction materials.',
-                foundingDate: '2018',
-                address: { '@type': 'PostalAddress', addressLocality: 'Dar es Salaam', addressCountry: 'TZ' },
-                contactPoint: { '@type': 'ContactPoint', telephone: '+255716002790', contactType: 'customer service', availableLanguage: ['English', 'Swahili'] },
-                sameAs: ['https://wa.me/255716002790'],
-              },
-              {
-                '@type': 'LocalBusiness',
-                '@id': `${siteUrl}/#business`,
-                name: 'Tanzibaba',
-                description: 'Premium construction materials supplier in Dar es Salaam — ready-mix concrete, aggregates, crushed stone, and road construction materials.',
-                url: siteUrl,
-                telephone: '+255716002790',
-                email: 'info@tanzibaba.co.tz',
-                areaServed: 'Dar es Salaam, Tanzania',
-                image: `${siteUrl}/images/new/mobile-hero.webp`,
-                address: { '@type': 'PostalAddress', addressLocality: 'Dar es Salaam', addressCountry: 'TZ' },
-                geo: { '@type': 'GeoCoordinates', latitude: -6.7924, longitude: 39.2083 },
-                openingHoursSpecification: [
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '07:00', closes: '18:00' },
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '07:00', closes: '18:00' },
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '07:00', closes: '18:00' },
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '07:00', closes: '18:00' },
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '07:00', closes: '18:00' },
-                  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '15:00' },
-                ],
-              },
-            ],
-          }) }}
-        />
         <section className="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden pt-20">
           <div className="absolute inset-0">
             <Image src="/images/large-construction-projects-dar-es-salaam.jpg" alt="Tanzibaba concrete delivery operations in Dar es Salaam" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />

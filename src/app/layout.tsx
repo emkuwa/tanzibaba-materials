@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+    languages: {
+      'x-default': siteUrl,
+    },
   },
   openGraph: {
     title: 'Tanzibaba — Premium Concrete, Aggregates & Building Materials Supplier | Tanzania',

@@ -30,7 +30,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'When should I get a cost estimate?', a: 'Get a preliminary cost estimate during the feasibility stage to determine project viability. A more detailed estimate should be prepared once the architectural design is 50 to 70 percent complete. The final detailed estimate should be based on complete drawings and a bill of quantities before tendering.' }
     ],
     keywords: ['construction cost estimation', 'building cost Tanzania', 'construction budget', 'material costs Tanzania', 'labour costs Tanzania'],
-    relatedArticles: ['how-to-estimate-construction-costs', 'budget-planning-guide', 'boq-basics']
+    relatedArticles: ['how-to-estimate-construction-costs', 'budget-planning-guide', 'boq-basics'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'boq-basics',
@@ -57,7 +64,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'What happens if the actual quantities differ from the BOQ?', a: 'If actual quantities differ significantly from the BOQ measurements, this may constitute a variation. The contract typically provides for re-measurement of quantities based on actual work completed, with payments adjusted using the agreed BOQ rates. Significant deviations should be reported and agreed between the parties.' }
     ],
     keywords: ['bill of quantities', 'BOQ construction', 'quantity surveying', 'construction tendering', 'BOQ preparation'],
-    relatedArticles: ['how-to-estimate-construction-costs', 'construction-cost-estimation', 'material-quantity-calculations']
+    relatedArticles: ['how-to-estimate-construction-costs', 'construction-cost-estimation', 'material-quantity-calculations'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'material-quantity-calculations',

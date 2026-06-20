@@ -28,10 +28,28 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const country = getCountryBySlug(parsed.enLocationSlug);
   const locName = location?.name || region?.name || country?.name || parsed.enLocationSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) || 'Tanzania';
 
+  // Build full English slug from parsed components for reciprocal hreflang
+  let enFullSlug: string | null = null;
+  if (parsed.enLocationSlug) {
+    enFullSlug = `${parsed.enServiceSlug}-${parsed.enLocationSlug}`;
+  } else if (parsed.serviceType === 'special') {
+    // Special pages map directly via swahiliSpecialPages
+    enFullSlug = parsed.enServiceSlug;
+  } else if (parsed.serviceType === 'east-africa') {
+    enFullSlug = `${parsed.enServiceSlug}-east-africa`;
+  }
+  const enUrl = enFullSlug ? `${siteUrl}/${enFullSlug}` : null;
+
   return {
     title: `${swData.title} ${locName} | Tanzibaba`,
     description: swData.desc(locName),
-    alternates: { canonical: `${siteUrl}/sw/${slug}` },
+    alternates: {
+      canonical: `${siteUrl}/sw/${slug}`,
+      languages: {
+        'en': enUrl || undefined,
+        'x-default': enUrl || undefined,
+      },
+    },
     openGraph: { title: `${swData.title} ${locName}`, description: swData.desc(locName), url: `${siteUrl}/sw/${slug}`, siteName: 'Tanzibaba', type: 'website', locale: 'sw_TZ' },
   };
 }

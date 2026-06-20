@@ -57,13 +57,7 @@ const locationPages = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ['', '/get-quote', '/about', '/contact', '/major-projects',
     '/tools', '/directory', '/learn',
-    '/commercial-construction', '/commercial-construction-dar-es-salaam',
-    '/commercial-construction-dodoma', '/infrastructure-construction',
-    '/construction-company-dodoma', '/ready-mix-concrete-zanzibar',
-    '/construction-company-zanzibar', '/construction-materials-zanzibar',
-    '/ready-mix-concrete-dodoma', '/construction-company-tanzania',
-    '/commercial-construction-tanzania', '/infrastructure-construction-tanzania',
-    '/government-construction-projects', '/industrial-construction-tanzania',
+    '/commercial-construction',
   ];
   const today = new Date();
 

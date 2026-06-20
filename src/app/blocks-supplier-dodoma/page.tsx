@@ -88,6 +88,32 @@ export default function BlocksDodomaPage() {
           </div>
         </section>
 
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-6 text-center">Other Services in Dodoma</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/aggregates-supplier-dodoma" className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-orange-50 border border-gray-100 hover:border-orange-200 transition-all group">
+                <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors">
+                  <span className="text-orange-600 font-bold text-sm">A</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">Aggregates</p>
+                  <p className="text-gray-500 text-xs">Dodoma Supplier</p>
+                </div>
+              </Link>
+              <Link href="/paving-blocks-dodoma" className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-purple-50 border border-gray-100 hover:border-purple-200 transition-all group">
+                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                  <span className="text-purple-600 font-bold text-sm">P</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">Paving Blocks</p>
+                  <p className="text-gray-500 text-xs">Dodoma Supplier</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Need Blocks in Dodoma?</h2>

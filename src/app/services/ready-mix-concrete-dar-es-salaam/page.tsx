@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Truck, Zap, CheckCircle, Shield, MapPin, MessageCircle, ArrowRight, Factory, Scale, HardHat } from 'lucide-react';
+import { Truck, Zap, CheckCircle, Shield, MapPin, MessageCircle, ArrowRight, Factory, Scale, HardHat, Clock, Headphones } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -60,6 +60,29 @@ export default function ReadyMixConcreteDarEsSalaam() {
                 <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all">
                   <MessageCircle className="w-5 h-5 text-green-400" /> WhatsApp Us
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full border border-green-200">
+                <CheckCircle className="w-4 h-4" />
+                <span className="text-sm font-semibold">Quality Certified</span>
+              </div>
+              <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full border border-blue-200">
+                <Clock className="w-4 h-4" />
+                <span className="text-sm font-semibold">On-Time Delivery</span>
+              </div>
+              <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full border border-purple-200">
+                <Headphones className="w-4 h-4" />
+                <span className="text-sm font-semibold">24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2 bg-orange-50 text-orange-700 px-4 py-2 rounded-full border border-orange-200">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm font-semibold">Response within 2 hours</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, MessageCircle, Send, Clock, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Send, Clock, ArrowRight, HelpCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -139,8 +139,41 @@ export default function Contact() {
             </div>
           </div>
         </section>
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {[
+                { q: 'What are your hours?', a: 'We operate Monday to Friday 07:00–18:00, Saturday 08:00–15:00, and Sunday closed. Emergency orders can be arranged via WhatsApp outside these hours.' },
+                { q: 'How do I get a quote?', a: 'The quickest way is WhatsApp at 0716 002 790. You can also email quotes@tanzibaba.co.tz or use our online form at /get-quote. We typically respond within minutes during business hours.' },
+                { q: 'Do you deliver nationwide?', a: 'We operate primarily in Dar es Salaam, Zanzibar and Dodoma. Additional regions in Tanzania can be serviced subject to project requirements. Contact us to discuss delivery to your location.' },
+                { q: 'What payment methods do you accept?', a: 'We accept bank transfer, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash. Corporate accounts with credit terms are available for qualifying businesses.' },
+                { q: 'How quickly can I get delivery?', a: 'For Dar es Salaam deliveries, we can often arrange same-day or next-day delivery once your order is confirmed. Contact us early in the day for best availability.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            { q: 'What are your hours?', a: 'We operate Monday to Friday 07:00–18:00, Saturday 08:00–15:00, and Sunday closed. Emergency orders can be arranged via WhatsApp outside these hours.' },
+            { q: 'How do I get a quote?', a: 'The quickest way is WhatsApp at 0716 002 790. You can also email quotes@tanzibaba.co.tz or use our online form at /get-quote. We typically respond within minutes during business hours.' },
+            { q: 'Do you deliver nationwide?', a: 'We operate primarily in Dar es Salaam, Zanzibar and Dodoma. Additional regions in Tanzania can be serviced subject to project requirements. Contact us to discuss delivery to your location.' },
+            { q: 'What payment methods do you accept?', a: 'We accept bank transfer, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash. Corporate accounts with credit terms are available for qualifying businesses.' },
+            { q: 'How quickly can I get delivery?', a: 'For Dar es Salaam deliveries, we can often arrange same-day or next-day delivery once your order is confirmed. Contact us early in the day for best availability.' },
+          ].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+        }) }} />
       </main>
-      <Footer />
     </>
   );
 }

@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Ubungo | Premium Supply | Tanzibaba',
   description: 'Ready-mix concrete delivery in Ubungo district. Serving Kimara, Mbezi, Gongo la Mboto & more. Premium concrete with washed sand technology.',
   keywords: ['ready mix concrete ubungo', 'concrete kimara', 'concrete mbezi'],
-  alternates: { canonical: `${siteUrl}/services/ready-mix-concrete-ubungo` },
+  alternates: { canonical: `${siteUrl}/ready-mix-concrete-ubungo` },
   openGraph: {
     title: 'Ready-Mix Concrete Ubungo | Premium Supply | Tanzibaba',
     description: 'Ready-mix concrete delivery in Ubungo district. Serving Kimara, Mbezi, Gongo la Mboto & more.',
-    url: `${siteUrl}/services/ready-mix-concrete-ubungo`,
+    url: `${siteUrl}/ready-mix-concrete-ubungo`,
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',

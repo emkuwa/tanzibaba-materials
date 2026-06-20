@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, FileText, CheckSquare, LandPlot, Leaf, TrendingUp, Gavel, UserCheck, ExternalLink, Search, ArrowRight, Shield, BookOpen, ClipboardList } from 'lucide-react';
+import { Building2, FileText, CheckSquare, LandPlot, Leaf, TrendingUp, Gavel, UserCheck, ExternalLink, Search, ArrowRight, Shield, BookOpen, ClipboardList, HelpCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { govCategories } from '@/data/government/categories';
@@ -72,8 +72,40 @@ export default function GovernmentHubPage() {
             </div>
           </div>
         </section>
+
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {[
+                { q: 'What permits are needed for construction in Tanzania?', a: 'Most construction projects require a building permit from your local municipal council. Major projects may also need environmental impact assessment (EIA) certificates, fire safety clearance, and structural approval from registered engineers. Requirements vary by project type and location.' },
+                { q: 'What regulations apply to construction?', a: 'Construction in Tanzania is governed by the National Building Research Institute (NBRI) standards, local municipal bylaws, and relevant environmental regulations. Projects must comply with the Building Act, land use planning laws, and any applicable zoning requirements.' },
+                { q: 'How do I register as a contractor?', a: 'Contractor registration in Tanzania is handled by the Contractors Registration Board (CRB). You need to meet qualification criteria including professional certifications, equipment, and experience. Visit the CRB website or contact them directly for the current application process.' },
+                { q: 'Where can I find official government resources?', a: 'This Government Hub provides links to key Tanzanian government agencies, regulatory bodies, and official portals. You can also visit municipal offices directly or contact us via WhatsApp for guidance on navigating specific procedures.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            { q: 'What permits are needed for construction in Tanzania?', a: 'Most construction projects require a building permit from your local municipal council. Major projects may also need environmental impact assessment (EIA) certificates, fire safety clearance, and structural approval from registered engineers. Requirements vary by project type and location.' },
+            { q: 'What regulations apply to construction?', a: 'Construction in Tanzania is governed by the National Building Research Institute (NBRI) standards, local municipal bylaws, and relevant environmental regulations. Projects must comply with the Building Act, land use planning laws, and any applicable zoning requirements.' },
+            { q: 'How do I register as a contractor?', a: 'Contractor registration in Tanzania is handled by the Contractors Registration Board (CRB). You need to meet qualification criteria including professional certifications, equipment, and experience. Visit the CRB website or contact them directly for the current application process.' },
+            { q: 'Where can I find official government resources?', a: 'This Government Hub provides links to key Tanzanian government agencies, regulatory bodies, and official portals. You can also visit municipal offices directly or contact us via WhatsApp for guidance on navigating specific procedures.' },
+          ].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+        }) }} />
       </main>
-      <Footer />
     </>
   );
 }

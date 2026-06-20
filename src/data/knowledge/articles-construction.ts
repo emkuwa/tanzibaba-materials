@@ -542,7 +542,14 @@ export const constructionArticles: KnowledgeArticle[] = [
       { q: 'What affects construction material prices?', a: 'Construction material prices in Tanzania are influenced by global commodity prices (especially cement and steel), import duties and taxes, transportation costs from source to site, seasonal demand fluctuations, fuel prices affecting production and transport, and currency exchange rates for imported materials. Prices typically rise during peak construction seasons.' }
     ],
     keywords: ['construction materials guide', 'types of building materials', 'construction materials Tanzania', 'building materials list', 'construction materials supplier Dar es Salaam'],
-    relatedArticles: ['how-to-estimate-construction-costs', 'construction-quality-control', 'construction-process-explained']
+    relatedArticles: ['how-to-estimate-construction-costs', 'construction-quality-control', 'construction-process-explained'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'house-construction-process-tanzania',

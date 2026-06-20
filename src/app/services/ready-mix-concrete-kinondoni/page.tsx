@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Kinondoni | Premium Supply | Tanzibaba',
   description: 'Ready-mix concrete supply in Kinondoni district. Fast delivery to Magomeni, Mikocheni, Sinza, Kawe & more. Premium quality, instant quotes.',
   keywords: ['ready mix concrete kinondoni', 'concrete delivery kinondoni', 'concrete magomeni'],
-  alternates: { canonical: `${siteUrl}/services/ready-mix-concrete-kinondoni` },
+  alternates: { canonical: `${siteUrl}/ready-mix-concrete-kinondoni` },
   openGraph: {
     title: 'Ready-Mix Concrete Kinondoni | Premium Supply | Tanzibaba',
     description: 'Ready-mix concrete supply in Kinondoni district. Fast delivery to Magomeni, Mikocheni, Sinza, Kawe & more.',
-    url: `${siteUrl}/services/ready-mix-concrete-kinondoni`,
+    url: `${siteUrl}/ready-mix-concrete-kinondoni`,
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',

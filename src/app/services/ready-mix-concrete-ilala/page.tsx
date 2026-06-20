@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Ilala | Premium Supply | Tanzibaba',
   description: 'Ready-mix concrete supply in Ilala district. Serving Kariakoo, Upanga, Buguruni, Tabata, Pugu & more. Quality concrete delivered fast.',
   keywords: ['ready mix concrete ilala', 'concrete kariakoo', 'concrete upanga'],
-  alternates: { canonical: `${siteUrl}/services/ready-mix-concrete-ilala` },
+  alternates: { canonical: `${siteUrl}/ready-mix-concrete-ilala` },
   openGraph: {
     title: 'Ready-Mix Concrete Ilala | Premium Supply | Tanzibaba',
     description: 'Ready-mix concrete supply in Ilala district. Serving Kariakoo, Upanga, Buguruni, Tabata, Pugu & more.',
-    url: `${siteUrl}/services/ready-mix-concrete-ilala`,
+    url: `${siteUrl}/ready-mix-concrete-ilala`,
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',

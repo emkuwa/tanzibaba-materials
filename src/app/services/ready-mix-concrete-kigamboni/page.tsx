@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Kigamboni | Premium Supply | Tanzibaba',
   description: 'Ready-mix concrete supply in Kigamboni district. Serving Kigamboni, Vijibweni, Somangila, Tungi & more. Quality concrete, fast delivery.',
   keywords: ['ready mix concrete kigamboni', 'concrete kigamboni', 'concrete vijibweni'],
-  alternates: { canonical: `${siteUrl}/services/ready-mix-concrete-kigamboni` },
+  alternates: { canonical: `${siteUrl}/ready-mix-concrete-kigamboni` },
   openGraph: {
     title: 'Ready-Mix Concrete Kigamboni | Premium Supply | Tanzibaba',
     description: 'Ready-mix concrete supply in Kigamboni district. Serving Kigamboni, Vijibweni, Somangila, Tungi & more.',
-    url: `${siteUrl}/services/ready-mix-concrete-kigamboni`,
+    url: `${siteUrl}/ready-mix-concrete-kigamboni`,
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',

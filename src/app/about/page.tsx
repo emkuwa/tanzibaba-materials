@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Shield, Truck, CheckCircle, MapPin, MessageCircle, Award, Factory, HardHat, Users } from 'lucide-react';
+import { Shield, Truck, CheckCircle, MapPin, MessageCircle, Award, Factory, HardHat, Users, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -110,6 +110,29 @@ export default function About() {
           </div>
         </section>
 
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {[
+                { q: 'What is Tanzibaba?', a: 'Tanzibaba is Dar es Salaam\'s premium ready-mix concrete supplier. We provide quality-controlled concrete using washed sand technology and computerized batching, serving commercial, industrial, infrastructure and residential projects across Tanzania.' },
+                { q: 'What products do you offer?', a: 'We offer a full range of ready-mix concrete grades (from M5 to C50+), concrete pumping services, and construction materials supply. Our concrete is suitable for foundations, slabs, columns, beams, and all structural applications.' },
+                { q: 'Where do you deliver?', a: 'We operate across all five districts of Dar es Salaam (Kinondoni, Ubungo, Ilala, Temeke, and Kigamboni), as well as Zanzibar and Dodoma. Additional regions in Tanzania can be serviced subject to project requirements.' },
+                { q: 'What is washed sand technology?', a: 'Washed sand technology involves thoroughly cleaning aggregate materials to remove silt, clay, and impurities before mixing. This produces concrete with superior strength, better workability, and greater consistency compared to unwashed alternatives.' },
+                { q: 'How do I get a quote?', a: 'You can request a quote via WhatsApp at 0716 002 790, email quotes@tanzibaba.co.tz, or use our online quote form at /get-quote. We respond within minutes during business hours.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 px-4 bg-brand-600">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Work with Tanzibaba?</h2>
@@ -120,6 +143,17 @@ export default function About() {
             </div>
           </div>
         </section>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            { q: 'What is Tanzibaba?', a: 'Tanzibaba is Dar es Salaam\'s premium ready-mix concrete supplier. We provide quality-controlled concrete using washed sand technology and computerized batching, serving commercial, industrial, infrastructure and residential projects across Tanzania.' },
+            { q: 'What products do you offer?', a: 'We offer a full range of ready-mix concrete grades (from M5 to C50+), concrete pumping services, and construction materials supply. Our concrete is suitable for foundations, slabs, columns, beams, and all structural applications.' },
+            { q: 'Where do you deliver?', a: 'We operate across all five districts of Dar es Salaam (Kinondoni, Ubungo, Ilala, Temeke, and Kigamboni), as well as Zanzibar and Dodoma. Additional regions in Tanzania can be serviced subject to project requirements.' },
+            { q: 'What is washed sand technology?', a: 'Washed sand technology involves thoroughly cleaning aggregate materials to remove silt, clay, and impurities before mixing. This produces concrete with superior strength, better workability, and greater consistency compared to unwashed alternatives.' },
+            { q: 'How do I get a quote?', a: 'You can request a quote via WhatsApp at 0716 002 790, email quotes@tanzibaba.co.tz, or use our online quote form at /get-quote. We respond within minutes during business hours.' },
+          ].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+        }) }} />
       </main>
       <Footer />
     </>

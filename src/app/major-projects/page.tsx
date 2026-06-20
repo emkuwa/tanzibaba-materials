@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProjectQualificationForm from '@/components/ProjectQualificationForm';
-import { Building2, FlaskConical, HardHat, ArrowRight, CheckCircle } from 'lucide-react';
+import { Building2, FlaskConical, HardHat, ArrowRight, CheckCircle, HelpCircle } from 'lucide-react';
 
 const siteUrl = 'https://materials.tanzibaba.com';
 
@@ -195,8 +195,42 @@ export default function MajorProjectsPage() {
             </div>
           </div>
         </section>
+
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {[
+                { q: 'What projects have you supplied?', a: 'Tanzibaba has supplied concrete for landmark projects including Vijana Towers, Viva Towers, and Hotel Verde Zanzibar. Our Major Projects division handles commercial developments, industrial facilities, and infrastructure projects across Tanzania.' },
+                { q: 'Can I visit a site?', a: 'Site visits can be arranged for qualified project leads. Contact our Major Projects team via WhatsApp at 0716 002 790 to discuss scheduling a visit to one of our active project sites in Dar es Salaam, Zanzibar, or Dodoma.' },
+                { q: 'How do I become a project supplier?', a: 'Submit your project details through the qualification form on this page. Our team reviews submissions within 1-2 days and will contact you to discuss how we can support your project requirements.' },
+                { q: 'What regions do you cover for major projects?', a: 'Our primary operations cover Dar es Salaam, Zanzibar and Dodoma. Additional construction projects can be undertaken in other regions of Tanzania subject to project requirements and scale.' },
+                { q: 'What project types do you accept?', a: 'We accept commercial developments (offices, hotels, retail), industrial facilities (warehouses, factories, cold storage), infrastructure projects (roads, bridges, drainage), and government construction projects.' },
+              ].map((faq, i) => (
+                <details key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden group">
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 border-t border-gray-100 pt-3">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            { q: 'What projects have you supplied?', a: 'Tanzibaba has supplied concrete for landmark projects including Vijana Towers, Viva Towers, and Hotel Verde Zanzibar. Our Major Projects division handles commercial developments, industrial facilities, and infrastructure projects across Tanzania.' },
+            { q: 'Can I visit a site?', a: 'Site visits can be arranged for qualified project leads. Contact our Major Projects team via WhatsApp at 0716 002 790 to discuss scheduling a visit to one of our active project sites in Dar es Salaam, Zanzibar, or Dodoma.' },
+            { q: 'How do I become a project supplier?', a: 'Submit your project details through the qualification form on this page. Our team reviews submissions within 1-2 days and will contact you to discuss how we can support your project requirements.' },
+            { q: 'What regions do you cover for major projects?', a: 'Our primary operations cover Dar es Salaam, Zanzibar and Dodoma. Additional construction projects can be undertaken in other regions of Tanzania subject to project requirements and scale.' },
+            { q: 'What project types do you accept?', a: 'We accept commercial developments (offices, hotels, retail), industrial facilities (warehouses, factories, cold storage), infrastructure projects (roads, bridges, drainage), and government construction projects.' },
+          ].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+        }) }} />
       </main>
-      <Footer />
     </>
   );
 }

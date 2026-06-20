@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calculator, Ruler, Square, PaintBucket, HardHat, DollarSign, FileText, Bot, ArrowRight } from 'lucide-react';
+import { Calculator, Ruler, Square, PaintBucket, HardHat, DollarSign, FileText, ArrowRight } from 'lucide-react';
 
 const tools = [
   { icon: Ruler, title: 'Concrete Calculator', desc: 'Calculate exact concrete volume for slabs, columns, beams and footings.', href: '/tools/concrete-calculator', color: 'bg-brand-50 text-brand-600' },
@@ -11,7 +11,6 @@ const tools = [
   { icon: HardHat, title: 'Material Estimator', desc: 'Comprehensive construction material estimation.', href: '/tools/material-estimator', color: 'bg-green-50 text-green-600' },
   { icon: DollarSign, title: 'Cost Calculator', desc: 'Estimate total construction costs for your project.', href: '/tools/cost-calculator', color: 'bg-emerald-50 text-emerald-600' },
   { icon: FileText, title: 'BOQ Generator', desc: 'Generate a bill of quantities for your construction project.', href: '/tools/boq-generator', color: 'bg-indigo-50 text-indigo-600' },
-  { icon: Bot, title: 'AI Assistant', desc: 'Get AI-powered construction advice and answers.', href: '/ai-assistant', color: 'bg-rose-50 text-rose-600' },
 ];
 
 export const metadata = {

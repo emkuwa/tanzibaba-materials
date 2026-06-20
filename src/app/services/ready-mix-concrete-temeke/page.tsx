@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Ready-Mix Concrete Temeke | Premium Supply | Tanzibaba',
   description: 'Ready-mix concrete delivery in Temeke district. Serving Mbagala, Charambe, Kurasini, Mtoni & more. Premium concrete for all projects.',
   keywords: ['ready mix concrete temeke', 'concrete mbagala', 'concrete kurasini'],
-  alternates: { canonical: `${siteUrl}/services/ready-mix-concrete-temeke` },
+  alternates: { canonical: `${siteUrl}/ready-mix-concrete-temeke` },
   openGraph: {
     title: 'Ready-Mix Concrete Temeke | Premium Supply | Tanzibaba',
     description: 'Ready-mix concrete delivery in Temeke district. Serving Mbagala, Charambe, Kurasini, Mtoni & more.',
-    url: `${siteUrl}/services/ready-mix-concrete-temeke`,
+    url: `${siteUrl}/ready-mix-concrete-temeke`,
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',

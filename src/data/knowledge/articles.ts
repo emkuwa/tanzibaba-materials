@@ -88,7 +88,12 @@ const newArticles: KnowledgeArticle[] = [
       { heading: 'Block Quantity Calculations', body: 'Block quantities are calculated based on wall area. For standard 400mm by 200mm blocks with 10mm mortar joints, the rate is approximately 12.5 blocks per square metre of wall area. Measure the length and height of each wall in metres, multiply to get the area, then multiply by 12.5. Subtract openings for doors and windows and add 5 to 10 percent for wastage. For example, a house with 40 metres of external wall at 3 metres high has a gross wall area of 120 square metres. Deducting 25 square metres for openings gives 95 square metres, requiring 95 × 12.5 = 1,188 blocks, plus 10 percent wastage = approximately 1,307 blocks. Remember to include internal partition walls and order half-blocks and lintel blocks as required.' },
       { heading: 'Steel Reinforcement Quantities', body: 'Steel reinforcement quantities are estimated based on the structural design, which specifies bar sizes, spacing and bending schedules for each structural element. For preliminary budgeting, reinforcement typically ranges from 80 to 120 kilograms per cubic metre of concrete for residential construction, and 100 to 150 kilograms per cubic metre for commercial buildings. Higher reinforcement ratios are needed for heavily loaded elements such as transfer beams and columns in multi-storey structures. Steel prices fluctuate significantly in Tanzania, so obtaining current pricing from suppliers is essential for accurate cost estimation. The structural engineer provides a detailed bending schedule that lists every bar required, which the contractor uses for procurement and fixing. Always order 5 to 10 percent extra to account for cutting waste and minor adjustments.' },
       { heading: 'Sand And Aggregate Quantities', body: 'Sand and aggregate quantities are derived from the concrete mix design and total concrete volume. For a typical C25 concrete mix, the proportions are approximately 1 part cement, 2 parts sand and 4 parts aggregate by volume. This means each cubic metre of concrete requires roughly 0.4 cubic metres of sand and 0.8 cubic metres of aggregate, plus cement. For mortar, typical proportions are 1 part cement to 4 to 6 parts sand by volume. Calculate the mortar volume based on joint thickness (typically 10mm) multiplied by the total length of joints in the wall. Aggregates for road base and drainage are calculated separately based on the required layer thickness and area. Always account for compaction losses of 15 to 20 percent when ordering loose aggregates.' },
-      { heading: 'Wastage Allowances', body: 'Wastage is an inevitable part of construction and must be accounted for in all material quantity calculations. Standard wastage allowances vary by material and project type. Concrete typically requires 5 to 10 percent wastage depending on site conditions and pour complexity. Blocks require 5 to 10 percent for cutting, breakage during handling and transport damage. Steel reinforcement requires 5 to 8 percent for cutting losses at bends and splices. Sand and aggregates require 15 to 20 percent for compaction losses and spillage. Paint requires 10 to 15 percent for surface absorption and application waste. Tiles require 10 to 15 percent for cutting waste, particularly for complex patterns or irregular room shapes. Well-managed sites with experienced workers can achieve lower wastage rates, while projects with poor organisation or complex designs may see higher losses. Factor wastage into your budget but also implement waste reduction strategies on site to minimise unnecessary costs.' }
+      { heading: 'Wastage Allowances', body: 'Wastage is an inevitable part of construction and must be accounted for in all material quantity calculations. Standard wastage allowances vary by material and project type. Concrete typically requires 5 to 10 percent wastage depending on site conditions and pour complexity. Blocks require 5 to 10 percent for cutting, breakage during handling and transport damage. Steel reinforcement requires 5 to 8 percent for cutting losses at bends and splices. Sand and aggregates require 15 to 20 percent for compaction losses and spillage. Paint requires 10 to 15 percent for surface absorption and application waste. Tiles require 10 to 15 percent for cutting waste, particularly for complex patterns or irregular room shapes. Well-managed sites with experienced workers can achieve lower wastage rates, while projects with poor organisation or complex designs may see higher losses. Factor wastage into your budget but also implement waste reduction strategies on site to minimise unnecessary costs.' },
+      { heading: 'Worked Examples For Common Projects', body: 'Here are detailed worked examples for a typical 3-bedroom residential house in Tanzania with total floor area of 120 square metres. Concrete volume: foundation trenches totalling 42 linear metres at 0.6m wide by 0.6m deep = 15.12 m3. Ground beams of 35 linear metres at 0.3m wide by 0.4m deep = 4.2 m3. Floor slab of 10m by 8m at 0.125m thick = 10 m3. Columns of 12 columns at 0.3m by 0.3m by 3m = 3.24 m3. Beams of 45 linear metres at 0.3m by 0.4m = 5.4 m3. Total concrete = 37.96 m3, plus 10 percent wastage = 41.8 m3. Block quantity: total wall area of 180 square metres, deducting 30 square metres for doors and windows = 150 square metres. At 12.5 blocks per square metre = 1,875 blocks, plus 10 percent wastage = 2,063 blocks. Steel reinforcement: 41.8 m3 of concrete at 100 kg per m3 = 4,180 kg or approximately 4.2 tonnes. Sand for concrete: 41.8 m3 at 0.4 m3 of sand per m3 of concrete = 16.72 m3, plus 15 percent wastage = 19.2 m3. Coarse aggregates: 41.8 m3 at 0.8 m3 per m3 of concrete = 33.44 m3, plus 15 percent wastage = 38.5 m3. Cement for concrete: approximately 7.5 bags per m3 for C25 = 314 bags. Cement for mortar at 1,875 blocks with average joint area of 0.02 m3 per square metre = 37.5 m3 of mortar at 1:5 ratio = 188 bags. Total cement = approximately 502 bags of 50 kg. These detailed examples show how to break down a whole-house project into individual material calculations and sum them for total requirements.' },
+      { heading: 'Common Formulas And Shortcuts', body: 'Several useful formulas and shortcuts simplify material quantity calculations for construction projects. For concrete volume of rectangular sections, the formula Length × Width × Depth in metres gives cubic metres directly. For circular columns, the formula pi × radius² × height gives the volume. For estimating wall block counts, multiply the net wall area in square metres by 12.5 for standard 400mm × 200mm blocks with 10mm joints. For mortar volume estimation, calculate the total length of mortar joints in metres multiplied by the joint width and depth — for example, 10mm joints in a wall with 1,875 blocks require approximately 37.5 m3 of mortar. A quick rule of thumb for reinforcement steel is 100 kg per cubic metre of concrete for residential construction and 120-150 kg per cubic metre for commercial buildings. For sand and aggregate estimation, each cubic metre of C25 concrete requires approximately 0.4 m3 of sand and 0.8 m3 of coarse aggregate, while each 50 kg bag of cement produces approximately 0.05 m3 of concrete at typical residential grades. For paint estimation, one litre covers approximately 10-12 square metres of plastered wall surface, depending on surface porosity and paint type. For tile estimation, multiply the floor or wall area in square metres by 1.1 to account for 10 percent cutting waste. These shortcuts provide quick preliminary estimates that can be refined with more detailed calculations as the project design develops.'
+      },
+      { heading: 'Wastage Calculations And Budget Impact', body: 'Understanding the financial impact of wastage helps builders and developers make informed procurement decisions. For a project requiring 40 cubic metres of C25 concrete at TZS 300,000 per cubic metre, the base material cost is TZS 12,000,000. At 5 percent wastage, the extra cost is TZS 600,000. At 10 percent wastage, the extra cost is TZS 1,200,000. The difference between well-managed and poorly managed wastage can therefore be TZS 600,000 or more on concrete alone. For blocks at TZS 2,500 each, 100 extra blocks from 10 percent wastage costs TZS 250,000 compared to 50 blocks at 5 percent wastage costing TZS 125,000. Steel reinforcement at TZS 1,800 per kilogram means the difference between 5 percent and 10 percent wastage on a 4-tonne order is TZS 360,000. Across all materials, the cumulative cost of excessive wastage on a typical residential project can exceed TZS 2,000,000 — a significant sum that could be saved through better planning and site management. Strategies to reduce wastage include accurate quantity takeoffs before ordering, proper storage of materials on site to prevent damage, experienced labour who minimise cutting waste and breakage, reusable formwork systems, and careful pour planning to avoid excess concrete. While some wastage is unavoidable, maintaining wastage within standard allowances protects the project budget and reduces the environmental impact of construction waste. Tanzibaba helps customers minimise wastage by providing accurate volume calculations, recommending appropriate order quantities, and delivering concrete in optimised truck sizes that match the pour requirements.'
+      }
     ],
     faqs: [
       { q: 'How do I calculate concrete volume for a slab?', a: 'Measure the slab length and width in metres, multiply them to get the area, then multiply by the slab thickness in metres. For example, a 6m × 4m slab at 0.15m thick: 6 × 4 × 0.15 = 3.6 cubic metres. Add 10 percent for wastage, giving approximately 4 cubic metres.' },
@@ -98,7 +103,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'Can I use online calculators for material quantities?', a: 'Yes, online calculators like those provided by Tanzibaba are excellent for preliminary estimates. They handle the common formulas automatically and provide quick, accurate results for standard shapes. For detailed projects, engage a quantity surveyor for precise takeoffs.' }
     ],
     keywords: ['material quantity calculations', 'building material estimates', 'concrete volume calculator', 'block quantity calculator', 'construction quantities'],
-    relatedArticles: ['how-much-concrete-do-i-need', 'block-quantity-calculator', 'concrete-volume-calculations']
+    relatedArticles: ['how-much-concrete-do-i-need', 'block-quantity-calculator', 'concrete-volume-calculations'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'concrete-volume-calculations',
@@ -125,7 +137,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'Can I calculate concrete volume myself?', a: 'Yes, concrete volume calculation is straightforward for standard shapes using Length × Width × Depth. For complex shapes, break them into simple sections and add the volumes. Tanzibaba provides free online calculators for all common shapes.' }
     ],
     keywords: ['concrete volume calculation', 'concrete formula', 'how to calculate concrete', 'concrete quantity', 'concrete calculator Tanzania'],
-    relatedArticles: ['how-much-concrete-do-i-need', 'what-is-ready-mix-concrete', 'common-concrete-mistakes']
+    relatedArticles: ['how-much-concrete-do-i-need', 'what-is-ready-mix-concrete', 'common-concrete-mistakes'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'budget-planning-guide',
@@ -152,7 +171,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'When should I pay my contractor?', a: 'Payments should be linked to verified construction progress. A typical arrangement is a 20 percent advance payment, followed by monthly progress payments based on measured work completed, with a 5 to 10 percent retention held until the defects liability period expires. Always verify work before approving payments.' }
     ],
     keywords: ['construction budget planning', 'construction budget Tanzania', 'building project budget', 'construction cost control', 'budget management construction'],
-    relatedArticles: ['construction-cost-estimation', 'how-to-estimate-construction-costs', 'boq-basics']
+    relatedArticles: ['construction-cost-estimation', 'how-to-estimate-construction-costs', 'boq-basics'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'site-safety-basics',
@@ -179,7 +205,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'How often should safety training be conducted?', a: 'All workers must receive safety induction before starting work. Weekly toolbox talks should address specific hazards for upcoming activities. Additional training is required when new equipment, materials or processes are introduced. refresher training should be conducted at least annually.' }
     ],
     keywords: ['construction site safety', 'site safety basics', 'construction safety Tanzania', 'workplace safety', 'construction hazards'],
-    relatedArticles: ['ppe-requirements', 'construction-quality-control', 'construction-process-explained']
+    relatedArticles: ['ppe-requirements', 'construction-quality-control', 'construction-process-explained'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'ppe-requirements',
@@ -206,7 +239,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'What is the hierarchy of safety controls?', a: 'The hierarchy from most to least effective is: elimination of the hazard, substitution with less hazardous alternatives, engineering controls such as guardrails, administrative controls such as safe work procedures, and personal protective equipment as the last line of defence.' }
     ],
     keywords: ['PPE requirements', 'construction PPE', 'personal protective equipment', 'site safety equipment', 'PPE Tanzania construction'],
-    relatedArticles: ['site-safety-basics', 'construction-quality-control', 'construction-process-explained']
+    relatedArticles: ['site-safety-basics', 'construction-quality-control', 'construction-process-explained'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'building-in-zanzibar',
@@ -233,7 +273,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'Can foreigners build property in Zanzibar?', a: 'Yes, foreigners can build property in Zanzibar subject to obtaining the necessary approvals from the Zanzibar Investment Promotion Authority (ZIPA) and complying with local building regulations. A Tanzanian legal entity or partnership with a local partner is typically recommended for the process.' }
     ],
     keywords: ['building in Zanzibar', 'Zanzibar construction', 'Zanzibar building permits', 'construction Zanzibar island', 'hotel construction Zanzibar'],
-    relatedArticles: ['hotel-construction-guide', 'coastal-construction-considerations', 'building-permit-guide-tanzania']
+    relatedArticles: ['hotel-construction-guide', 'coastal-construction-considerations', 'building-permit-guide-tanzania'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'coastal-construction-considerations',
@@ -260,7 +307,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'How often should coastal buildings be maintained?', a: 'Coastal buildings should be inspected at least twice annually, with washing of exposed surfaces to remove salt deposits performed quarterly for oceanfront properties. Protective coatings should be touched up as needed, typically every 3 to 5 years. Regular maintenance significantly extends the service life of coastal buildings.' }
     ],
     keywords: ['coastal construction', 'building near the sea', 'salt corrosion concrete', 'coastal building durability', 'marine construction Tanzania'],
-    relatedArticles: ['building-in-zanzibar', 'concrete-curing-guide', 'washed-sand-benefits']
+    relatedArticles: ['building-in-zanzibar', 'concrete-curing-guide', 'washed-sand-benefits'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'tbs-standards-guide',
@@ -287,34 +341,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'How do I get my product TBS certified?', a: 'Apply to TBS for product certification, which involves factory inspection, product testing and ongoing surveillance. The process verifies that your production consistently meets the applicable standard. Contact TBS directly for application procedures and fees.' }
     ],
     keywords: ['TBS standards', 'Tanzania Bureau of Standards', 'construction standards Tanzania', 'TBS certification', 'building material standards'],
-    relatedArticles: ['concrete-quality-control', 'construction-quality-control', 'contractor-registration-guide']
-  },
-  {
-    slug: 'contractor-registration-guide',
-    title: 'Contractor Registration Guide: How To Register With CRB In Tanzania',
-    description: 'Complete guide to contractor registration with the Contractors Registration Board (CRB) in Tanzania. Learn about classes, requirements and the application process.',
-    h1: 'Contractor Registration Guide — How To Register With CRB',
-    category: 'construction-guides',
-    readingTime: '10 min read',
-    publishedDate: '2025-06-01',
-    updatedDate: '2025-06-01',
-    content: [
-      { heading: 'What Is CRB?', body: 'The Contractors Registration Board is the statutory body established under the Contractors Registration Act to regulate the registration and practice of contractors in Tanzania. CRB maintains a register of contractors classified by their financial capacity, technical capability and experience, and ensures that registered contractors meet and maintain the required standards of competence and professionalism. Registration with CRB is mandatory for any contractor undertaking construction work in Tanzania, and operating without valid registration is an offence under the Act. CRB classification determines the maximum value of projects that a contractor is eligible to undertake, with higher classes allowing larger project values. For construction clients, engaging a CRB-registered contractor provides assurance that the contractor has been assessed and found competent to carry out construction work safely and to an acceptable standard.' },
-      { heading: 'Registration Classes', body: 'CRB classifies contractors into six classes based on their financial capacity and technical capability. Class One contractors have no upper limit on project value and can undertake projects of any size. Class Two can undertake projects up to TZS 50 billion. Class Three is limited to projects up to TZS 10 billion. Class Four can undertake projects up to TZS 3 billion. Class Five is limited to projects up to TZS 500 million. Class Six, the entry level, can undertake projects up to TZS 100 million. The classification determines which government and private sector projects a contractor is eligible to bid for, as tenders specify the minimum CRB class required. Advancing through the classes requires demonstrating increased financial capacity, technical expertise and project experience. Contractors must also be registered in the appropriate trade category such as general building, civil engineering, mechanical, electrical or specialist works.' },
-      { heading: 'Registration Requirements', body: 'CRB registration requires applicants to demonstrate compliance with several requirements across financial, technical and administrative criteria. Financial requirements include audited accounts showing adequate turnover and working capital for the desired class, bank references confirming financial standing, and tax clearance from the Tanzania Revenue Authority. Technical requirements include employing qualified professionals such as engineers registered with the Engineers Registration Board and quantity surveyors registered with the Architects and Quantity Surveyors Registration Board, demonstrating relevant project experience, and having appropriate plant and equipment. Administrative requirements include a valid business registration certificate, National Social Security Fund compliance, Workers Compensation Fund registration, and professional indemnity insurance. All requirements must be documented and submitted with the application form to CRB for assessment.' },
-      { heading: 'Application Process', body: 'The CRB registration application begins with obtaining and completing the prescribed application form from CRB offices or website. The form requires detailed information about the company including legal structure, directors and shareholders, professional staff, financial details and project experience. Supporting documents must be assembled including audited financial statements for the past three years, professional staff certificates and registration documents, plant and equipment lists with proof of ownership or hire agreements, project completion certificates for previous work, tax clearance certificate, NSSF compliance certificate and WCF registration. The completed application with all supporting documents is submitted to CRB with the prescribed application fee. CRB reviews the application, verifies the documentation and may conduct a site inspection of the contractors facilities. Processing typically takes 4 to 8 weeks for complete applications. If approved, the contractor receives a registration certificate valid for two years, renewable upon demonstrating continued compliance.' },
-      { heading: 'Maintaining Registration', body: 'CRB registration is not permanent and must be maintained through compliance with ongoing requirements. Registration must be renewed every two years by submitting updated financial statements, evidence of continued professional staffing, and proof of current tax, NSSF and WCF compliance. CRB may conduct random inspections to verify that registered contractors continue to meet the standards required for their class. Contractors who fail to renew their registration or who no longer meet the requirements have their registration suspended or cancelled, making them ineligible to undertake new construction work. Changes in company structure, ownership or key professional staff must be reported to CRB within the prescribed timeframe. Contractors must also comply with the CRB Code of Ethics, which governs professional conduct including fair competition, honest representation of capabilities and proper contract execution. Violations of the Code can result in disciplinary action including suspension or removal from the register.' },
-      { heading: 'Benefits Of Registration', body: 'CRB registration provides significant benefits that justify the investment in meeting the requirements. The primary benefit is eligibility to bid for government construction projects, which represent a major portion of construction spending in Tanzania. Registration also enhances credibility with private sector clients who increasingly require CRB registration as a prequalification criterion. Being registered demonstrates that the contractor has the financial capacity, technical capability and professional standing to undertake construction work competently. Registration provides access to a wider range of projects as the contractor advances through the classes. It also facilitates relationships with suppliers and financial institutions who may offer better terms to registered contractors. For contractors committed to professionalism and growth, CRB registration is not just a regulatory requirement but a strategic business asset that opens doors to larger and more prestigious projects.' }
-    ],
-    faqs: [
-      { q: 'Is CRB registration required for all construction work?', a: 'Yes, registration with the Contractors Registration Board is legally required for any contractor undertaking construction work in Tanzania. Operating without valid CRB registration is an offence under the Contractors Registration Act and can result in fines and legal action.' },
-      { q: 'What class of CRB registration do I need?', a: 'The class required depends on the project value. Class Six covers projects up to TZS 100 million, Class Five up to TZS 500 million, Class Four up to TZS 3 billion, Class Three up to TZS 10 billion, Class Two up to TZS 50 billion, and Class One has no upper limit. Check the tender requirements for the specific class needed.' },
-      { q: 'How long does CRB registration take?', a: 'The application process typically takes 4 to 8 weeks for complete applications. Processing may take longer if documentation is incomplete or if CRB requires additional information or a site inspection. Ensure all documents are complete and accurate before submission to avoid delays.' },
-      { q: 'How often must CRB registration be renewed?', a: 'CRB registration must be renewed every two years. Renewal requires submission of updated financial statements, proof of continued professional staffing, and current compliance certificates for tax, NSSF and WCF. Start the renewal process at least two months before expiry.' },
-      { q: 'What happens if my CRB registration expires?', a: 'If CRB registration expires, the contractor is not legally permitted to undertake new construction work. The contractor should cease operations until registration is renewed. Expired registration may also affect existing contracts and can damage the contractors reputation with clients and partners.' }
-    ],
-    keywords: ['CRB registration', 'contractor registration Tanzania', 'Contractors Registration Board', 'CRB classes', 'construction contractor registration'],
-    relatedArticles: ['government-projects-guide', 'engineer-architect-requirements', 'construction-quality-control']
+    relatedArticles: ['concrete-quality-control', 'construction-quality-control', 'contractor-registration-guide'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   },
   {
     slug: 'engineer-architect-requirements',
@@ -341,7 +375,14 @@ const newArticles: KnowledgeArticle[] = [
       { q: 'Can I design my own house without a professional?', a: 'While minor alterations may be done by homeowners, any significant construction project requires professional design by registered architects and engineers. Building permit applications require certified drawings from registered professionals, and building without proper design risks structural safety and regulatory non-compliance.' }
     ],
     keywords: ['architect requirements Tanzania', 'engineer registration Tanzania', 'AQRB registration', 'ERB registration', 'construction professionals'],
-    relatedArticles: ['building-permit-guide-tanzania', 'construction-process-explained', 'contractor-registration-guide']
+    relatedArticles: ['building-permit-guide-tanzania', 'construction-process-explained', 'contractor-registration-guide'],
+    internalLinks: [
+      { text: 'Ready-Mix Concrete Dar es Salaam', url: '/ready-mix-concrete-dar-es-salaam' },
+      { text: 'Aggregates Supplier', url: '/aggregates-supplier-dar-es-salaam' },
+      { text: 'Concrete Blocks Supplier', url: '/blocks-supplier-dar-es-salaam' },
+      { text: 'Get a Quote', url: '/get-quote' },
+      { text: 'Contact Us', url: '/contact' }
+    ]
   }
 ];
 

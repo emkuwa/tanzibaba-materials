@@ -18,7 +18,7 @@ const navItems = [
     ],
   },
   {
-    label: 'Projects', icon: Building2, href: '/major-projects',
+    label: 'Projects', icon: Building2, href: '/projects',
   },
   {
     label: 'AI Tools', icon: Calculator, href: '/tools',
@@ -32,7 +32,6 @@ const navItems = [
       { label: 'Material Estimator', href: '/tools/material-estimator' },
       { label: 'Cost Calculator', href: '/tools/cost-calculator' },
       { label: 'BOQ Generator', href: '/tools/boq-generator' },
-      { label: 'AI Assistant', href: '/ai-assistant' },
     ],
   },
   {

@@ -786,7 +786,8 @@ function OverviewContent({ slug }: { slug: string }) {
   ];
 
   const isDistrict = Object.keys(districtNames).some(d => slug.endsWith(`-${d}`));
-  const data = isDistrict ? (districtPages[slug] || overviewData[slug]) : (overviewData[slug] || { desc: `Premium ${slug.replace(/-/g, ' ')} in Dar es Salaam.`, features: ['Quality materials', 'Competitive pricing', 'Reliable delivery', 'Expert support'] });
+  const defaultData = { desc: `Premium ${slug.replace(/-/g, ' ')} in Dar es Salaam.`, features: ['Quality materials', 'Competitive pricing', 'Reliable delivery', 'Expert support'] };
+  const data = (districtPages[slug] || overviewData[slug] || defaultData);
 
   const pageFaqs = isDistrict ? [
     { q: `Do you supply ${slug.startsWith('aggregates') ? 'construction aggregates' : 'premium ready-mix concrete'} in ${displayName.replace('Ready-Mix Concrete ', '').replace('Aggregates Supplier ', '')}?`, a: `Yes, we supply ${slug.startsWith('aggregates') ? 'construction aggregates' : 'premium ready-mix concrete'} to all areas of ${displayName.replace('Ready-Mix Concrete ', '').replace('Aggregates Supplier ', '')}.` },

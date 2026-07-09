@@ -43,7 +43,7 @@ export default function RentToOwn() {
       <main>
         <section className="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden pt-20">
           <div className="absolute inset-0">
-            <Image src="/images/new/commercial-building.webp" alt="Rent to own construction equipment Tanzania" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />
+            <Image src="/images/equipment/backhoe-loader-hire-tanzania.webp" alt="Rent to own construction equipment Tanzania — backhoe loader with flexible ownership options" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/90 to-gray-950/60" />
           </div>
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

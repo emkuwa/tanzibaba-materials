@@ -30,12 +30,12 @@ const benefits = [
 ];
 
 const categories = [
-  { title: 'Earthmoving', items: ['Excavators', 'Bulldozers', 'Wheel Loaders', 'Backhoe Loaders', 'Motor Graders'], image: '/images/new/road-construction.webp' },
-  { title: 'Transport', items: ['Dump Trucks', 'Tipper Trucks', 'Lowbed Trailers', 'Water Bowsers', 'Fuel Bowsers'], image: '/images/new/crusher-plant.webp' },
-  { title: 'Concrete', items: ['Concrete Pump Trucks', 'Transit Mixers', 'Boom Pumps'], image: '/images/new/concrete-pump.webp' },
-  { title: 'Lifting & Handling', items: ['Mobile Cranes', 'Forklifts', 'Telehandlers'], image: '/images/new/commercial-building.webp' },
-  { title: 'Mining & Quarry', items: ['Mobile Crushers', 'Screening Plants'], image: '/images/new/aggregates.webp' },
-  { title: 'Site Equipment', items: ['Generators', 'Lighting Towers', 'Air Compressors'], image: '/images/new/washed-sand.webp' },
+  { title: 'Earthmoving', items: ['Excavators', 'Bulldozers', 'Wheel Loaders', 'Backhoe Loaders', 'Motor Graders'], image: '/images/equipment/wheel-loader-hire-tanzania.webp', alt: 'Wheel loader for sale in Tanzania — new and used options' },
+  { title: 'Transport', items: ['Dump Trucks', 'Tipper Trucks', 'Lowbed Trailers', 'Water Bowsers', 'Fuel Bowsers'], image: '/images/equipment/tipper-truck-hire-tanzania.webp', alt: 'Tipper truck for sale in Tanzania — new and used options' },
+  { title: 'Concrete', items: ['Concrete Pump Trucks', 'Transit Mixers', 'Boom Pumps'], image: '/images/equipment/transit-mixer-truck-tanzania.webp', alt: 'Transit mixer truck for sale in Tanzania — new and used options' },
+  { title: 'Lifting & Handling', items: ['Mobile Cranes', 'Forklifts', 'Telehandlers'], image: '/images/equipment/forklift-hire-tanzania.webp', alt: 'Forklift for sale in Tanzania — new and used options' },
+  { title: 'Mining & Quarry', items: ['Mobile Crushers', 'Screening Plants'], image: '/images/equipment/screening-plant-hire-tanzania.webp', alt: 'Screening plant for sale in Tanzania — new and used options' },
+  { title: 'Site Equipment', items: ['Generators', 'Lighting Towers', 'Air Compressors'], image: '/images/equipment/diesel-generator-hire-tanzania.webp', alt: 'Diesel generator for sale in Tanzania — new and used options' },
 ];
 
 const faqs = [
@@ -53,7 +53,7 @@ export default function BuyEquipment() {
       <main>
         <section className="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden pt-20">
           <div className="absolute inset-0">
-            <Image src="/images/new/crusher-plant.webp" alt="Buy construction equipment Tanzania" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />
+            <Image src="/images/equipment/bulldozer-hire-tanzania.webp" alt="Buy construction equipment Tanzania — new and used bulldozers, excavators and heavy machinery" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/90 to-gray-950/60" />
           </div>
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -113,7 +113,7 @@ export default function BuyEquipment() {
               {categories.map(cat => (
                 <div key={cat.title} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden">
-                    <Image src={cat.image} alt={cat.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                    <Image src={cat.image} alt={cat.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4">
                       <span className="inline-flex items-center gap-1.5 bg-white/90 text-gray-900 px-3 py-1 rounded-lg text-xs font-bold">{cat.title}</span>

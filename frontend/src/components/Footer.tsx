@@ -55,14 +55,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Construction Equipment Hire</h4>
+            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Construction Equipment</h4>
             <div className="flex flex-col gap-3">
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Excavators</Link>
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Bulldozers</Link>
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Wheel Loaders</Link>
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Dump Trucks</Link>
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Mobile Cranes</Link>
-              <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Concrete Pump Trucks</Link>
+              <Link href="/equipment/rent" className="text-sm hover:text-brand-400 transition-colors">Rent Equipment</Link>
+              <Link href="/equipment/buy" className="text-sm hover:text-brand-400 transition-colors">Buy Equipment</Link>
+              <Link href="/equipment/rent-to-own" className="text-sm hover:text-brand-400 transition-colors">Rent-to-Own</Link>
+              <Link href="/equipment/list-equipment" className="text-sm hover:text-brand-400 transition-colors">Sell or List Equipment</Link>
             </div>
           </div>
 

@@ -18,17 +18,12 @@ const navItems = [
     ],
   },
   {
-    label: 'Construction Equipment Hire', icon: HardHat, href: '/equipment-hire',
+    label: 'Construction Equipment', icon: HardHat, href: '/equipment/rent',
     children: [
-      { label: 'Excavators', href: '/equipment-hire' },
-      { label: 'Bulldozers', href: '/equipment-hire' },
-      { label: 'Wheel Loaders', href: '/equipment-hire' },
-      { label: 'Dump Trucks', href: '/equipment-hire' },
-      { label: 'Mobile Cranes', href: '/equipment-hire' },
-      { label: 'Concrete Pump Trucks', href: '/equipment-hire' },
-      { label: 'Forklifts', href: '/equipment-hire' },
-      { label: 'Generators', href: '/equipment-hire' },
-      { label: 'All Equipment', href: '/equipment-hire' },
+      { label: 'Rent Equipment', href: '/equipment/rent' },
+      { label: 'Buy Equipment', href: '/equipment/buy' },
+      { label: 'Rent-to-Own', href: '/equipment/rent-to-own' },
+      { label: 'Sell or List Equipment', href: '/equipment/list-equipment' },
     ],
   },
   {

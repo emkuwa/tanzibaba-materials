@@ -6,7 +6,8 @@ import Link from 'next/link';
 import {
   Truck, ArrowRight, CheckCircle, HardHat, Building2, Mountain, Package, Square, Route,
   Calculator, BookOpen, Users, Newspaper, FileText, Phone, MessageCircle, Zap, Award,
-  Shield, Globe, Hammer, Beaker, X, Droplets, Tractor, Wrench, Cog, ClipboardList
+  Shield, Globe, Hammer, Beaker, X, Droplets, Tractor, Wrench, Cog, ClipboardList,
+  DollarSign, LayoutGrid, Home as HomeIcon, Factory, Landmark, BarChart3
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -53,7 +54,7 @@ const services = [
   { icon: Package, title: 'Building Materials Supply', desc: 'Premium concrete, aggregates, blocks and building materials for all construction needs.', href: '/ready-mix-concrete-dar-es-salaam', image: '/images/new/ready-mix-concrete.webp' },
   { icon: Truck, title: 'Ready Mix Concrete', desc: 'Premium ready-mix concrete grades C10 to C50 with washed sand technology.', href: '/ready-mix-concrete-dar-es-salaam', image: '/images/new/concrete-pump.webp' },
   { icon: Mountain, title: 'Aggregate Supply', desc: 'High-quality crushed stone, gravel and aggregates from our quality-controlled crushing plant.', href: '/aggregates-supplier-dar-es-salaam', image: '/images/new/aggregates.webp' },
-  { icon: HardHat, title: 'Construction Equipment Hire', desc: 'Earthmoving, transport, concrete, lifting and site equipment for short or long-term hire.', href: '/equipment-hire', image: '/images/new/road-construction.webp' },
+  { icon: HardHat, title: 'Construction Equipment', desc: 'Rent, buy, rent-to-own or list construction equipment — excavators, loaders, cranes and more.', href: '/equipment/rent', image: '/images/new/road-construction.webp' },
   { icon: Wrench, title: 'Heavy Machinery Rental', desc: 'Heavy machinery including cranes, loaders, graders and rollers for your projects.', href: '/equipment-hire', image: '/images/new/commercial-building.webp' },
   { icon: Truck, title: 'Truck Hire', desc: 'Dump trucks, tipper trucks, lowbed trailers and water bowsers for material transport.', href: '/equipment-hire', image: '/images/new/crusher-plant.webp' },
   { icon: Route, title: 'Project Logistics', desc: 'End-to-end logistics coordination for material and equipment delivery to your site.', href: '/services/logistics', image: '/images/new/precast-products.webp' },
@@ -123,8 +124,42 @@ const industryHub = [
   { icon: BookOpen, title: 'Building Guides', desc: 'Free guides on concrete, aggregates and construction.', href: '/resources/guides', color: 'bg-teal-50 text-teal-600' },
 ];
 
+const equipmentServices = [
+  { icon: Truck, title: 'Rent Equipment', desc: 'Short-term and long-term construction equipment rental for projects of any size.', href: '/equipment/rent', color: 'bg-orange-50 text-orange-600' },
+  { icon: Package, title: 'Buy Equipment', desc: 'Source new and used construction equipment from trusted suppliers across Tanzania.', href: '/equipment/buy', color: 'bg-blue-50 text-blue-600' },
+  { icon: ClipboardList, title: 'Rent-to-Own', desc: 'Flexible ownership options through approved partners — rent with the option to buy.', href: '/equipment/rent-to-own', color: 'bg-brand-50 text-brand-600' },
+  { icon: Users, title: 'Sell or List Equipment', desc: 'Equipment owners and dealers can list their equipment and connect with buyers.', href: '/equipment/list-equipment', color: 'bg-violet-50 text-violet-600' },
+];
+
+const whyChooseTanzibaba = [
+  { icon: LayoutGrid, title: 'Multiple Supply Sources', desc: 'Access materials from multiple quarries, plants and suppliers through a single platform.' },
+  { icon: DollarSign, title: 'Competitive Pricing', desc: 'Direct pricing from suppliers with no middlemen and no hidden costs.' },
+  { icon: HardHat, title: 'Construction Equipment Network', desc: 'Rent, buy, rent-to-own or list equipment through our extensive partner network.' },
+  { icon: Zap, title: 'Fast Quotations', desc: 'Get price estimates via WhatsApp within minutes, not hours or days.' },
+  { icon: Globe, title: 'Tanzania & Zanzibar Coverage', desc: 'Reliable delivery to construction sites across the mainland and Zanzibar.' },
+  { icon: Users, title: 'One Contact for Multiple Suppliers', desc: 'Coordinate materials and equipment from dozens of suppliers through one relationship.' },
+];
+
+const industries = [
+  { icon: Hammer, title: 'Mining', desc: 'Premium materials and equipment for mining operations and mineral processing facilities.', image: '/images/new/aggregates.webp' },
+  { icon: Route, title: 'Road Construction', desc: 'High-quality aggregates, concrete and equipment for road, highway and bridge projects.', image: '/images/new/road-construction.webp' },
+  { icon: Building2, title: 'Hotels & Resorts', desc: 'Premium concrete, blocks and finishing materials for hotels and resort developments.', image: '/images/new/commercial-building.webp' },
+  { icon: Building2, title: 'Commercial Buildings', desc: 'Reliable materials supply and equipment for office, retail and mixed-use developments.', image: '/images/new/commercial-building.webp' },
+  { icon: HomeIcon, title: 'Residential Projects', desc: 'Quality materials for apartments, housing estates and residential developments.', image: '/images/new/ready-mix-concrete.webp' },
+  { icon: Factory, title: 'Industrial Facilities', desc: 'Durable concrete and specialized materials for factories, warehouses and industrial plants.', image: '/images/new/precast-products.webp' },
+  { icon: Landmark, title: 'Government Projects', desc: 'Approved materials and equipment for public sector and government infrastructure projects.', image: '/images/new/infrastructure-project.webp' },
+  { icon: Route, title: 'Infrastructure', desc: 'End-to-end supply of materials and equipment for bridges, airports, dams and utilities.', image: '/images/new/infrastructure-project.webp' },
+];
+
+const stats = [
+  { icon: Truck, value: '50+', label: 'Equipment Types' },
+  { icon: Package, value: '100+', label: 'Construction Materials' },
+  { icon: Users, value: '50+', label: 'Partner Companies' },
+  { icon: Globe, value: 'Tanzania & Zanzibar', label: 'Coverage' },
+];
+
 const productOptions = [
-  'Ready Mix Concrete', 'Aggregates', 'Gravel', 'Washed Sand', 'Road Base', 'Concrete Blocks', 'Paving Blocks', 'Culvert Pipes', 'Precast Products', 'Construction Equipment Hire', 'Other'
+  'Ready Mix Concrete', 'Aggregates', 'Gravel', 'Washed Sand', 'Road Base', 'Concrete Blocks', 'Paving Blocks', 'Culvert Pipes', 'Precast Products', 'Construction Equipment', 'Other'
 ];
 
 const locationOptions = [
@@ -333,14 +368,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. CONSTRUCTION EQUIPMENT HIRE */}
+        {/* 5. CONSTRUCTION EQUIPMENT */}
         <section className="py-12 md:py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                <HardHat className="w-4 h-4" /> Construction Equipment Hire
+                <HardHat className="w-4 h-4" /> Construction Equipment
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Equipment Hire by Category</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Equipment by Category</h2>
               <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Well-maintained construction equipment available for short and long-term hire across Tanzania and Zanzibar.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -370,46 +405,57 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-8 md:mt-10">
-              <Link href="/equipment-hire" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base">
+              <Link href="/equipment/rent" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base">
                 View All Equipment <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* 6. EQUIPMENT CTA */}
+        {/* 6. EQUIPMENT SERVICES */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl p-6 md:p-10 text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-brand-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <HardHat className="w-6 h-6 text-brand-400" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Need Construction Equipment?</h3>
-                  <p className="text-gray-400 text-sm md:text-base mb-6 max-w-md">Access trusted equipment owners across Tanzania and Zanzibar for short and long-term projects.</p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link href="/equipment-hire" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 md:px-6 py-3 rounded-xl transition-all shadow-lg text-sm">
-                      Request Equipment <ArrowRight className="w-4 h-4" />
-                    </Link>
-                    <a onClick={() => setShowLeadCapture(true)} className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 md:px-6 py-3 rounded-xl transition-all border border-white/20 text-sm cursor-pointer">
-                      <MessageCircle className="w-4 h-4" /> Talk to an Expert
-                    </a>
-                  </div>
-                </div>
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <HardHat className="w-4 h-4" /> Equipment Marketplace
               </div>
-
-              <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-10 text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 0%, transparent 60%)' }} />
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Rent, Buy, Rent-to-Own or List</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Whether you need equipment for a day, want to purchase, or have equipment to list — Tanzibaba connects you with trusted owners and suppliers.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {equipmentServices.map(s => (
+                <Link key={s.title} href={s.href} className="group bg-gray-50 rounded-2xl border border-gray-200 p-5 md:p-6 hover:shadow-xl hover:border-brand-200 transition-all duration-300 text-center">
+                  <div className={`w-12 h-12 md:w-14 md:h-14 ${s.color} rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform`}>
+                    <s.icon className="w-6 h-6 md:w-7 md:h-7" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Own Construction Equipment?</h3>
-                  <p className="text-brand-100 text-sm md:text-base mb-6 max-w-md">Join the Tanzibaba Network and receive equipment hire requests from contractors and developers across Tanzania.</p>
-                  <Link href="/supplier/register" className="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold px-5 md:px-6 py-3 rounded-xl hover:bg-brand-50 transition-all shadow-lg text-sm">
-                    Register Your Equipment <ArrowRight className="w-4 h-4" />
+                  <h3 className="font-bold text-gray-900 mb-1 md:mb-2 text-sm md:text-base group-hover:text-brand-600 transition-colors">{s.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-500">{s.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 7. EQUIPMENT REQUEST CTA */}
+        <section className="py-12 md:py-20 px-4 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%)' }} />
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-brand-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <HardHat className="w-7 h-7 text-brand-400" />
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3 md:mb-4">Need Equipment Fast?</h2>
+                <p className="text-gray-400 text-sm md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">Request equipment for rent, purchase or rent-to-own — we&apos;ll connect you with trusted owners and suppliers.</p>
+                <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
+                  <Link href="/equipment/rent" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg text-sm md:text-base">
+                    <Truck className="w-4 h-4" /> Rent
+                  </Link>
+                  <Link href="/equipment/buy" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all border border-white/20 text-sm md:text-base">
+                    <Package className="w-4 h-4" /> Buy
+                  </Link>
+                  <Link href="/equipment/rent-to-own" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all border border-white/20 text-sm md:text-base">
+                    <ClipboardList className="w-4 h-4" /> Rent-to-Own
                   </Link>
                 </div>
               </div>
@@ -417,8 +463,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7. WHY CHOOSE TANZIBABA */}
-        <section className="py-12 md:py-20 px-4 bg-white">
+        {/* 8. WHY CHOOSE TANZIBABA */}
+        <section className="py-16 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
@@ -428,7 +474,7 @@ export default function Home() {
               <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">We combine premium materials, competitive pricing and reliable supply to deliver the best construction experience.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {whyUs.map(w => (
+              {whyChooseTanzibaba.map(w => (
                 <div key={w.title} className="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 hover:shadow-lg transition-shadow">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-3 md:mb-4">
                     <w.icon className="w-5 h-5 md:w-6 md:h-6 text-brand-600" />
@@ -441,7 +487,160 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. CONSTRUCTION TOOLS */}
+        {/* 9. INDUSTRIES WE SERVE */}
+        <section className="py-16 md:py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                <Building2 className="w-4 h-4" /> Industries
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Industries We Serve</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Serving construction projects across all sectors — from mining and infrastructure to commercial and residential.</p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {industries.map(ind => (
+                <div key={ind.title} className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden">
+                    <Image src={ind.image} alt={ind.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3">
+                      <div className="inline-flex items-center gap-1.5 bg-white/90 text-gray-800 px-2.5 py-1 rounded-lg text-xs font-bold backdrop-blur-sm">
+                        <ind.icon className="w-3.5 h-3.5" />
+                        {ind.title}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-3 md:p-4">
+                    <p className="text-xs md:text-sm text-gray-600 line-clamp-2">{ind.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 10. STATISTICS */}
+        <section className="py-16 md:py-20 px-4 bg-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <Image src="/images/new/infrastructure-project.webp" alt="" fill className="object-cover" sizes="100vw" quality={85} />
+            <div className="absolute inset-0 bg-gray-950/85" />
+          </div>
+          <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">Tanzibaba by the Numbers</h2>
+              <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">Our growing network serves construction projects across Tanzania and Zanzibar.</p>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+              {stats.map(s => (
+                <div key={s.label} className="text-center">
+                  <div className="w-14 h-14 bg-brand-600/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <s.icon className="w-7 h-7 text-brand-400" />
+                  </div>
+                  <div className="text-2xl md:text-3xl font-extrabold text-white mb-1">{s.value}</div>
+                  <div className="text-sm text-gray-400 font-medium">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 11. PARTNER CTA */}
+        <section className="py-16 md:py-20 px-4 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 60%)' }} />
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <HardHat className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3 md:mb-4">Own Equipment?</h2>
+                <p className="text-orange-100 text-sm md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">Register your equipment on the Tanzibaba network and receive hire requests from contractors and developers across Tanzania.</p>
+                <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
+                  <Link href="/equipment/list-equipment" className="inline-flex items-center gap-2 bg-white text-orange-700 font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl hover:bg-orange-50 transition-all shadow-lg text-sm md:text-base">
+                    Register Equipment <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all border border-white/20 text-sm md:text-base">
+                    <MessageCircle className="w-4 h-4" /> WhatsApp Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 12. SUPPLIER CTA */}
+        <section className="py-16 md:py-20 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 60%)' }} />
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Factory className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3 md:mb-4">Own a Quarry, Concrete Plant or Building Materials Business?</h2>
+                <p className="text-brand-100 text-sm md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">Join the Tanzibaba Construction Network and connect with contractors and developers across Tanzania who need premium construction materials.</p>
+                <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
+                  <Link href="/supplier/register" className="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl hover:bg-brand-50 transition-all shadow-lg text-sm md:text-base">
+                    Join the Network <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all border border-white/20 text-sm md:text-base">
+                    <MessageCircle className="w-4 h-4" /> Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 13. SEO INTERNAL LINKS */}
+        <section className="py-12 md:py-16 px-4 bg-gray-50 border-y border-gray-100">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Explore Tanzibaba</h2>
+              <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">Quick links to our core products, services and industry resources.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+              <Link href="/ready-mix-concrete-dar-es-salaam" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Truck className="w-3.5 h-3.5" /> Concrete
+              </Link>
+              <Link href="/aggregates-supplier-dar-es-salaam" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Mountain className="w-3.5 h-3.5" /> Aggregates
+              </Link>
+              <Link href="/blocks-supplier-dar-es-salaam" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Square className="w-3.5 h-3.5" /> Blocks
+              </Link>
+              <Link href="/paving-blocks-dar-es-salaam" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Package className="w-3.5 h-3.5" /> Paving Blocks
+              </Link>
+              <Link href="/equipment/rent" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <HardHat className="w-3.5 h-3.5" /> Equipment Hire
+              </Link>
+              <Link href="/equipment/buy" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <DollarSign className="w-3.5 h-3.5" /> Buy Equipment
+              </Link>
+              <Link href="/commercial-construction" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Building2 className="w-3.5 h-3.5" /> Commercial
+              </Link>
+              <Link href="/infrastructure-construction" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Route className="w-3.5 h-3.5" /> Infrastructure
+              </Link>
+              <Link href="/industrial-construction-tanzania" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Factory className="w-3.5 h-3.5" /> Industrial
+              </Link>
+              <Link href="/government-construction-projects" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Landmark className="w-3.5 h-3.5" /> Government
+              </Link>
+              <Link href="/directory" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <Users className="w-3.5 h-3.5" /> Partners
+              </Link>
+              <Link href="/supplier/register" className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-700 hover:border-brand-300 hover:text-brand-600 font-medium px-4 py-2 rounded-xl text-xs md:text-sm transition-all shadow-sm">
+                <FileText className="w-3.5 h-3.5" /> Become a Supplier
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 14. CONSTRUCTION TOOLS */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -470,7 +669,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 9. INDUSTRY HUB */}
+        {/* 15. INDUSTRY HUB */}
         <section className="py-12 md:py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -497,7 +696,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 10. FAQ */}
+        {/* 16. FAQ */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 md:mb-10">
@@ -537,7 +736,7 @@ export default function Home() {
           { '@type': 'Question', name: 'What payment methods do you accept?', acceptedAnswer: { '@type': 'Answer', text: 'We accept bank transfers, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash payments. For large orders, we offer flexible payment terms including partial payment on delivery. Contact our team to discuss the best payment option for your project.' } },
         ] }) }} />
 
-        {/* 11. QUOTE CTA */}
+        {/* 17. QUOTE CTA */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">

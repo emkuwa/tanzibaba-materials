@@ -1,0 +1,221 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  SUPPLIER
+  CUSTOMER
+}
+
+enum QuoteStatus {
+  SUBMITTED
+  QUOTED
+  ACCEPTED
+  SUPPLIER_ASSIGNED
+  SUPPLIER_CONTACTED
+  DELIVERED
+  CANCELLED
+}
+
+enum OrderStatus {
+  NEW
+  ACCEPTED
+  IN_PROGRESS
+  DELIVERED
+  CANCELLED
+}
+
+enum SupplierStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String
+  role          UserRole  @default(CUSTOMER)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  customer      Customer?
+  supplier      Supplier?
+  adminNotes    Note[]
+}
+
+model Customer {
+  id              String    @id @default(uuid())
+  userId          String    @unique
+  fullName        String
+  phoneNumber     String
+  whatsappNumber  String
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quotes          Quote[]
+
+  @@map("customers")
+}
+
+model Supplier {
+  id              String         @id @default(uuid())
+  userId          String         @unique
+  companyName     String
+  contactPerson   String
+  phoneNumber     String
+  email           String
+  latitude        Float?
+  longitude       Float?
+  capacity        Int            @default(0)
+  reliabilityScore Float         @default(0)
+  status          SupplierStatus @default(ACTIVE)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  coverageAreas   SupplierCoverage[]
+  pricings        SupplierPricing[]
+  orders          Order[]
+
+  @@map("suppliers")
+}
+
+model SupplierCoverage {
+  id          String   @id @default(uuid())
+  supplierId  String
+  district    String
+  createdAt   DateTime @default(now())
+
+  supplier    Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
+
+  @@map("supplier_coverage")
+}
+
+model SupplierPricing {
+  id          String   @id @default(uuid())
+  supplierId  String
+  grade       String
+  pricePerM3  Float
+  deliveryFee Float
+  pumpFee     Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  supplier    Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
+
+  @@unique([supplierId, grade])
+  @@map("supplier_pricing")
+}
+
+model Quote {
+  id              String      @id @default(uuid())
+  quoteNumber     String      @unique
+  customerId      String
+  productCategory String?
+  projectType     String
+  siteLocation    String
+  district         String
+  latitude        Float?
+  longitude       Float?
+  concreteGrade   String?
+  quantityM3      Float?
+  length          Float?
+  width           Float?
+  thickness       Float?
+  deliveryDate    DateTime
+  pumpRequired    Boolean     @default(false)
+  concreteCost    Float?
+  deliveryCost    Float?
+  pumpCost        Float?
+  totalPrice      Float?
+  status          QuoteStatus @default(SUBMITTED)
+  notes           String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  customer        Customer    @relation(fields: [customerId], references: [id])
+  items           QuoteItem[]
+  order           Order?
+  invoices        Invoice[]
+
+  @@map("quotes")
+}
+
+model QuoteItem {
+  id          String  @id @default(uuid())
+  quoteId     String
+  grade       String
+  quantity    Float
+  unitPrice   Float
+  total       Float
+  gravelSize  String?
+  gravelUseCase String?
+  gravelUnit  String?
+
+  quote       Quote   @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+
+  @@map("quote_items")
+}
+
+model Order {
+  id              String      @id @default(uuid())
+  quoteId         String      @unique
+  supplierId      String
+  status          OrderStatus @default(NEW)
+  notes           String?
+  acceptedAt      DateTime?
+  deliveredAt     DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  quote           Quote       @relation(fields: [quoteId], references: [id])
+  supplier        Supplier    @relation(fields: [supplierId], references: [id])
+  statusUpdates   OrderStatusUpdate[]
+
+  @@map("orders")
+}
+
+model OrderStatusUpdate {
+  id        String      @id @default(uuid())
+  orderId   String
+  status    OrderStatus
+  note      String?
+  createdAt DateTime    @default(now())
+
+  order     Order       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_status_updates")
+}
+
+model Invoice {
+  id          String   @id @default(uuid())
+  quoteId     String
+  invoiceNumber String @unique
+  pdfUrl      String?
+  issuedAt    DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  quote       Quote    @relation(fields: [quoteId], references: [id])
+
+  @@map("invoices")
+}
+
+model Note {
+  id        String   @id @default(uuid())
+  userId    String
+  content   String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notes")
+}

@@ -66,7 +66,7 @@ export default function HotelVerdeZanzibar() {
         </section>
 
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-          <Image src="/images/commercial-building.jpg" alt="Hotel Verde Zanzibar — sustainable hotel construction with premium concrete supplied by Tanzibaba" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+          <Image src="/images/new/commercial-building.webp" alt="Hotel Verde Zanzibar — sustainable hotel construction with premium concrete supplied by Tanzibaba" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
         </div>
 
         <section className="py-16 px-4 bg-white">

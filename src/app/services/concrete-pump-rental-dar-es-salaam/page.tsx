@@ -66,7 +66,7 @@ export default function ConcretePumpRentalDarEsSalaam() {
         </section>
 
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Image src="/images/concrete-pump.jpg" alt="Concrete pump operations at a multi-storey construction site in Dar es Salaam" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+          <Image src="/images/new/concrete-pump.webp" alt="Concrete pump operations at a multi-storey construction site in Dar es Salaam" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
         </div>
 
         <section className="py-16 px-4 bg-white">

@@ -60,7 +60,7 @@ export default function C25VsC30() {
         </section>
 
         <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden mb-8">
-          <Image src="/images/commercial-building.jpg" alt="C25 vs C30 concrete comparison guide — choosing the right grade for your construction project" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
+          <Image src="/images/new/commercial-building.webp" alt="C25 vs C30 concrete comparison guide — choosing the right grade for your construction project" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
         </div>
 
         <article className="py-12 px-4 bg-white">

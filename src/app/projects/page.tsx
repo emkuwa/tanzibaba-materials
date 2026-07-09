@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Tanzibaba',
     type: 'website',
     locale: 'en_TZ',
-    images: [{ url: '/images/commercial-building.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/new/commercial-building.webp', width: 1200, height: 630 }],
   },
 };
 

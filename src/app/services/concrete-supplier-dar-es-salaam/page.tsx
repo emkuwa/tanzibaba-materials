@@ -66,7 +66,7 @@ export default function ConcreteSupplierDarEsSalaam() {
         </section>
 
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Image src="/images/commercial-building.jpg" alt="Leading concrete supplier in Dar es Salaam — premium ready-mix for all construction needs" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+          <Image src="/images/new/commercial-building.webp" alt="Leading concrete supplier in Dar es Salaam — premium ready-mix for all construction needs" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
         </div>
 
         <section className="py-16 px-4 bg-white">

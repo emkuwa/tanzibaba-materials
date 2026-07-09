@@ -100,7 +100,7 @@ export default function BlogIndex() {
         </section>
 
         <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden mb-8">
-          <Image src="/images/commercial-building.jpg" alt="Tanzibaba concrete blog — expert guides on ready-mix concrete in Dar es Salaam" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
+          <Image src="/images/new/commercial-building.webp" alt="Tanzibaba concrete blog — expert guides on ready-mix concrete in Dar es Salaam" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" priority />
         </div>
 
         <section className="py-16 px-4 bg-white">

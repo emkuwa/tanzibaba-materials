@@ -27,37 +27,37 @@ const products = [
   {
     name: 'Ready Mix Concrete',
     slug: 'ready-mix-concrete-dodoma',
-    image: '/images/ready-mix-concrete.jpg',
+    image: '/images/new/ready-mix-concrete.webp',
     description: 'High-quality ready mix concrete delivered directly to your construction site in Kongwa district.',
   },
   {
     name: 'Aggregates & Kokoto',
     slug: 'aggregates-supplier-dodoma',
-    image: '/images/aggregates.jpg',
+    image: '/images/new/aggregates.webp',
     description: 'Premium aggregates, gravel, and kokoto for all your construction projects in Kongwa.',
   },
   {
     name: 'Concrete Blocks',
     slug: 'blocks-supplier-dodoma',
-    image: '/images/blocks.jpg',
+    image: '/images/new/hollow-blocks.webp',
     description: 'Durable concrete blocks in various sizes for residential and commercial buildings in Kongwa.',
   },
   {
     name: 'Paving Blocks',
     slug: 'paving-blocks-dodoma',
-    image: '/images/paving-blocks.jpg',
+    image: '/images/new/paving-blocks.webp',
     description: 'Decorative and interlocking paving blocks for driveways, walkways, and outdoor spaces in Kongwa.',
   },
   {
     name: 'Culvert Pipes',
     slug: 'culvert-pipes-dodoma',
-    image: '/images/culvert-pipes.jpg',
+    image: '/images/new/culvert-pipes.webp',
     description: 'Robust concrete culvert pipes for drainage and road infrastructure projects in Kongwa.',
   },
   {
     name: 'Zege (Concrete Products)',
     slug: 'zege-dodoma',
-    image: '/images/zege.jpg',
+    image: '/images/new/ready-mix-concrete.webp',
     description: 'Full range of zege and concrete products for construction needs throughout Kongwa district.',
   },
 ];

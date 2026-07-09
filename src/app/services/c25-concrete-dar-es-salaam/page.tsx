@@ -66,7 +66,7 @@ export default function C25ConcreteDarEsSalaam() {
         </section>
 
         <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden mb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Image src="/images/commercial-building.jpg" alt="C25 premium concrete supply in Dar es Salaam — quality tested ready-mix for construction" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
+          <Image src="/images/new/commercial-building.webp" alt="C25 premium concrete supply in Dar es Salaam — quality tested ready-mix for construction" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
         </div>
 
         <section className="py-16 px-4 bg-white">

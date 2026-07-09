@@ -60,7 +60,7 @@ export default function ConcretePriceGuide() {
         </section>
 
         <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden mb-8">
-          <Image src="/images/commercial-building.jpg" alt="Concrete price guide Tanzania 2026 — C10 to C50 ready-mix concrete prices from Tanzibaba" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
+          <Image src="/images/new/commercial-building.webp" alt="Concrete price guide Tanzania 2026 — C10 to C50 ready-mix concrete prices from Tanzibaba" fill className="object-cover" sizes="(max-width: 768px) 100vw, 896px" loading="lazy" />
         </div>
 
         <article className="py-12 px-4 bg-white">

@@ -11,10 +11,10 @@ const pixelId = '984823598215170';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Tanzibaba — Premium Concrete, Aggregates, Building Materials & Equipment Supplier | Tanzania',
-    template: '%s | Tanzibaba — Premium Building Materials & Equipment Tanzania',
+    default: 'Tanzibaba — Construction Supply, Equipment & Logistics Network | Tanzania',
+    template: '%s | Tanzibaba — Construction Supply, Equipment & Logistics Tanzania',
   },
-  description: 'Tanzibaba is Tanzania\'s premium building materials and equipment supplier. Premium ready-mix concrete, aggregates, gravel, washed sand, road base, concrete blocks, paving blocks, equipment hire and construction materials delivered across Tanzania.',
+  description: 'Tanzibaba is Tanzania\'s construction supply, equipment and logistics network. Premium ready-mix concrete, aggregates, gravel, washed sand, road base, concrete blocks, paving blocks, construction equipment hire and materials delivered across Tanzania.',
   keywords: ['premium concrete Tanzania', 'ready mix concrete Dar es Salaam', 'premium aggregates Tanzania', 'building materials Tanzania', 'washed sand Tanzania', 'concrete blocks Tanzania', 'construction materials Tanzania', 'premium building materials Tanzania'],
   robots: {
     index: true,
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Tanzibaba — Premium Concrete, Aggregates, Building Materials & Equipment Supplier | Tanzania',
-    description: 'Tanzania\'s leading building materials and equipment supplier. Premium concrete, aggregates, blocks, equipment hire and construction materials.',
+    title: 'Tanzibaba — Construction Supply, Equipment & Logistics Network | Tanzania',
+    description: 'Tanzania\'s construction supply, equipment and logistics network. Premium concrete, aggregates, blocks, equipment hire and construction materials.',
     url: siteUrl,
     siteName: 'Tanzibaba',
     type: 'website',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tanzibaba — Premium Concrete, Aggregates, Building Materials & Equipment Supplier',
-    description: 'Tanzania\'s leading building materials and equipment supplier. Premium concrete, aggregates, blocks, equipment hire and construction materials.',
+    title: 'Tanzibaba — Construction Supply, Equipment & Logistics Network',
+    description: 'Tanzania\'s construction supply, equipment and logistics network. Premium concrete, aggregates, blocks, equipment hire and construction materials.',
     images: ['/images/og-brand-image.png'],
   },
   verification: {
@@ -61,7 +61,7 @@ const jsonLd = {
       '@type': 'LocalBusiness',
       '@id': `${siteUrl}/#business`,
       name: 'Tanzibaba',
-      description: 'Premium construction materials and equipment supplier in Dar es Salaam — ready-mix concrete, aggregates, crushed stone, equipment hire and road construction materials.',
+      description: 'Construction supply, equipment and logistics network in Dar es Salaam — ready-mix concrete, aggregates, crushed stone, construction equipment hire and road construction materials.',
       url: siteUrl,
       telephone: '+255716002790',
       email: 'info@tanzibaba.co.tz',
@@ -105,10 +105,10 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${siteUrl}/#service`,
-      name: 'Construction Materials & Equipment Supply',
+      name: 'Construction Supply, Equipment & Logistics',
       provider: { '@id': `${siteUrl}/#business` },
       areaServed: 'Dar es Salaam, Tanzania',
-      description: 'Premium construction materials and equipment — ready-mix concrete (C10 to C50), gravel, crushed stone, equipment hire and road construction aggregates — with washed sand technology.',
+      description: 'Construction supply, equipment and logistics — ready-mix concrete (C10 to C50), gravel, crushed stone, construction equipment hire and road construction aggregates — with washed sand technology.',
     },
     {
       '@type': 'Service',

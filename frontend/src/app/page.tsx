@@ -17,7 +17,7 @@ const trustBadges = [
   { icon: Droplets, label: 'Washed Sand Technology' },
   { icon: Beaker, label: 'Laboratory Tested Concrete' },
   { icon: CheckCircle, label: 'Quality Controlled Production' },
-  { icon: Truck, label: 'Reliable Supply & Equipment Network' },
+  { icon: Truck, label: 'Construction Supply, Equipment & Logistics Network' },
 ];
 
 const products = [
@@ -45,40 +45,64 @@ const whyUs = [
   { icon: Droplets, title: 'Washed Sand Technology', desc: 'Advanced sand washing removes impurities — producing cleaner materials and stronger concrete.' },
   { icon: Beaker, title: 'Laboratory Tested Concrete', desc: 'Every batch verified through laboratory testing to ensure consistency and performance.' },
   { icon: CheckCircle, title: 'Quality Controlled Production', desc: 'Computerized batching and strict quality control at every stage of production.' },
-  { icon: Truck, title: 'Reliable Supply & Equipment Network', desc: 'Modern fleet, strategic plant locations and extensive equipment inventory ensure on-time delivery for projects of any size.' },
+  { icon: Truck, title: 'Construction Supply, Equipment & Logistics Network', desc: 'Modern fleet, strategic plant locations and extensive equipment inventory ensure on-time delivery for projects of any size.' },
   { icon: HardHat, title: 'Industry Expertise', desc: 'Decades of experience serving commercial, industrial and infrastructure projects across Tanzania.' },
 ];
 
 const services = [
   { icon: Package, title: 'Building Materials Supply', desc: 'Premium concrete, aggregates, blocks and building materials for all construction needs.', href: '/ready-mix-concrete-dar-es-salaam', image: '/images/new/ready-mix-concrete.webp' },
-  { icon: Mountain, title: 'Aggregate Supply', desc: 'High-quality crushed stone, gravel and aggregates from our quality-controlled crushing plant.', href: '/aggregates-supplier-dar-es-salaam', image: '/images/new/aggregates.webp' },
   { icon: Truck, title: 'Ready Mix Concrete', desc: 'Premium ready-mix concrete grades C10 to C50 with washed sand technology.', href: '/ready-mix-concrete-dar-es-salaam', image: '/images/new/concrete-pump.webp' },
-  { icon: HardHat, title: 'Equipment Hire', desc: 'Earthmoving, material handling and construction equipment for short or long-term hire.', href: '/equipment-hire', image: '/images/new/commercial-building.webp' },
-  { icon: Wrench, title: 'Heavy Machinery Rental', desc: 'Heavy machinery including cranes, loaders, graders and rollers for your projects.', href: '/equipment-hire', image: '/images/new/road-construction.webp' },
+  { icon: Mountain, title: 'Aggregate Supply', desc: 'High-quality crushed stone, gravel and aggregates from our quality-controlled crushing plant.', href: '/aggregates-supplier-dar-es-salaam', image: '/images/new/aggregates.webp' },
+  { icon: HardHat, title: 'Construction Equipment Hire', desc: 'Earthmoving, transport, concrete, lifting and site equipment for short or long-term hire.', href: '/equipment-hire', image: '/images/new/road-construction.webp' },
+  { icon: Wrench, title: 'Heavy Machinery Rental', desc: 'Heavy machinery including cranes, loaders, graders and rollers for your projects.', href: '/equipment-hire', image: '/images/new/commercial-building.webp' },
   { icon: Truck, title: 'Truck Hire', desc: 'Dump trucks, tipper trucks, lowbed trailers and water bowsers for material transport.', href: '/equipment-hire', image: '/images/new/crusher-plant.webp' },
-  { icon: Route, title: 'Project Logistics', desc: 'End-to-end logistics coordination for material and equipment delivery to your site.', href: '/services/logistics', image: '/images/new/commercial-building.webp' },
-  { icon: ClipboardList, title: 'Procurement Services', desc: 'Complete procurement management for construction materials and equipment.', href: '/services/procurement', image: '/images/new/precast-products.webp' },
+  { icon: Route, title: 'Project Logistics', desc: 'End-to-end logistics coordination for material and equipment delivery to your site.', href: '/services/logistics', image: '/images/new/precast-products.webp' },
+  { icon: ClipboardList, title: 'Procurement Coordination', desc: 'Complete procurement and supply chain coordination for construction materials and equipment.', href: '/services/procurement', image: '/images/new/culvert-pipes.webp' },
 ];
 
-const equipment = [
-  { icon: Tractor, title: 'Excavators', desc: 'Hydraulic excavators for earthmoving, trenching and site preparation.', color: 'bg-orange-50 text-orange-600' },
-  { icon: Tractor, title: 'Bulldozers', desc: 'Heavy-duty bulldozers for grading, clearing and land levelling.', color: 'bg-stone-50 text-stone-600' },
-  { icon: Truck, title: 'Wheel Loaders', desc: 'Wheel loaders for material handling, loading and stockpile management.', color: 'bg-brand-50 text-brand-600' },
-  { icon: Tractor, title: 'Backhoe Loaders', desc: 'Versatile backhoe loaders for excavation, digging and loading.', color: 'bg-amber-50 text-amber-600' },
-  { icon: Tractor, title: 'Motor Graders', desc: 'Motor graders for fine grading, road maintenance and levelling.', color: 'bg-blue-50 text-blue-600' },
-  { icon: Truck, title: 'Dump Trucks', desc: 'Heavy-duty dump trucks for bulk material transport.', color: 'bg-red-50 text-red-600' },
-  { icon: Truck, title: 'Tipper Trucks', desc: 'Tipper trucks for efficient unloading of aggregates and materials.', color: 'bg-amber-50 text-amber-600' },
-  { icon: Truck, title: 'Lowbed Trailers', desc: 'Lowbed trailers for transporting heavy equipment and machinery.', color: 'bg-indigo-50 text-indigo-600' },
-  { icon: Wrench, title: 'Mobile Cranes', desc: 'Mobile cranes for lifting, hoisting and heavy material placement.', color: 'bg-violet-50 text-violet-600' },
-  { icon: Tractor, title: 'Forklifts', desc: 'Forklifts for material handling, loading and warehouse operations.', color: 'bg-teal-50 text-teal-600' },
-  { icon: Truck, title: 'Concrete Pump Trucks', desc: 'Concrete pump trucks for precise concrete placement at height.', color: 'bg-cyan-50 text-cyan-600' },
-  { icon: Truck, title: 'Transit Mixers', desc: 'Concrete transit mixers for fresh concrete delivery to site.', color: 'bg-sky-50 text-sky-600' },
-  { icon: Droplets, title: 'Water Bowsers', desc: 'Water bowsers for dust suppression, compaction and site water supply.', color: 'bg-blue-50 text-blue-600' },
-  { icon: Droplets, title: 'Fuel Bowsers', desc: 'Fuel bowsers for on-site refuelling of equipment and vehicles.', color: 'bg-rose-50 text-rose-600' },
-  { icon: Cog, title: 'Rollers', desc: 'Compaction rollers for soil, asphalt and road base compaction.', color: 'bg-stone-50 text-stone-600' },
-  { icon: Hammer, title: 'Mobile Crushers', desc: 'Mobile crushers for on-site rock crushing and aggregate production.', color: 'bg-orange-50 text-orange-600' },
-  { icon: Cog, title: 'Screening Plants', desc: 'Screening plants for material sorting, grading and classification.', color: 'bg-purple-50 text-purple-600' },
-  { icon: Zap, title: 'Generators', desc: 'Diesel generators for reliable on-site power supply.', color: 'bg-amber-50 text-amber-600' },
+const equipmentCategories = [
+  {
+    title: 'Earthmoving',
+    icon: Tractor,
+    color: 'bg-orange-100 text-orange-600',
+    image: '/images/new/road-construction.webp',
+    items: ['Excavators', 'Bulldozers', 'Wheel Loaders', 'Backhoe Loaders', 'Motor Graders'],
+  },
+  {
+    title: 'Transport',
+    icon: Truck,
+    color: 'bg-blue-100 text-blue-600',
+    image: '/images/new/crusher-plant.webp',
+    items: ['Dump Trucks', 'Tipper Trucks', 'Lowbed Trailers', 'Water Bowsers', 'Fuel Bowsers'],
+  },
+  {
+    title: 'Concrete',
+    icon: Truck,
+    color: 'bg-brand-100 text-brand-600',
+    image: '/images/new/concrete-pump.webp',
+    items: ['Concrete Pump Trucks', 'Transit Mixers', 'Boom Pumps'],
+  },
+  {
+    title: 'Lifting & Handling',
+    icon: Wrench,
+    color: 'bg-violet-100 text-violet-600',
+    image: '/images/new/commercial-building.webp',
+    items: ['Mobile Cranes', 'Forklifts', 'Telehandlers'],
+  },
+  {
+    title: 'Mining & Quarry',
+    icon: Hammer,
+    color: 'bg-stone-100 text-stone-600',
+    image: '/images/new/aggregates.webp',
+    items: ['Mobile Crushers', 'Screening Plants'],
+  },
+  {
+    title: 'Site Equipment',
+    icon: Zap,
+    color: 'bg-amber-100 text-amber-600',
+    image: '/images/new/washed-sand.webp',
+    items: ['Generators', 'Lighting Towers', 'Air Compressors'],
+  },
 ];
 
 const tools = [
@@ -100,7 +124,7 @@ const industryHub = [
 ];
 
 const productOptions = [
-  'Ready Mix Concrete', 'Aggregates', 'Gravel', 'Washed Sand', 'Road Base', 'Concrete Blocks', 'Paving Blocks', 'Culvert Pipes', 'Precast Products', 'Equipment Hire', 'Other'
+  'Ready Mix Concrete', 'Aggregates', 'Gravel', 'Washed Sand', 'Road Base', 'Concrete Blocks', 'Paving Blocks', 'Culvert Pipes', 'Precast Products', 'Construction Equipment Hire', 'Other'
 ];
 
 const locationOptions = [
@@ -130,7 +154,7 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-20 w-full">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-brand-600/20 text-brand-300 px-3 py-1.5 rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6 border border-brand-500/20">
-                <Zap className="w-3.5 h-3.5 md:w-4 md:h-4" /> Tanzania&apos;s Premium Building Materials & Equipment Supplier
+                <Zap className="w-3.5 h-3.5 md:w-4 md:h-4" /> Tanzania&apos;s Construction Supply, Equipment & Logistics Network
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] mb-4 md:mb-6">
                 Premium Concrete Made with{' '}
@@ -138,7 +162,7 @@ export default function Home() {
                 for Superior Strength and Performance
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed mb-6 md:mb-8 max-w-2xl">
-                Trusted supplier of concrete, aggregates, blocks, building materials and equipment hire for commercial, industrial and infrastructure projects across Tanzania.
+                Trusted construction supply, equipment and logistics network serving commercial, industrial and infrastructure projects across Tanzania and Zanzibar.
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10">
                 <button onClick={() => setShowQuote(true)} className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-xl transition-all shadow-lg shadow-brand-600/30 text-sm md:text-base">
@@ -176,7 +200,7 @@ export default function Home() {
                 { icon: Award, title: 'Premium Concrete', desc: 'Engineered for consistency and superior strength across all grades.' },
                 { icon: Droplets, title: 'Washed Sand Technology', desc: 'Cleaner sand removes impurities for stronger, more durable concrete.' },
                 { icon: Beaker, title: 'Laboratory Tested', desc: 'Every batch verified through rigorous laboratory testing.' },
-                { icon: Truck, title: 'Reliable Supply & Equipment', desc: 'Modern fleet and strategic plants ensure on-time delivery.' },
+                { icon: Truck, title: 'Construction Supply, Equipment & Logistics', desc: 'Modern fleet and strategic plants ensure on-time delivery.' },
                 { icon: CheckCircle, title: 'Transparent Pricing', desc: 'Direct factory pricing with no hidden costs. VAT included.' },
               ].map(item => (
                 <div key={item.title} className="text-center p-5 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-md transition-shadow">
@@ -309,24 +333,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. EQUIPMENT HIRE */}
+        {/* 5. CONSTRUCTION EQUIPMENT HIRE */}
         <section className="py-12 md:py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                <HardHat className="w-4 h-4" /> Equipment Hire
+                <HardHat className="w-4 h-4" /> Construction Equipment Hire
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Heavy Equipment & Machinery Hire</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Well-maintained construction equipment available for short and long-term hire across Tanzania. All machines operated by trained professionals.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Equipment Hire by Category</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Well-maintained construction equipment available for short and long-term hire across Tanzania and Zanzibar.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {equipment.map(e => (
-                <div key={e.title} className="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 hover:shadow-lg hover:border-brand-200 transition-all duration-300 text-center group">
-                  <div className={`w-12 h-12 md:w-14 md:h-14 ${e.color} rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform`}>
-                    <e.icon className="w-6 h-6 md:w-7 md:h-7" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {equipmentCategories.map(cat => (
+                <div key={cat.title} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
+                  <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden">
+                    <Image src={cat.image} alt={cat.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4">
+                      <div className={`inline-flex items-center gap-1.5 ${cat.color} px-2.5 py-1 rounded-lg text-xs font-bold`}>
+                        <cat.icon className="w-3.5 h-3.5" />
+                        {cat.title}
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">{e.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-500">{e.desc}</p>
+                  <div className="p-4 md:p-5">
+                    <ul className="space-y-1.5">
+                      {cat.items.map(item => (
+                        <li key={item} className="flex items-center gap-2 text-xs md:text-sm text-gray-600">
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ))}
             </div>
@@ -338,7 +377,47 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 6. WHY CHOOSE TANZIBABA */}
+        {/* 6. EQUIPMENT CTA */}
+        <section className="py-12 md:py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl p-6 md:p-10 text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-brand-600/20 rounded-xl flex items-center justify-center mb-4">
+                    <HardHat className="w-6 h-6 text-brand-400" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Need Construction Equipment?</h3>
+                  <p className="text-gray-400 text-sm md:text-base mb-6 max-w-md">Access trusted equipment owners across Tanzania and Zanzibar for short and long-term projects.</p>
+                  <div className="flex flex-wrap gap-3">
+                    <Link href="/equipment-hire" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 md:px-6 py-3 rounded-xl transition-all shadow-lg text-sm">
+                      Request Equipment <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <a onClick={() => setShowLeadCapture(true)} className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 md:px-6 py-3 rounded-xl transition-all border border-white/20 text-sm cursor-pointer">
+                      <MessageCircle className="w-4 h-4" /> Talk to an Expert
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-10 text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 0%, transparent 60%)' }} />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Own Construction Equipment?</h3>
+                  <p className="text-brand-100 text-sm md:text-base mb-6 max-w-md">Join the Tanzibaba Network and receive equipment hire requests from contractors and developers across Tanzania.</p>
+                  <Link href="/supplier/register" className="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold px-5 md:px-6 py-3 rounded-xl hover:bg-brand-50 transition-all shadow-lg text-sm">
+                    Register Your Equipment <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. WHY CHOOSE TANZIBABA */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -362,7 +441,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7. CONSTRUCTION TOOLS */}
+        {/* 8. CONSTRUCTION TOOLS */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -391,7 +470,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. INDUSTRY HUB */}
+        {/* 9. INDUSTRY HUB */}
         <section className="py-12 md:py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -418,7 +497,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 9. FAQ */}
+        {/* 10. FAQ */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 md:mb-10">
@@ -458,7 +537,7 @@ export default function Home() {
           { '@type': 'Question', name: 'What payment methods do you accept?', acceptedAnswer: { '@type': 'Answer', text: 'We accept bank transfers, mobile money (M-Pesa, Tigo Pesa, Airtel Money), and cash payments. For large orders, we offer flexible payment terms including partial payment on delivery. Contact our team to discuss the best payment option for your project.' } },
         ] }) }} />
 
-        {/* 10. QUOTE CTA */}
+        {/* 11. QUOTE CTA */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-3xl p-6 md:p-12 text-center text-white relative overflow-hidden">

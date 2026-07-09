@@ -18,7 +18,7 @@ const navItems = [
     ],
   },
   {
-    label: 'Equipment Hire', icon: HardHat, href: '/equipment-hire',
+    label: 'Construction Equipment Hire', icon: HardHat, href: '/equipment-hire',
     children: [
       { label: 'Excavators', href: '/equipment-hire' },
       { label: 'Bulldozers', href: '/equipment-hire' },
@@ -28,6 +28,7 @@ const navItems = [
       { label: 'Concrete Pump Trucks', href: '/equipment-hire' },
       { label: 'Forklifts', href: '/equipment-hire' },
       { label: 'Generators', href: '/equipment-hire' },
+      { label: 'All Equipment', href: '/equipment-hire' },
     ],
   },
   {

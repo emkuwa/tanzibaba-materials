@@ -8,13 +8,13 @@ import Footer from '@/components/Footer';
 const siteUrl = 'https://materials.tanzibaba.com';
 
 export const metadata: Metadata = {
-  title: 'About Tanzibaba | Premium Ready-Mix Concrete Dar es Salaam',
-  description: 'Tanzibaba is Dar es Salaam\'s premium ready-mix concrete and equipment supplier. Quality-controlled production with washed sand technology. Direct pricing — no middlemen.',
+  title: 'About Tanzibaba | Construction Supply, Equipment & Logistics Network',
+  description: 'Tanzibaba is Dar es Salaam\'s construction supply, equipment and logistics network. Premium ready-mix concrete with washed sand technology. Direct pricing — no middlemen.',
   keywords: ['about tanzibaba', 'tanzibaba concrete supplier', 'tanzania concrete company', 'ready mix concrete company dar es salaam'],
   alternates: { canonical: `${siteUrl}/about` },
   openGraph: {
-    title: 'About Tanzibaba | Premium Ready-Mix Concrete Dar es Salaam',
-    description: 'Tanzibaba is Dar es Salaam\'s premium ready-mix concrete and equipment supplier. Washed sand technology, quality controlled production, direct pricing.',
+    title: 'About Tanzibaba | Construction Supply, Equipment & Logistics Network',
+    description: 'Tanzibaba is Dar es Salaam\'s construction supply, equipment and logistics network. Washed sand technology, quality controlled production, direct pricing.',
     url: `${siteUrl}/about`,
     siteName: 'Tanzibaba',
     type: 'website',

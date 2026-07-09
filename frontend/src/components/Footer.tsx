@@ -15,7 +15,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-              Premium construction materials and equipment supplier — ready mix concrete, aggregates, blocks, building materials and equipment hire across Tanzania.
+              Premium construction supply, equipment and logistics network — ready mix concrete, aggregates, blocks, building materials and construction equipment hire across Tanzania.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a href="https://wa.me/255716002790" target="_blank" className="w-10 h-10 bg-green-600/20 rounded-lg flex items-center justify-center hover:bg-green-600/30 transition-colors">
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Equipment Hire</h4>
+            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Construction Equipment Hire</h4>
             <div className="flex flex-col gap-3">
               <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Excavators</Link>
               <Link href="/equipment-hire" className="text-sm hover:text-brand-400 transition-colors">Bulldozers</Link>
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p className="text-gray-600">&copy; {new Date().getFullYear()} Tanzibaba. All rights reserved.</p>
-          <p className="text-gray-600 text-center">Premium Building Materials &amp; Equipment Supplier Across Tanzania.</p>
+          <p className="text-gray-600 text-center">Tanzania&apos;s Construction Supply, Equipment &amp; Logistics Network.</p>
         </div>
       </div>
     </footer>

@@ -163,10 +163,16 @@ export default function KokotoIringaPage() {
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'Je, mnauza kokoto Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Ndiyo, tunauza kokoto bora kwa ujenzi wa barabara, majengo na miundombinu katika mkoa wa Iringa na maeneo yote jirani.' } },
-          { '@type': 'Question', name: 'Bei ya kokoto Iringa ni ngapi?', acceptedAnswer: { '@type': 'Answer', text: 'Bei ya kokoto Iringa inaanzia TZS 75,000 kwa tani. Bei hutofautiana kulingana na ukubwa na kiasi.' } },
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Kokoto Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Kokoto (gravel) supply in Iringa for construction, road building and infrastructure projects.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Kokoto Iringa', item: 'https://materials.tanzibaba.com/kokoto-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'Je, mnauza kokoto Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Ndiyo, tunauza kokoto bora kwa ujenzi wa barabara, majengo na miundombinu katika mkoa wa Iringa na maeneo yote jirani.' } },
+            { '@type': 'Question', name: 'Bei ya kokoto Iringa ni ngapi?', acceptedAnswer: { '@type': 'Answer', text: 'Bei ya kokoto Iringa inaanzia TZS 75,000 kwa tani. Bei hutofautiana kulingana na ukubwa na kiasi.' } },
         ]
       }) }} />
     </>

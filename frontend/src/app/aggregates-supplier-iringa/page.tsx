@@ -156,6 +156,22 @@ export default function AggregatesSupplierIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Aggregates Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Construction aggregates supply in Iringa — gravel, crushed stone and road base materials.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Aggregates Supplier Iringa', item: 'https://materials.tanzibaba.com/aggregates-supplier-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'What aggregate types do you supply in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'We supply crusher dust, 0-5mm, 5-10mm, 10-20mm, 20-40mm, 40mm+, road base and asphalt aggregate in Iringa.' } },
+            { '@type': 'Question', name: 'What is the price of aggregates in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Aggregate prices start from TZS 75,000 per ton. Prices vary by size and quantity. Contact us for project-specific quotes.' } },
+            { '@type': 'Question', name: 'Do you deliver aggregates to all areas in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver to Iringa City, Mazimbu, Kihesa, Nala, Madizini, Mlandizi and surrounding areas.' } },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

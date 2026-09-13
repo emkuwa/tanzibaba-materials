@@ -157,6 +157,22 @@ export default function BlocksIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Concrete Blocks Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Concrete blocks supply in Iringa — hollow blocks, solid blocks and paving blocks for construction projects.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Blocks Supplier Iringa', item: 'https://materials.tanzibaba.com/blocks-supplier-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'What block types do you supply in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'We supply hollow blocks, solid blocks and paving blocks in Iringa. All blocks are manufactured to Tanzanian standards.' } },
+            { '@type': 'Question', name: 'What are the prices of blocks in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Hollow blocks start from TZS 2,500 each, solid blocks from TZS 3,500 each. Prices vary by size and quantity. Contact us for bulk pricing.' } },
+            { '@type': 'Question', name: 'Do you deliver blocks to Mazimbu and Kihesa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver blocks to all areas in Iringa including Mazimbu, Kihesa, Nala, Madizini and Mlandizi.' } },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

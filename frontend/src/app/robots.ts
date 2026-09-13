@@ -7,7 +7,19 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/dashboard/', '/supplier/', '/api/'],
+        disallow: ['/admin/', '/dashboard/', '/supplier/', '/api/', '/login/', '/register/'],
+      },
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        disallow: '/',
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

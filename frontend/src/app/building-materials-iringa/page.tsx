@@ -129,6 +129,17 @@ export default function BuildingMaterialsIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Building Materials Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Comprehensive building materials supply in Iringa — ready mix concrete, aggregates, blocks, paving and culvert pipes.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Building Materials Iringa', item: 'https://materials.tanzibaba.com/building-materials-iringa' }
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

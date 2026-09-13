@@ -25,15 +25,27 @@ const productPages = [
   'aggregates-supplier-dar-es-salaam',
   'aggregates-supplier-dodoma',
   'aggregates-supplier-zanzibar',
+  'aggregates-supplier-iringa',
   'blocks-supplier-dar-es-salaam',
   'blocks-supplier-dodoma',
   'blocks-supplier-zanzibar',
+  'blocks-supplier-iringa',
   'paving-blocks-dar-es-salaam',
   'paving-blocks-dodoma',
   'paving-blocks-zanzibar',
+  'paving-blocks-iringa',
   'culvert-pipes-dar-es-salaam',
   'culvert-pipes-dodoma',
   'culvert-pipes-zanzibar',
+  'culvert-pipes-iringa',
+  'concrete-supplier-dodoma',
+  'concrete-supplier-iringa',
+  'kokoto-dodoma',
+  'kokoto-iringa',
+  'building-materials-dodoma',
+  'building-materials-iringa',
+  'construction-company-dodoma',
+  'construction-company-iringa',
 ];
 
 const locationPages = [
@@ -52,11 +64,54 @@ const locationPages = [
   'construction-company-zanzibar',
   'construction-materials-zanzibar',
   'government-construction-projects',
+  'construction-company-iringa',
+];
+
+const blogPages = [
+  'what-is-ready-mix-concrete',
+  'how-concrete-is-delivered',
+  'ready-mix-concrete-for-apartments',
+  'foundation-concrete-guide',
+  'c25-vs-c30-concrete',
+  'concrete-pump-guide',
+  'concrete-price-guide-tanzania',
+  'commercial-construction-guide',
+  'infrastructure-construction-guide',
+  'building-construction-costs-tanzania',
+  'aggregate-sizes-guide',
+  'road-construction-materials-guide',
+  'hotel-construction-zanzibar',
+  'industrial-construction-tanzania',
+];
+
+const equipmentPages = [
+  'equipment/rent',
+  'equipment/buy',
+  'equipment/rent-to-own',
+  'equipment/list-equipment',
+];
+
+const toolPages = [
+  'tools/block-calculator',
+  'tools/boq-generator',
+  'tools/sand-calculator',
+  'tools/material-estimator',
+  'tools/cost-calculator',
+  'tools/paint-calculator',
+  'tools/aggregate-calculator',
+  'tools/concrete-calculator',
+  'tools/tile-calculator',
+];
+
+const projectPages = [
+  'projects/hotel-verde-zanzibar',
+  'projects/viva-towers',
+  'projects/vijana-towers',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ['', '/get-quote', '/about', '/contact', '/major-projects',
-    '/tools', '/directory', '/learn',
+  const staticPages = ['', '/get-quote', '/about', '/contact', '/faq', '/major-projects',
+    '/tools', '/directory', '/learn', '/news', '/resources', '/projects',
     '/commercial-construction',
   ];
   const today = new Date();
@@ -148,6 +203,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
   }));
 
+  const blogEntries: MetadataRoute.Sitemap = blogPages.map(slug => ({
+    url: `${siteUrl}/blog/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
+  }));
+
+  const equipmentEntries: MetadataRoute.Sitemap = equipmentPages.map(slug => ({
+    url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
+  }));
+
+  const toolEntries: MetadataRoute.Sitemap = toolPages.map(slug => ({
+    url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6,
+  }));
+
+  const projectEntries: MetadataRoute.Sitemap = projectPages.map(slug => ({
+    url: `${siteUrl}/${slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7,
+  }));
+
   const directoryEntries: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/directory`, lastModified: today, changeFrequency: 'weekly' as const, priority: 0.8 },
   ];
@@ -164,7 +235,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaEntries, ...gradeEntries, ...projectTypeEntries, ...overviewEntries,
     ...materialsEntries, ...tzConstructionEntries, ...africaConstructionEntries,
     ...swahiliEntries, ...governmentEntries,
-    ...productEntries, ...locationEntries, ...directoryEntries,
-    ...learnEntries,
+    ...productEntries, ...locationEntries, ...blogEntries, ...equipmentEntries,
+    ...toolEntries, ...projectEntries, ...directoryEntries, ...learnEntries,
   ];
 }

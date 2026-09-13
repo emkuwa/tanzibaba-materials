@@ -209,6 +209,24 @@ export default function RentEquipment() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Tanzania' },
+          { '@type': 'Service', name: 'Construction Equipment Rental Tanzania', serviceType: 'Equipment Rental', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Tanzania', description: 'Construction equipment rental in Tanzania — excavators, bulldozers, wheel loaders, dump trucks, cranes and more. Short-term and long-term hire with trained operators.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Equipment Rental', item: 'https://materials.tanzibaba.com/equipment/rent' }
+          ]},
+          { '@type': 'ItemList', name: 'Equipment Categories', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Earthmoving Equipment', description: 'Excavators, bulldozers, wheel loaders, backhoe loaders, motor graders' },
+            { '@type': 'ListItem', position: 2, name: 'Transport Equipment', description: 'Dump trucks, tipper trucks, lowbed trailers, water bowsers, fuel bowsers' },
+            { '@type': 'ListItem', position: 3, name: 'Concrete Equipment', description: 'Concrete pump trucks, transit mixers, boom pumps' },
+            { '@type': 'ListItem', position: 4, name: 'Lifting & Handling', description: 'Mobile cranes, forklifts, telehandlers' },
+            { '@type': 'ListItem', position: 5, name: 'Mining & Quarry', description: 'Mobile crushers, screening plants' },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

@@ -156,6 +156,22 @@ export default function CulvertPipesIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Culvert Pipes Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Culvert pipes supply in Iringa — round concrete pipes and box culverts for drainage and road projects.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Culvert Pipes Iringa', item: 'https://materials.tanzibaba.com/culvert-pipes-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'What culvert pipe sizes do you have in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'We supply 400mm to 1200mm diameter concrete culvert pipes in Iringa for drainage and road projects.' } },
+            { '@type': 'Question', name: 'What is the price of culvert pipes in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Culvert pipes start from TZS 45,000 each. Prices vary by size and quantity. Contact us for project-specific quotes.' } },
+            { '@type': 'Question', name: 'Do you deliver culvert pipes to all areas in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver to Iringa City, Mazimbu, Kihesa, Nala and surrounding areas.' } },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

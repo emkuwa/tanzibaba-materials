@@ -150,6 +150,22 @@ export default function PavingBlocksIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Paving Blocks Supply Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Paving blocks supply in Iringa — interlocking blocks, paver tiles and kerbstones for driveways, walkways and parking areas.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Paving Blocks Iringa', item: 'https://materials.tanzibaba.com/paving-blocks-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'What paving block sizes do you have in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'We supply 200×100×80mm, 200×100×60mm, 220×110×80mm and 220×110×60mm paving blocks in Iringa.' } },
+            { '@type': 'Question', name: 'What is the price of paving blocks in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Paving blocks start from TZS 5,500 per piece. Prices vary by size and quantity. Contact us for bulk pricing.' } },
+            { '@type': 'Question', name: 'Do you deliver paving blocks to all areas in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we deliver to Iringa City, Mazimbu, Kihesa, Nala, Madizini and surrounding areas.' } },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

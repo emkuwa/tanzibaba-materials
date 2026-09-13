@@ -150,6 +150,22 @@ export default function ConstructionCompanyIringaPage() {
         </section>
       </main>
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'LocalBusiness', '@id': 'https://materials.tanzibaba.com/#business', name: 'Tanzibaba', url: 'https://materials.tanzibaba.com', telephone: '+255716002790', areaServed: 'Iringa, Tanzania' },
+          { '@type': 'Service', name: 'Construction Services Iringa', provider: { '@id': 'https://materials.tanzibaba.com/#business' }, areaServed: 'Iringa, Tanzania', description: 'Construction services in Iringa — commercial, residential, industrial and infrastructure projects.' },
+          { '@type': 'BreadcrumbList', itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://materials.tanzibaba.com' },
+            { '@type': 'ListItem', position: 2, name: 'Construction Company Iringa', item: 'https://materials.tanzibaba.com/construction-company-iringa' }
+          ]},
+          { '@type': 'FAQPage', mainEntity: [
+            { '@type': 'Question', name: 'Do you offer construction services in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer comprehensive construction services in Iringa including commercial, residential, industrial and infrastructure projects.' } },
+            { '@type': 'Question', name: 'What construction projects do you handle in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'We handle offices, hotels, houses, apartments, factories, warehouses, roads, bridges and other construction projects in Iringa.' } },
+            { '@type': 'Question', name: 'Do you provide building materials for construction in Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we supply all building materials including ready mix concrete, aggregates, blocks, paving and culvert pipes for construction projects in Iringa.' } },
+          ]}
+        ]
+      }) }} />
     </>
   );
 }

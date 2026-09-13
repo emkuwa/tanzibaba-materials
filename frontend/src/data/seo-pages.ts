@@ -46,6 +46,10 @@ export const locations: Location[] = [
     description: 'Premium ready-mix concrete supply for commercial, industrial and infrastructure projects in Kibaha. Quality concrete delivered from our Dar es Salaam plants.',
     metaDesc: 'Premium ready-mix concrete supply in Kibaha. Grades C10–C50 with washed sand technology. Delivery from Dar es Salaam.',
     heroDesc: 'Premium ready-mix concrete supply and delivery to Kibaha and surrounding areas.' },
+  { slug: 'iringa', name: 'Iringa', areas: ['Iringa City', 'Mazimbu', 'Mlandizi', 'Kihesa', 'Nala', 'Madizini'],
+    description: 'Premium ready-mix concrete supply for commercial, industrial and infrastructure projects in Iringa. Our batch plants serve Iringa City, Mazimbu, Kihesa and surrounding areas with fast delivery and consistent quality.',
+    metaDesc: 'Premium ready-mix concrete supply in Iringa. Grades C10–C50 with washed sand technology. Get an instant quote online.',
+    heroDesc: 'Premium ready-mix concrete supply and delivery across Iringa — from Mazimbu to Kihesa, Nala to Madizini.' },
 ];
 
 export interface ConcreteGrade {

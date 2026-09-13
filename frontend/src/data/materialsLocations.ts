@@ -28,6 +28,7 @@ export const zanzibarLocations: MaterialsLocation[] = [
 
 export const extraLocations: MaterialsLocation[] = [
   { slug: 'dodoma', name: 'Dodoma', region: 'Dodoma', description: 'Dodoma city, the capital of Tanzania, with growing residential, commercial and government construction projects' },
+  { slug: 'iringa', name: 'Iringa', region: 'Iringa', description: 'Iringa city and surrounding areas in the Southern Highlands, with residential, commercial and infrastructure construction projects' },
 ];
 
 export const allMaterialsLocations: MaterialsLocation[] = [

@@ -1,0 +1,161 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { MapPin, ArrowRight, HelpCircle, Phone, Circle } from 'lucide-react';
+
+const siteUrl = 'https://materials.tanzibaba.com';
+
+export const metadata: Metadata = {
+  title: 'Culvert Pipes Iringa — Concrete Drainage Pipes | Tanzibaba',
+  description: 'Premium culvert pipes supplier in Iringa. Round concrete pipes and box culverts for drainage and road projects. Delivery to Mazimbu, Kihesa, Nala.',
+  keywords: ['culvert pipes Iringa', 'concrete pipes Iringa', 'drainage pipes Iringa', 'box culverts Iringa', 'mifereji Iringa'],
+  alternates: { canonical: `${siteUrl}/culvert-pipes-iringa` },
+  openGraph: {
+    title: 'Culvert Pipes Iringa — Concrete Drainage Pipes | Tanzibaba',
+    description: 'Premium culvert pipes supplier in Iringa. Round concrete pipes and box culverts.',
+    url: `${siteUrl}/culvert-pipes-iringa`,
+    siteName: 'Tanzibaba',
+    type: 'website',
+    locale: 'en_TZ',
+    images: [{ url: '/images/new/culvert-pipes.webp', width: 1200, height: 630 }],
+  },
+};
+
+export default function CulvertPipesIringaPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section className="relative min-h-[60vh] flex items-center bg-gray-950 overflow-hidden">
+          <div className="absolute inset-0">
+            <Image src="/images/new/culvert-pipes.webp" alt="Culvert pipes in Iringa" fill className="object-cover" style={{ objectPosition: '50% 40%' }} priority fetchPriority="high" sizes="100vw" quality={85} />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/90 to-gray-950/60" />
+          </div>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 bg-brand-600/20 border border-brand-500/30 text-brand-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                <Circle className="w-4 h-4" /> Culvert Pipes — Iringa
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight">
+                Culvert Pipes{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">
+                  Iringa
+                </span>
+              </h1>
+              <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+                Premium concrete culvert pipes for drainage, road construction and infrastructure projects in Iringa. Round pipes and box culverts available.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <a href="/get-quote" className="group inline-flex items-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-700 transition-all shadow-2xl shadow-brand-600/40">
+                  Get a Quote <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all">
+                  WhatsApp Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pipe Sizes */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Culvert Pipe Sizes in Iringa</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { size: '400mm dia × 1050mm', use: 'Small drainage, driveway culverts' },
+                { size: '500mm dia × 1050mm', use: 'Medium drainage, road culverts' },
+                { size: '600mm dia × 1050mm', use: 'Large drainage, main culverts' },
+                { size: '900mm dia × 900mm', use: 'Box culverts, major drainage' },
+                { size: '1200mm dia × 900mm', use: 'Large box culverts, river crossings' },
+              ].map((pipe, i) => (
+                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-5 flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center shrink-0">
+                    <Circle className="w-6 h-6 text-brand-600" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">{pipe.size}</p>
+                    <p className="text-gray-500 text-sm">{pipe.use}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery */}
+        <section className="py-14 px-4 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Culvert Pipe Delivery in Iringa</h2>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { area: 'Iringa City', coverage: 'Full coverage' },
+                { area: 'Mazimbu', coverage: 'Full coverage' },
+                { area: 'Kihesa', coverage: 'Full coverage' },
+                { area: 'Nala', coverage: 'Full coverage' },
+              ].map((loc, i) => (
+                <div key={i} className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+                  <MapPin className="w-5 h-5 text-brand-500 mx-auto mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">{loc.area}</p>
+                  <p className="text-green-600 text-xs mt-1">{loc.coverage}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: 'What culvert pipe sizes do you have in Iringa?', a: 'We supply 400mm to 1200mm diameter concrete culvert pipes in Iringa for drainage and road projects.' },
+                { q: 'What is the price of culvert pipes in Iringa?', a: 'Culvert pipes start from TZS 45,000 each. Prices vary by size and quantity. Contact us for project-specific quotes.' },
+                { q: 'Do you deliver culvert pipes to all areas in Iringa?', a: 'Yes, we deliver to Iringa City, Mazimbu, Kihesa, Nala and surrounding areas.' },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-6">
+                  <div className="flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-brand-500 mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
+                      <p className="text-gray-500 text-sm">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-14 px-4 bg-gray-50">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Need Culvert Pipes in Iringa?</h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Link href="/get-quote" className="inline-flex items-center gap-2 bg-brand-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/30">
+                Get a Quote <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a href="https://wa.me/255716002790" target="_blank" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-all">
+                WhatsApp Us
+              </a>
+              <a href="tel:+255716002790" className="inline-flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all">
+                <Phone className="w-4 h-4" /> Call Now
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

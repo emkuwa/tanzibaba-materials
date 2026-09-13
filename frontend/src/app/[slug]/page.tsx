@@ -827,7 +827,7 @@ function OverviewContent({ slug }: { slug: string }) {
     <>
       <section className="relative min-h-[70vh] flex items-center bg-gray-950 overflow-hidden pt-20">
         {(slug.startsWith('ready-mix-concrete') || slug.startsWith('aggregates') || slug.startsWith('blocks') || slug.startsWith('paving') || slug.startsWith('culvert') || slug.startsWith('gravel')) ? (
-          <Image src={slug.startsWith('ready-mix-concrete') ? productImages['ready-mix-concrete'] : (slug.startsWith('aggregates') || slug.startsWith('gravel')) ? productImages['aggregates'] : slug.startsWith('blocks') ? productImages['blocks'] : slug.startsWith('paving') ? productImages['paving'] : slug.startsWith('culvert') ? productImages['culvert'] : ''} alt="" fill className="object-cover opacity-30" sizes="100vw" loading="lazy" />
+          <Image src={slug.startsWith('ready-mix-concrete') ? productImages['ready-mix-concrete'] : (slug.startsWith('aggregates') || slug.startsWith('gravel')) ? productImages['gravel-aggregates'] : slug.startsWith('blocks') ? productImages['hollow-blocks'] : slug.startsWith('paving') ? productImages['paving-blocks'] : slug.startsWith('culvert') ? productImages['culvert-pipes'] : ''} alt="" fill className="object-cover opacity-30" sizes="100vw" loading="lazy" />
         ) : null}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950/95 via-gray-900/90 to-brand-950/85" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

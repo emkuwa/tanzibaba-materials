@@ -19,33 +19,34 @@ const allMaterialsLocations = [...darEsSalaamLocations, ...zanzibarLocations, ..
 // === Segmented sitemap data (consolidated from individual sitemap files) ===
 
 const productPages = [
-  'ready-mix-concrete-dar-es-salaam',
-  'ready-mix-concrete-dodoma',
-  'ready-mix-concrete-zanzibar',
-  'aggregates-supplier-dar-es-salaam',
-  'aggregates-supplier-dodoma',
-  'aggregates-supplier-zanzibar',
-  'aggregates-supplier-iringa',
-  'blocks-supplier-dar-es-salaam',
-  'blocks-supplier-dodoma',
-  'blocks-supplier-zanzibar',
-  'blocks-supplier-iringa',
-  'paving-blocks-dar-es-salaam',
-  'paving-blocks-dodoma',
-  'paving-blocks-zanzibar',
-  'paving-blocks-iringa',
-  'culvert-pipes-dar-es-salaam',
-  'culvert-pipes-dodoma',
-  'culvert-pipes-zanzibar',
-  'culvert-pipes-iringa',
-  'concrete-supplier-dodoma',
-  'concrete-supplier-iringa',
-  'kokoto-dodoma',
-  'kokoto-iringa',
-  'building-materials-dodoma',
-  'building-materials-iringa',
-  'construction-company-dodoma',
-  'construction-company-iringa',
+  // Ready Mix Concrete
+  'ready-mix-concrete-dar-es-salaam', 'ready-mix-concrete-dodoma', 'ready-mix-concrete-zanzibar',
+  // Concrete Supplier (static landing pages)
+  'concrete-supplier-dodoma', 'concrete-supplier-iringa', 'concrete-supplier-zanzibar',
+  'concrete-supplier-arusha', 'concrete-supplier-mwanza', 'concrete-supplier-mbeya',
+  'concrete-supplier-moshi', 'concrete-supplier-morogoro', 'concrete-supplier-tanga',
+  // Aggregates
+  'aggregates-supplier-dar-es-salaam', 'aggregates-supplier-dodoma', 'aggregates-supplier-zanzibar',
+  'aggregates-supplier-iringa', 'aggregates-supplier-arusha', 'aggregates-supplier-mwanza',
+  'aggregates-supplier-mbeya', 'aggregates-supplier-moshi', 'aggregates-supplier-morogoro',
+  'aggregates-supplier-tanga',
+  // Blocks
+  'blocks-supplier-dar-es-salaam', 'blocks-supplier-dodoma', 'blocks-supplier-zanzibar',
+  'blocks-supplier-iringa', 'blocks-supplier-arusha', 'blocks-supplier-mwanza',
+  'blocks-supplier-mbeya', 'blocks-supplier-moshi', 'blocks-supplier-morogoro',
+  'blocks-supplier-tanga',
+  // Paving
+  'paving-blocks-dar-es-salaam', 'paving-blocks-dodoma', 'paving-blocks-zanzibar', 'paving-blocks-iringa',
+  // Culvert
+  'culvert-pipes-dar-es-salaam', 'culvert-pipes-dodoma', 'culvert-pipes-zanzibar', 'culvert-pipes-iringa',
+  // Kokoto
+  'kokoto-dodoma', 'kokoto-iringa', 'kokoto-zanzibar',
+  // Building Materials
+  'building-materials-dodoma', 'building-materials-iringa', 'building-materials-zanzibar',
+  // Construction Company (static landing pages)
+  'construction-company-dodoma', 'construction-company-iringa', 'construction-company-zanzibar',
+  'construction-company-arusha', 'construction-company-mwanza', 'construction-company-mbeya',
+  'construction-company-moshi', 'construction-company-morogoro', 'construction-company-tanga',
 ];
 
 const locationPages = [

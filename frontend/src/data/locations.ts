@@ -72,12 +72,19 @@ export const materialTypes = [
   { slug: 'ready-mix-concrete', name: 'Ready-Mix Concrete', badge: 'Ready-Mix Concrete', icon: 'Truck', metaDescSuffix: 'premium ready-mix concrete supply', descPrefix: 'supplies premium ready-mix concrete' },
   { slug: 'concrete-supplier', name: 'Concrete Supply', badge: 'Concrete Supplier', icon: 'Truck', metaDescSuffix: 'premium concrete supply', descPrefix: 'is a trusted concrete supplier' },
   { slug: 'concrete-pump', name: 'Concrete Pump', badge: 'Concrete Pump', icon: 'Truck', metaDescSuffix: 'concrete pump rental services', descPrefix: 'offers professional concrete pump services' },
+  { slug: 'blocks-supplier', name: 'Blocks Supply', badge: 'Blocks Supplier', icon: 'HardHat', metaDescSuffix: 'concrete blocks supply', descPrefix: 'supplies quality concrete blocks including hollow blocks, solid blocks, and interlocking blocks' },
+  { slug: 'paving-blocks', name: 'Paving Blocks', badge: 'Paving Blocks', icon: 'Grid', metaDescSuffix: 'paving blocks supply', descPrefix: 'supplies interlocking paving blocks, paver tiles, and kerbstones' },
+  { slug: 'culvert-pipes', name: 'Culvert Pipes', badge: 'Culvert Pipes', icon: 'CircleDot', metaDescSuffix: 'culvert pipes supply', descPrefix: 'supplies concrete culvert pipes and box culverts for drainage' },
   { slug: 'gravel-supplier', name: 'Gravel Supply', badge: 'Gravel Supplier', icon: 'CircleDot', metaDescSuffix: 'gravel supply services', descPrefix: 'supplies high-quality gravel' },
   { slug: 'crushed-stone-supplier', name: 'Crushed Stone Supply', badge: 'Crushed Stone Supplier', icon: 'CircleDot', metaDescSuffix: 'crushed stone supply services', descPrefix: 'supplies premium crushed stone and aggregates' },
   { slug: 'aggregates-supplier', name: 'Aggregates Supply', badge: 'Aggregates Supplier', icon: 'Package', metaDescSuffix: 'construction aggregates supply', descPrefix: 'supplies construction aggregates including gravel, crushed stone, and sand' },
   { slug: 'kokoto-supplier', name: 'Kokoto Supply', badge: 'Kokoto Supplier', icon: 'CircleDot', metaDescSuffix: 'kokoto (gravel) supply services', descPrefix: 'supplies kokoto (gravel) and crushed stone for construction' },
+  { slug: 'sand-supplier', name: 'Sand Supply', badge: 'Sand Supplier', icon: 'Package', metaDescSuffix: 'construction sand supply', descPrefix: 'supplies washed construction sand, river sand, and manufactured sand' },
+  { slug: 'cement-supplier', name: 'Cement Supply', badge: 'Cement Supplier', icon: 'Package', metaDescSuffix: 'cement supply services', descPrefix: 'supplies Portland cement, PPC cement, and specialized cement products' },
+  { slug: 'steel-supplier', name: 'Steel Supply', badge: 'Steel Supplier', icon: 'Package', metaDescSuffix: 'steel reinforcement supply', descPrefix: 'supplies steel reinforcement bars, mesh, and structural steel' },
   { slug: 'road-construction-materials', name: 'Road Construction Materials', badge: 'Road Materials', icon: 'Route', metaDescSuffix: 'road construction materials supply', descPrefix: 'supplies road construction materials including aggregates, gravel, and base course materials' },
   { slug: 'construction-materials', name: 'Construction Materials', badge: 'Construction Materials', icon: 'Package', metaDescSuffix: 'construction materials supply', descPrefix: 'supplies construction materials including concrete, aggregates, gravel, and crushed stone' },
+  { slug: 'building-materials', name: 'Building Materials', badge: 'Building Materials', icon: 'Package', metaDescSuffix: 'building materials supply', descPrefix: 'supplies complete building materials including cement, steel, paints, tiles, and finishes' },
 ];
 
 export function getMaterialTypeBySlug(slug: string): typeof materialTypes[number] | undefined {

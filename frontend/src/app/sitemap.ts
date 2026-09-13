@@ -154,12 +154,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  // Granular area pages
+  // Granular area pages - all material types × all areas
   const areaEntries: MetadataRoute.Sitemap = [];
-  for (const area of areas) {
-    areaEntries.push({ url: `${siteUrl}/ready-mix-concrete-${area.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7 });
-    areaEntries.push({ url: `${siteUrl}/concrete-supplier-${area.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6 });
-    areaEntries.push({ url: `${siteUrl}/concrete-pump-${area.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6 });
+  for (const mt of materialTypes) {
+    for (const area of areas) {
+      areaEntries.push({ url: `${siteUrl}/${mt.slug}-${area.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.7 });
+    }
+  }
+
+  // Construction service pages for DSM neighborhoods
+  const dsmConstructionEntries: MetadataRoute.Sitemap = [];
+  const dsmAreas = areas.filter(a => ['Kinondoni', 'Ubungo', 'Ilala', 'Temeke', 'Kigamboni'].includes(a.district));
+  for (const svc of constructionServices) {
+    for (const area of dsmAreas) {
+      dsmConstructionEntries.push({ url: `${siteUrl}/${svc.slug}-${area.slug}`, lastModified: today, changeFrequency: 'monthly' as const, priority: 0.6 });
+    }
   }
 
   const gradeEntries: MetadataRoute.Sitemap = concreteGrades.map((g) => ({
@@ -235,6 +244,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...mainEntries,
     ...areaEntries, ...gradeEntries, ...projectTypeEntries, ...overviewEntries,
     ...materialsEntries, ...tzConstructionEntries, ...africaConstructionEntries,
+    ...dsmConstructionEntries,
     ...swahiliEntries, ...governmentEntries,
     ...productEntries, ...locationEntries, ...blogEntries, ...equipmentEntries,
     ...toolEntries, ...projectEntries, ...directoryEntries, ...learnEntries,

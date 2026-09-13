@@ -262,8 +262,10 @@ const projectTypeData: Record<string, { name: string; desc: string; grade: strin
 function AreaSection({ area, mt }: { area: NonNullable<ReturnType<typeof getAreaBySlug>>; mt: NonNullable<ReturnType<typeof getMaterialTypeBySlug>> }) {
   const IconComp = iconMap[mt.icon] || Truck;
   const isConcrete = mt.slug.startsWith('ready-mix-concrete') || mt.slug.startsWith('concrete-supplier');
-  const isAggregate = ['gravel-supplier', 'crushed-stone-supplier', 'aggregates-supplier', 'kokoto-supplier'].includes(mt.slug);
+  const isAggregate = ['gravel-supplier', 'crushed-stone-supplier', 'aggregates-supplier', 'kokoto-supplier', 'sand-supplier', 'cement-supplier', 'steel-supplier'].includes(mt.slug);
+  const isBlocks = ['blocks-supplier', 'paving-blocks', 'culvert-pipes'].includes(mt.slug);
   const isRoad = mt.slug === 'road-construction-materials';
+  const isBuilding = mt.slug === 'building-materials' || mt.slug === 'construction-materials';
 
   const areaFaqs = [
     { q: `Do you supply ${mt.name.toLowerCase()} in ${area.name}?`, a: `Yes, we supply ${mt.name.toLowerCase()} to ${area.name} in ${area.district}. Our facilities serve the ${area.landmark} area with reliable delivery services.` },
@@ -288,6 +290,8 @@ function AreaSection({ area, mt }: { area: NonNullable<ReturnType<typeof getArea
               Tanzibaba {mt.descPrefix} in {area.name}, {area.district} — {area.description}.
               {isConcrete ? ' We deliver grades C10 to C50 using washed sand technology for superior strength and durability.' : ''}
               {isAggregate ? ' Our materials are sourced from quality-controlled production facilities for consistent grading and strength.' : ''}
+              {isBlocks ? ' We supply premium quality blocks and pipes for walls, drainage, and construction projects.' : ''}
+              {isBuilding ? ' We supply a complete range of building materials from cement and steel to paints and finishes.' : ''}
               {isRoad ? ' We supply aggregates, gravel, base course, and concrete for road construction projects of all sizes.' : ''}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -53,6 +53,66 @@ export const materialsServices: MaterialsService[] = [
     metaDescBase: 'Concrete culvert pipes supply in {location}. Round pipes and box culverts for drainage.',
     keywords: ['culvert pipes', 'culvert pipes dar es salaam', 'drainage pipes tanzania', 'box culverts', 'concrete pipes tanzania', 'road culverts', 'msambazaji wa mifereji', 'culvert pipes Zanzibar', 'drainage materials tanzania', 'building materials dar', 'infrastructure materials tanzania'],
   },
+  {
+    slug: 'concrete-pump', name: 'Concrete Pump Rental', shortName: 'Concrete Pump', badge: 'Concrete Pump', icon: 'Truck',
+    desc: 'rents professional concrete pumps for efficient placement of ready-mix concrete at construction sites',
+    metaDescBase: 'Concrete pump rental in {location}. Professional pump trucks for efficient concrete placement.',
+    keywords: ['concrete pump', 'concrete pump rental', 'pump truck', 'concrete pump dar es salaam', 'pump kwa zege', 'concrete pumping tanzania', 'boom pump', 'line pump', 'concrete pump price', 'pump rental dar'],
+  },
+  {
+    slug: 'gravel-supplier', name: 'Gravel Supply', shortName: 'Gravel', badge: 'Gravel Supplier', icon: 'CircleDot',
+    desc: 'supplies high-quality construction gravel in various sizes for foundations, drainage, and general construction',
+    metaDescBase: 'Gravel supply in {location}. Construction gravel in various sizes for building projects.',
+    keywords: ['gravel', 'gravel supplier', 'gravel dar es salaam', 'kokoto', 'construction gravel', 'gravel price tanzania', 'msambazaji wa gravel', 'gravel kwa ujenzi', 'gravel delivery'],
+  },
+  {
+    slug: 'crushed-stone-supplier', name: 'Crushed Stone Supply', shortName: 'Crushed Stone', badge: 'Crushed Stone', icon: 'CircleDot',
+    desc: 'supplies premium crushed stone and aggregates for construction, road building, and infrastructure projects',
+    metaDescBase: 'Crushed stone supply in {location}. Premium aggregates for construction and road building.',
+    keywords: ['crushed stone', 'crushed stone supplier', 'crusher dust', 'aggregate', 'crushed stone dar es salaam', 'msambazaji wa mawe', 'construction aggregates tanzania', 'road base materials'],
+  },
+  {
+    slug: 'kokoto-supplier', name: 'Kokoto Supply', shortName: 'Kokoto', badge: 'Kokoto Supplier', icon: 'CircleDot',
+    desc: 'supplies kokoto (gravel) and crushed stone for construction projects across Tanzania',
+    metaDescBase: 'Kokoto supply in {location}. Construction gravel and crushed stone for building projects.',
+    keywords: ['kokoto', 'kokoto supplier', 'kokoto dar es salaam', 'gravel tanzania', 'msambazaji wa kokoto', 'kokoto kwa ujenzi', 'construction gravel', 'kokoto price'],
+  },
+  {
+    slug: 'sand-supplier', name: 'Sand Supply', shortName: 'Sand', badge: 'Sand Supplier', icon: 'Package',
+    desc: 'supplies washed construction sand, river sand, and manufactured sand for concrete and plastering',
+    metaDescBase: 'Sand supply in {location}. Washed construction sand, river sand and manufactured sand.',
+    keywords: ['sand', 'sand supplier', 'construction sand', 'river sand', 'washed sand', 'sand dar es salaam', 'msambazaji wa mchanga', 'mchanga wa ujenzi', 'plastering sand', 'concrete sand'],
+  },
+  {
+    slug: 'cement-supplier', name: 'Cement Supply', shortName: 'Cement', badge: 'Cement Supplier', icon: 'Package',
+    desc: 'supplies Portland cement, PPC cement, and specialized cement products from top manufacturers',
+    metaDescBase: 'Cement supply in {location}. Portland cement, PPC cement and specialized cement products.',
+    keywords: ['cement', 'cement supplier', 'Portland cement', 'PPC cement', 'cement dar es salaam', 'bei ya cement', 'msambazaji wa cement', 'Simba cement', 'Dangote cement', 'cement tanzania'],
+  },
+  {
+    slug: 'steel-supplier', name: 'Steel Reinforcement Supply', shortName: 'Steel', badge: 'Steel Supplier', icon: 'Package',
+    desc: 'supplies steel reinforcement bars, mesh, and structural steel for construction projects',
+    metaDescBase: 'Steel reinforcement supply in {location}. Rebar, mesh and structural steel for construction.',
+    keywords: ['steel', 'rebar', 'steel reinforcement', 'mesh', 'steel dar es salaam', 'chuma ya ujenzi', 'msambazaji wa steel', 'structural steel', 'binding wire', 'steel price tanzania'],
+  },
+  {
+    slug: 'road-construction-materials', name: 'Road Construction Materials', shortName: 'Road Materials', badge: 'Road Materials', icon: 'Route',
+    desc: 'supplies road construction materials including aggregates, gravel, and base course materials',
+    metaDescBase: 'Road construction materials supply in {location}. Aggregates, gravel and base course.',
+    keywords: ['road construction materials', 'road base', 'base course', 'sub-base', 'road materials dar', 'barabara materials', 'road building tanzania', 'asphalt materials'],
+  },
+  {
+    slug: 'construction-materials', name: 'Construction Materials', shortName: 'Construction Materials', badge: 'Construction Materials', icon: 'Package',
+    desc: 'supplies complete construction materials including concrete, aggregates, gravel, and crushed stone',
+    metaDescBase: 'Construction materials supply in {location}. Complete building materials for all projects.',
+    keywords: ['construction materials', 'building materials', 'materials dar es salaam', 'vyombo vya ujenzi', 'building supplies tanzania', 'construction supplies', 'hardware materials'],
+  },
+  {
+    slug: 'building-materials', name: 'Building Materials', shortName: 'Building Materials', badge: 'Building Materials', icon: 'Package',
+    desc: 'supplies complete building materials including cement, steel, paints, tiles, plumbing and electrical supplies',
+    metaDescBase: 'Building materials supply in {location}. Cement, steel, paints, tiles, plumbing and electrical.',
+    keywords: ['building materials', 'cement', 'steel', 'paints', 'tiles', 'plumbing', 'electrical', 'building materials dar es salaam', 'vyombo vya ujenzi', 'hardware shop', 'construction supplies tanzania'],
+  },
 ];
 
 export const constructionServices: ConstructionService[] = [

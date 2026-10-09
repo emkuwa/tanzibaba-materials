@@ -925,7 +925,7 @@ export default function SEOPage({ params }: PageProps) {
 
   // Overview pages — check BEFORE materials/construction to avoid false matches
   if (overviewSlugs.includes(slug)) {
-    return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } } ] }) }} /></>);
+    return (<><Navbar /><main><OverviewContent slug={slug} /></main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'LocalBusiness', '@id': `${siteUrl}/#business`, name: 'Tanzibaba', url: siteUrl, telephone: '+255716002790', areaServed: 'Dar es Salaam' }, { '@type': 'Service', name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), provider: { '@id': `${siteUrl}/#business` } }, { '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), item: `${siteUrl}/${slug}` } ] } ] }) }} /></>);
   }
 
   // Special + EA pages

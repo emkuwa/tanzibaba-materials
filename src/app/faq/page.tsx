@@ -105,8 +105,25 @@ const faqGroups = [
 ];
 
 export default function FaqIndex() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqGroups.flatMap((group) =>
+      group.questions.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      }))
+    ),
+  };
   return (
     <>
+      {/* Raw script (not next/script) so JSON-LD is present in SSR HTML for crawlers */}
+      <script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
       <main>
         <section className="relative min-h-[45vh] flex items-center bg-gray-950 overflow-hidden pt-20">

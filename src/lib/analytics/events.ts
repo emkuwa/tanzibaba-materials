@@ -100,3 +100,53 @@ export function trackBlogRead(postTitle?: string) {
 export function trackEvent(name: string, params?: EventParams) {
   fire(name, params);
 }
+
+// ============================================================
+// AI SEARCH REFERRAL TRACKING (measurable only — no estimates)
+// ============================================================
+// Matches referrer hosts belonging to answer engines / AI search
+// surfaces so referral traffic from them is identifiable in GA4.
+const AI_REFERRER_PATTERNS: { id: string; match: RegExp }[] = [
+  { id: 'chatgpt', match: /(^|\.)chatgpt\.com$/ },
+  { id: 'openai', match: /(^|\.)openai\.com$/ },
+  { id: 'perplexity', match: /(^|\.)perplexity\.ai$/ },
+  { id: 'copilot', match: /(^|\.)copilot\.microsoft\.com$/ },
+  { id: 'bing-chat', match: /(^|\.)bing\.com$/ },
+  { id: 'gemini', match: /(^|\.)gemini\.google\.com$/ },
+  { id: 'google-ai', match: /(^|\.)(google\.[a-z.]+|grok\.com)$/ },
+  { id: 'claude', match: /(^|\.)claude\.ai$/ },
+  { id: 'you', match: /(^|\.)you\.com$/ },
+  { id: 'phind', match: /(^|\.)phind\.com$/ },
+];
+
+/** Identify which AI surface (if any) referred the current session. Returns null when not measurable. */
+export function detectAIReferrer(): string | null {
+  if (typeof document === 'undefined') return null;
+  try {
+    const ref = document.referrer;
+    if (!ref) return null;
+    const host = new URL(ref).hostname.toLowerCase();
+    for (const p of AI_REFERRER_PATTERNS) {
+      if (p.match.test(host)) return p.id;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/** Fire once per session when the visitor arrived from an AI answer engine. */
+export function trackAIReferral() {
+  const source = detectAIReferrer();
+  if (!source) return;
+  try {
+    if (typeof window !== 'undefined' && window.sessionStorage.getItem('ai_referral_tracked')) return;
+    window.sessionStorage.setItem('ai_referral_tracked', '1');
+  } catch {
+    /* storage unavailable — still fire */
+  }
+  fire('ai_referral', {
+    event_category: 'attribution',
+    event_label: source,
+  });
+}

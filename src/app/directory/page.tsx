@@ -97,7 +97,7 @@ export default function DirectoryPage() {
               <Users className="w-4 h-4" /> Industry Directory
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold mb-4">Tanzania Construction Directory</h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">Find contractors, architects, engineers, suppliers and service providers for your construction project.</p>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">The Tanzibaba directory lists {listings.length} contractors, architects, engineers, suppliers and service providers across Tanzania. Search by name, trade or location to find the right company for your project.</p>
 
             <div className="max-w-3xl mx-auto">
               <div className="relative">

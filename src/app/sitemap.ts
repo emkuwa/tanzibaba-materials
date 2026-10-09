@@ -55,11 +55,13 @@ const locationPages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ['', '/get-quote', '/about', '/contact', '/major-projects',
+  const staticPages = ['', '/get-quote', '/about', '/contact', '/faq', '/major-projects',
     '/tools', '/directory', '/learn',
     '/commercial-construction',
   ];
-  const today = new Date();
+  // Stable last-modified date: only bump when content actually changes.
+  // Using `new Date()` here would mark every URL as changed on each build.
+  const today = new Date('2026-06-19');
 
   const mainEntries: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: `${siteUrl}${page}`,

@@ -15,6 +15,7 @@
 // ============================================================
 
 import { useEffect } from 'react';
+import { trackAIReferral } from './events';
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || '';
 
@@ -24,6 +25,9 @@ export function GA4Provider({ children }: { children: React.ReactNode }) {
       // Already loaded via layout.tsx inline script
       // This provider just adds enhanced features
     }
+
+    // Track AI answer-engine referrals once per session (measurable attribution only)
+    trackAIReferral();
 
     // Track page visibility changes (engagement signal)
     const handleVisibility = () => {

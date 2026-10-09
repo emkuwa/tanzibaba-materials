@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import areas, { concreteGrades, siteUrl } from '@/data/locations';
+import areas, { concreteGrades, siteUrl, materialTypes } from '@/data/locations';
 import { materialsServices, constructionServices } from '@/data/services';
 import { darEsSalaamLocations, zanzibarLocations, extraLocations } from '@/data/materialsLocations';
 import { tanzaniaRegions, africaCountries } from '@/data/countries';

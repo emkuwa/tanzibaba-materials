@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: siteUrl,
     languages: {
       'x-default': siteUrl,
     },
@@ -65,6 +64,7 @@ const jsonLd = {
       url: siteUrl,
       telephone: '+255716002790',
       email: 'info@tanzibaba.co.tz',
+      parentOrganization: { '@id': `${siteUrl}/#organization` },
       areaServed: 'Dar es Salaam, Tanzania',
       image: `${siteUrl}/images/new/mobile-hero.webp`,
       address: {
@@ -117,6 +117,14 @@ const jsonLd = {
       provider: { '@id': `${siteUrl}/#business` },
       areaServed: 'Dar es Salaam, Coastal Region, Tanzania',
       description: 'High-quality crushed stone and aggregates from our Lugoba crusher for road construction, building foundations, concrete production, and infrastructure development.',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      name: 'Tanzibaba',
+      url: siteUrl,
+      publisher: { '@id': `${siteUrl}/#organization` },
+      inLanguage: 'en-TZ',
     },
     {
       '@type': 'ImageObject',
@@ -201,9 +209,12 @@ export default function RootLayout({
         <AnalyticsProviders>
           <AuthProvider>{children}</AuthProvider>
         </AnalyticsProviders>
-        <Script id="schema-org" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify(jsonLd)}
-        </Script>
+        {/* Raw script (not next/script) so entity JSON-LD is present in SSR HTML for crawlers */}
+        <script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script id="whatsapp-tracking" strategy="afterInteractive">
           {`
             document.addEventListener('click', function(e) {

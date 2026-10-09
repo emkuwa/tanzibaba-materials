@@ -173,6 +173,7 @@ export default function KokotoIringaPage() {
           { '@type': 'FAQPage', mainEntity: [
             { '@type': 'Question', name: 'Je, mnauza kokoto Iringa?', acceptedAnswer: { '@type': 'Answer', text: 'Ndiyo, tunauza kokoto bora kwa ujenzi wa barabara, majengo na miundombinu katika mkoa wa Iringa na maeneo yote jirani.' } },
             { '@type': 'Question', name: 'Bei ya kokoto Iringa ni ngapi?', acceptedAnswer: { '@type': 'Answer', text: 'Bei ya kokoto Iringa inaanzia TZS 75,000 kwa tani. Bei hutofautiana kulingana na ukubwa na kiasi.' } },
+        ] }
         ]
       }) }} />
     </>

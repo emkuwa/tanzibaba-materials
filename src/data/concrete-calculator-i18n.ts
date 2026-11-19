@@ -1,4 +1,6 @@
 export const calculatorEnglish: Record<string, string> = {
+  "Weka kiasi cha zege au tumia calculator ya vipimo kwanza.": "Enter a concrete volume or use the measurements calculator first.",
+  "Chagua location sahihi kwenye matokeo hapo juu; bei itajikokotoa.": "Select the correct location from the results above; your price will calculate automatically.",
   "Zana za ujenzi / Tools": "Construction tools",
   "Kokotoa zege na bei ya site yako": "Calculate concrete volume and price",
   "Concrete volume & price calculator. Weka vipimo au kiasi unachohitaji, chagua eneo lako na uone makadirio ya bei.": "Enter your measurements or required volume, choose your delivery area and get an estimated price.",

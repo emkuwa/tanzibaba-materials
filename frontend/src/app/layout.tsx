@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import { AuthProvider } from '@/lib/auth';
 import { AnalyticsProviders } from '@/lib/analytics/providers';
+import AiSalesChat from '@/components/AiSalesChat';
 
 const siteUrl = 'https://materials.tanzibaba.com';
 const gaId = 'G-7KYD1RMSV9';
@@ -263,6 +264,7 @@ export default function RootLayout({
         <AnalyticsProviders>
           <AuthProvider>{children}</AuthProvider>
         </AnalyticsProviders>
+        <AiSalesChat />
         <Script id="schema-org" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(jsonLd)}
         </Script>

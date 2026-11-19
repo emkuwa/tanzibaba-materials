@@ -1,128 +1,57 @@
 'use client';
-
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
-import { Calculator, ArrowLeft } from 'lucide-react';
-import LeadCaptureForm from '@/components/LeadCaptureForm';
+import { Calculator, MapPin, MessageCircle } from 'lucide-react';
 
+type Place = { label: string; lat: number; lon: number };
+type Quote = { unitPrice?: number; total: number | null; bandKm?: number; customQuote: boolean; plant: string; distanceKm: number; quantity: number; grade: string; distanceSource: string };
+const areas = ['Kibada, Kigamboni','Kigamboni','Vijibweni','Tungi','Mjimwema','Kibugumo','Gezaulole','Somangila','Kisarawe II','Temeke','Kurasini','Mtoni','Tandika','Mbagala','Charambe','Chamazi','Kijichi','Toangoma','Ilala','Kariakoo','Upanga','Buguruni','Tabata','Kipawa','Ukonga','Pugu','Gongo la Mboto','Kivule','Chanika','Kinondoni','Mikocheni','Kijitonyama','Sinza','Mwenge','Kawe','Mbezi Beach','Kunduchi','Tegeta','Bunju','Mbweni','Magomeni','Manzese','Ubungo','Kimara','Mbezi Luis','Mbezi Juu','Goba','Makongo','Saranga','Kwembe','Kibaha'];
+const help: Record<string,string> = {
+  blinding: 'C15 inaweza kuwa chaguo la kuanzia kwa kazi nyepesi zisizobeba jengo. Fuata specification ya mradi; calculator haitoi design.',
+  ground: 'Kwa sakafu ya ardhini na njia za magari, C20–C30 zinaweza kujadiliwa na fundi/mhandisi. Mizigo, udongo, unene, reinforcement na joints vinaamua design sahihi.',
+  structure: 'Kwa msingi, nguzo, beams na slab ya juu: tumia grade iliyo kwenye michoro ya structural engineer. Idadi ya ghorofa pekee haiamui grade.',
+  marine: 'Kwa mazingira ya baharini, tanki au maji yenye kemikali: strength pekee haitoshi. Engineer aainishe exposure, mix, cover na curing zinazofaa.',
+};
+const money = (n: number) => new Intl.NumberFormat('en-TZ', { maximumFractionDigits: 0 }).format(n);
+const input = 'w-full rounded-xl border border-gray-300 bg-white p-3 text-base text-gray-900 focus:ring-2 focus:ring-brand-500';
 export default function ConcreteCalculator() {
-  const [length, setLength] = useState('');
-  const [width, setWidth] = useState('');
-  const [thickness, setThickness] = useState('');
-  const [waste, setWaste] = useState('5');
-  const [result, setResult] = useState<{ volume: number; withWaste: number } | null>(null);
-  const [showLeadCapture, setShowLeadCapture] = useState(false);
-
-  const calculate = () => {
-    const l = parseFloat(length);
-    const w = parseFloat(width);
-    const t = parseFloat(thickness);
-    const wastePct = parseFloat(waste) || 0;
-    if (l > 0 && w > 0 && t > 0) {
-      const volume = l * w * (t / 1000);
-      setResult({ volume, withWaste: volume * (1 + wastePct / 100) });
-    }
-  };
-
-  return (
-    <>
-      <div className="min-h-screen bg-gray-50">
-        <div className="bg-gray-950 text-white py-16 px-4">
-          <div className="max-w-3xl mx-auto">
-            <Link href="/tools" className="inline-flex items-center gap-1 text-gray-400 hover:text-white text-sm mb-4 transition-colors"><ArrowLeft className="w-4 h-4" /> All Tools</Link>
-            <div className="inline-flex items-center gap-2 bg-brand-600/20 text-brand-300 px-3 py-1 rounded-full text-xs font-medium mb-3"><Calculator className="w-3.5 h-3.5" /> Calculator</div>
-            <h1 className="text-3xl md:text-4xl font-extrabold mb-3">Concrete Volume Calculator</h1>
-            <p className="text-gray-400">Calculate the exact volume of concrete needed for slabs, footings, columns and beams.</p>
-          </div>
-        </div>
-        <div className="max-w-3xl mx-auto px-4 -mt-8 pb-20">
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 shadow-sm">
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Length (m)</label>
-                  <input type="number" value={length} onChange={e => setLength(e.target.value)} placeholder="0" className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Width (m)</label>
-                  <input type="number" value={width} onChange={e => setWidth(e.target.value)} placeholder="0" className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Thickness (mm)</label>
-                  <input type="number" value={thickness} onChange={e => setThickness(e.target.value)} placeholder="0" className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Waste Factor (%)</label>
-                <input type="number" value={waste} onChange={e => setWaste(e.target.value)} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none" />
-              </div>
-              <button onClick={calculate} className="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-all">Calculate Volume</button>
-            </div>
-            {result && (
-              <div className="mt-6 p-5 bg-brand-50 rounded-xl border border-brand-200">
-                <h3 className="font-bold text-gray-900 mb-3">Results</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="bg-white rounded-xl p-4 border border-brand-100">
-                    <p className="text-gray-500">Net Volume</p>
-                    <p className="text-2xl font-bold text-gray-900">{result.volume.toFixed(2)} m³</p>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 border border-brand-100">
-                    <p className="text-gray-500">With Waste ({waste}%)</p>
-                    <p className="text-2xl font-bold text-brand-600">{result.withWaste.toFixed(2)} m³</p>
-                  </div>
-                </div>
-                <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={() => setShowLeadCapture(true)}
-                    className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all text-center"
-                  >
-                    WhatsApp Us
-                  </button>
-                  <a
-                    href="/get-quote"
-                    className="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-all text-center"
-                  >
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-4 pb-12">
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <h3 className="font-bold text-gray-900 mb-4">Related Products</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <Link href="/ready-mix-concrete-dar-es-salaam" className="flex items-center gap-3 p-3 rounded-xl bg-brand-50 hover:bg-brand-100 transition-colors text-sm font-medium text-brand-700">
-              <span className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 font-bold">R</span>
-              Ready-Mix Concrete
-            </Link>
-            <Link href="/aggregates-supplier-dar-es-salaam" className="flex items-center gap-3 p-3 rounded-xl bg-orange-50 hover:bg-orange-100 transition-colors text-sm font-medium text-orange-700">
-              <span className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 font-bold">A</span>
-              Aggregates
-            </Link>
-            <Link href="/blocks-supplier-dar-es-salaam" className="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition-colors text-sm font-medium text-blue-700">
-              <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold">B</span>
-              Concrete Blocks
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {showLeadCapture && (
-        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4" onClick={() => setShowLeadCapture(false)}>
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative bg-white w-full md:max-w-md md:rounded-2xl rounded-t-2xl shadow-2xl animate-in slide-in-from-bottom duration-300" onClick={e => e.stopPropagation()}>
-            <LeadCaptureForm
-              product="Ready Mix Concrete"
-              quantity={result ? `${result.withWaste.toFixed(2)} m³` : ''}
-              onClose={() => setShowLeadCapture(false)}
-            />
-          </div>
-        </div>
-      )}
-    </>
-  );
+  const [length,setLength]=useState(''),[width,setWidth]=useState(''),[depth,setDepth]=useState(''),[unit,setUnit]=useState('cm'),[waste,setWaste]=useState('5'),[count,setCount]=useState('1');
+  const [qty,setQty]=useState(''),[grade,setGrade]=useState('C25'),[use,setUse]=useState('structure');
+  const [query,setQuery]=useState(''),[places,setPlaces]=useState<Place[]>([]),[place,setPlace]=useState<Place|null>(null),[plant,setPlant]=useState('auto');
+  const [manual,setManual]=useState(false),[km,setKm]=useState(''),[quote,setQuote]=useState<Quote|null>(null),[error,setError]=useState(''),[busy,setBusy]=useState(false),[searching,setSearching]=useState(false);
+  const version=useRef(0), searchVersion=useRef(0);
+  const invalidate=()=>{version.current++;setQuote(null);setError('');setBusy(false)};
+  const l=Number(length),w=Number(width),d=Number(depth)/(unit==='mm'?1000:unit==='cm'?100:1),n=Number(count),a=Number(waste);
+  const valid=[l,w,d,n].every(v=>Number.isFinite(v)&&v>0)&&Number.isInteger(n)&&Number.isFinite(a)&&a>=0&&a<=30;
+  const area=valid?l*w*n:0, volume=valid?area*d:0, order=valid?Math.ceil(volume*(1+a/100)*100)/100:0;
+  async function search(){const id=++searchVersion.current;setSearching(true);setError('');setPlaces([]);try{const r=await fetch('/api/concrete-locations?q='+encodeURIComponent(query));const data=await r.json();if(id!==searchVersion.current)return;if(!r.ok)throw Error(data.error);setPlaces(data.locations);if(!data.locations.length)setError('Eneo halijapatikana. Ongeza kata/barabara au weka umbali unaoujua.');}catch(e){if(id===searchVersion.current)setError(e instanceof Error?e.message:'Jaribu tena.')}finally{if(id===searchVersion.current)setSearching(false)}}
+  async function price(){const id=++version.current;setBusy(true);setError('');setQuote(null);try{if(!query.trim())throw Error('Andika eneo la site.');if(!manual&&!place)throw Error('Tafuta eneo kisha chagua location kwenye matokeo.');const r=await fetch('/api/concrete-price',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({grade,quantity:Number(qty),plant,...(manual?{distanceKm:Number(km)}:{lat:place?.lat,lon:place?.lon})})});const data=await r.json();if(id!==version.current)return;if(!r.ok)throw Error(data.error);setQuote(data)}catch(e){if(id===version.current)setError(e instanceof Error?e.message:'Jaribu tena.')}finally{if(id===version.current)setBusy(false)}}
+  const message=['Habari Tanzibaba, naomba quotation ya zege.',`Eneo: ${place?.label||query||'Nitatuma location'}`,`Grade: ${grade}`,`Kiasi: ${qty||'Nahitaji msaada'} m³`,...(quote?[`Plant: ${quote.plant}`,`Umbali: ${quote.distanceKm} km (${quote.distanceSource==='manual'?'nimeweka mwenyewe':'makadirio ya ramani'})`,quote.customQuote?'Naomba bei maalumu.':`Makadirio: TZS ${money(quote.unitPrice!)} / m³; jumla TZS ${money(quote.total!)}.`]:[]),'Naomba kuthibitisha location, VAT, pump na ratiba ya delivery.'].join('\n');
+  const whatsapp='https://wa.me/255716002790?text='+encodeURIComponent(message);
+  return <div className="bg-gray-50 min-h-screen pb-20">
+    <header className="bg-gray-950 text-white px-4 pt-12 pb-20"><div className="max-w-6xl mx-auto"><Link href="/tools" className="text-brand-300">Zana za ujenzi / Tools</Link><div className="flex items-center gap-3 mt-5"><Calculator className="text-brand-400"/><span className="text-brand-300">DAR ES SALAAM</span></div><h1 className="text-3xl md:text-5xl font-extrabold mt-3 mb-4">Kokotoa zege na bei ya site yako</h1><p className="text-gray-300 text-lg max-w-2xl">Concrete volume & price calculator. Weka vipimo au kiasi unachohitaji, chagua eneo lako na uone makadirio ya bei.</p></div></header>
+    <main className="max-w-6xl mx-auto px-4 -mt-8 grid lg:grid-cols-2 gap-6 items-start">
+      <section className="bg-white rounded-2xl p-6 border shadow-sm"><h2 className="text-2xl font-bold mb-2">Ukubwa wa eneo</h2><p className="text-gray-600 mb-5">Kwa slab au sehemu za mstatili. Kwa beam/nguzo, tumia vipimo vya sehemu hiyo na idadi yake. Usijumuishe sehemu zinazopishana mara mbili.</p><div className="grid grid-cols-2 gap-4">
+        {[["Urefu / Length (m)",length,setLength],["Upana / Width (m)",width,setWidth],["Unene / Depth",depth,setDepth],["Idadi ya sehemu sawa",count,setCount]].map(([label,value,setter],i)=><label className="text-base font-medium" key={i}>{label as string}<input className={input+' mt-1'} type="number" min="0.001" step={i===3?'1':'any'} value={value as string} onChange={e=>(setter as (s:string)=>void)(e.target.value)}/></label>)}
+        <label>Kipimo cha unene<select className={input+' mt-1'} value={unit} onChange={e=>setUnit(e.target.value)}><option value="cm">Sentimita (cm)</option><option value="mm">Milimita (mm)</option><option value="m">Mita (m)</option></select></label><label>Ziada ya kupanga (%)<input className={input+' mt-1'} type="number" min="0" max="30" value={waste} onChange={e=>setWaste(e.target.value)}/></label>
+      </div><p className="text-sm text-gray-500 mt-3">Volume = urefu × upana × unene × idadi. Ziada ya 5% ni chaguo la kupanga; ibadilishe kulingana na site.</p><div className="bg-brand-50 rounded-xl p-5 mt-5" aria-live="polite"><p>Eneo: <strong>{area.toFixed(2)} m²</strong> · Zege halisi: <strong>{volume.toFixed(2)} m³</strong></p><p className="text-3xl font-bold text-brand-700 mt-2">{order.toFixed(2)} m³</p><p className="text-sm mt-1">Kiasi pamoja na ziada, kimepandishwa hadi 0.01 m³.</p><button disabled={!valid} className="mt-4 bg-brand-600 text-white font-semibold p-3 rounded-xl w-full disabled:opacity-40" onClick={()=>{setQty(String(order));invalidate()}}>Tumia kiasi hiki kupata bei</button></div></section>
+      <section className="bg-white rounded-2xl p-6 border shadow-sm"><h2 className="text-2xl font-bold mb-2">Bei ya zege / Price estimate</h2><p className="text-gray-600 mb-5">Chagua eneo kwenye suggestions au andika lako.</p><label htmlFor="area" className="font-medium">Eneo la site</label><div className="flex gap-2 mt-1"><input id="area" list="dar-areas" className={input} value={query} placeholder="Mfano: Kibada, Kigamboni" onChange={e=>{setQuery(e.target.value);setPlace(null);setPlaces([]);searchVersion.current++;setSearching(false);invalidate()}}/><button type="button" disabled={searching||query.trim().length<2} className="rounded-xl bg-gray-900 text-white px-4 disabled:opacity-40" onClick={search}>{searching?'…':'Tafuta'}</button></div><datalist id="dar-areas">{areas.map(x=><option key={x} value={x}/>)}</datalist>
+      <div className="flex flex-wrap gap-2 mt-3">{['Kibada, Kigamboni','Mbagala','Mikocheni','Tegeta','Kimara','Tabata'].map(x=><button key={x} className="px-3 py-2 rounded-full border text-sm hover:bg-brand-50" onClick={()=>{setQuery(x);setPlace(null);setPlaces([]);searchVersion.current++;setSearching(false);invalidate()}}>{x}</button>)}</div>
+      {!!places.length&&<div className="mt-3 border rounded-xl divide-y" aria-label="Matokeo ya maeneo">{places.map((p,i)=><button key={i} className="w-full text-left p-3 hover:bg-brand-50 flex items-start gap-2" onClick={()=>{setPlace(p);setPlaces([]);invalidate()}}><MapPin className="w-5 h-5 shrink-0"/>{p.label}</button>)}</div>}
+      {place&&<p className="p-3 rounded-lg bg-green-50 text-green-900 mt-3">Location: {place.label}</p>}
+      <p className="text-sm text-gray-500 mt-3">Tafuta kisha chagua location sahihi. Makadirio hutumia eneo/landmark; tuma pin halisi kuthibitisha njia ya lori. © OpenStreetMap contributors · Photon · OSRM.</p>
+      <div className="grid grid-cols-2 gap-4 mt-5"><label>Kiasi cha zege (m³)<input className={input+' mt-1'} type="number" min="0.01" step="any" value={qty} onChange={e=>{setQty(e.target.value);invalidate()}}/></label><label>Grade<select className={input+' mt-1'} value={grade} onChange={e=>{setGrade(e.target.value);invalidate()}}>{['C15','C20','C25','C30','C35','C40'].map(x=><option key={x}>{x}</option>)}</select></label></div>
+      <label className="block mt-4">Plant<select className={input+' mt-1'} value={plant} onChange={e=>{setPlant(e.target.value);invalidate()}}><option value="auto" disabled={manual}>Pendekeza plant ya karibu</option><option value="temeke">Uwanja wa Taifa, Temeke</option><option value="mikocheni">ITV, Mikocheni</option></select></label>
+      <label className="flex items-center gap-3 mt-4"><input type="checkbox" checked={manual} onChange={e=>{setManual(e.target.checked);if(e.target.checked&&plant==='auto')setPlant('temeke');invalidate()}}/>Ninajua umbali wa barabara kutoka plant</label>{manual&&<label className="block mt-3">Umbali (km)<input className={input+' mt-1'} type="number" min="0.1" max="500" step="0.1" value={km} onChange={e=>{setKm(e.target.value);invalidate()}}/></label>}
+      <button disabled={busy} onClick={price} className="w-full rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold p-4 mt-5 disabled:opacity-50">{busy?'Inakokotoa…':'Onyesha bei yangu'}</button><div aria-live="polite">{error&&<p role="alert" className="bg-amber-50 text-amber-900 p-3 rounded-xl mt-3">{error}</p>}{quote&&<div className="bg-gray-950 text-white rounded-xl p-5 mt-4"><p>{quote.plant} · {quote.distanceKm} km</p>{quote.customQuote?<h3 className="text-2xl font-bold mt-3">Zaidi ya km 40: omba bei maalumu</h3>:<><h3 className="text-3xl font-bold mt-3">TZS {money(quote.unitPrice!)} <span className="text-base font-normal">/ m³</span></h3><p className="text-xl mt-2">Jumla: TZS {money(quote.total!)} kwa {quote.quantity} m³</p><p className="text-sm text-gray-300 mt-3">Kiwango cha umbali: hadi {quote.bandKm} km. Bei za kuanzia 1 Nov 2026; delivery inategemea njia na upatikanaji.</p></>}<p className="text-sm text-amber-200 mt-3">Hali ya VAT itathibitishwa kwenye quotation. Pump haijajumuishwa. Haya ni makadirio, si uthibitisho wa oda.</p></div>}</div>
+      <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-700 text-white rounded-xl p-4 font-semibold mt-4"><MessageCircle className="w-5 h-5"/>Tuma mahitaji WhatsApp</a><p className="text-sm text-gray-500 mt-2">Eneo, kiasi na makadirio vitaambatanishwa kwenye ujumbe.</p></section>
+      <section className="bg-white rounded-2xl p-6 border lg:col-span-2"><h2 className="text-2xl font-bold mb-3">Nichague grade gani?</h2><label htmlFor="use">Aina ya kazi</label><select id="use" className={input+' mt-2'} value={use} onChange={e=>setUse(e.target.value)}><option value="blinding">Blinding / kazi nyepesi zisizobeba jengo</option><option value="ground">Sakafu ya ardhini / njia ya magari</option><option value="structure">Msingi, nguzo, beams au slab ya juu</option><option value="marine">Baharini / tanki / mazingira maalumu</option></select><p className="bg-brand-50 p-4 rounded-xl mt-4 text-lg">{help[use]}</p><p className="mt-3 text-gray-600">Huu ni mwongozo wa kuzungumza na mtaalamu. Tool haichagui grade au unene salama kwa jengo lako.</p></section>
+      <section className="bg-white rounded-2xl p-6 border lg:col-span-2"><h2 className="text-2xl font-bold mb-5">Elimu fupi ya zege</h2><div className="grid sm:grid-cols-2 gap-6">{[
+      ['Grade ni nini?','C25/C30/C35 ni majina ya strength yanayotumiwa kwenye biashara. Thibitisha strength, umri wa test na kama specification ni cube au cylinder; C25 si maelezo kamili ya mix.'],
+      ['Slump si strength','Slump hupima consistency ya zege bichi. Slump inayofaa hutegemea njia ya kumwaga, pump na reinforcement. Kubaliana na supplier kabla ya delivery.'],
+      ['Maji ya ziada','Usiongeze maji kiholela. Maji yanayozidi mix design yanaweza kupunguza strength na durability. Mabadiliko ya site yafanywe kwa udhibiti wa supplier na yarekodiwe.'],
+      ['Curing na maandalizi','Linda zege jipya lisikauke haraka. Panga curing kulingana na specification. Kabla ya lori, hakiki formwork, reinforcement, njia ya kuingia, watu, vibrator na pump inapohitajika.'],
+      ].map(([title,body])=><article key={title}><h3 className="font-bold text-lg mb-2">{title}</h3><p className="text-gray-600">{body}</p></article>)}</div><p className="text-sm mt-6 text-gray-500">Soma zaidi: <a className="text-brand-700 underline" href="https://www.nrmca.org/association-resources/research-and-engineering/cip/" target="_blank" rel="noopener noreferrer">NRMCA Concrete in Practice</a> · <a className="text-brand-700 underline" href="https://www.concretecentre.com/Specification.aspx" target="_blank" rel="noopener noreferrer">The Concrete Centre: Specification</a></p><Link href="/learn" className="inline-block text-brand-700 font-semibold mt-4">Tembelea Education Hub</Link></section>
+    </main>
+  </div>;
 }

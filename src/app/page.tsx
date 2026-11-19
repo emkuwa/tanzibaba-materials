@@ -7,12 +7,12 @@ const siteUrl = 'https://materials.tanzibaba.com';
 export const metadata: Metadata = {
   title: 'Tanzibaba — Ready-Mix Concrete, Aggregates & Building Materials | Tanzania',
   description:
-    'Tanzibaba supplies ready-mix concrete (grades C10–C50), aggregates, concrete blocks, paving blocks and construction equipment across Dar es Salaam, Zanzibar and Dodoma. Prices include 18% VAT. Get a quote in under 2 minutes.',
+    'Tanzibaba supplies ready-mix concrete (grades C10–C50), aggregates, concrete blocks, paving blocks and construction equipment across Dar es Salaam, Zanzibar and Dodoma. Estimate concrete volume and delivery-based prices online. Get a quote in under 2 minutes.',
   alternates: { canonical: siteUrl },
   openGraph: {
     title: 'Tanzibaba — Ready-Mix Concrete, Aggregates & Building Materials | Tanzania',
     description:
-      'Ready-mix concrete C10–C50, aggregates, blocks and equipment across Dar es Salaam, Zanzibar and Dodoma. Prices include VAT. Get a quote in under 2 minutes.',
+      'Ready-mix concrete C10–C50, aggregates, blocks and equipment across Dar es Salaam, Zanzibar and Dodoma. Try our concrete volume and price calculator. Get a quote in under 2 minutes.',
     url: siteUrl,
     siteName: 'Tanzibaba',
     type: 'website',

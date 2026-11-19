@@ -111,7 +111,7 @@ export default function HomeClient() {
               </h1>
               <p className="text-xl sm:text-2xl font-bold text-white/90 mb-2">Supply &bull; Hire &bull; Procurement</p>
               <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8 max-w-xl">
-                Tanzibaba supplies ready-mix concrete in grades C10 to C50, aggregates, blocks and heavy equipment across Dar es Salaam, Zanzibar and Dodoma. All quoted prices include 18% VAT.
+                Tanzibaba supplies ready-mix concrete in grades C10 to C50, aggregates, blocks and heavy equipment across Dar es Salaam, Zanzibar and Dodoma. Use our concrete calculator for a delivery-based estimate; VAT and pump requirements are confirmed in your quotation.
               </p>
               <p className="text-sm text-gray-500 mb-6">Get matched in under 2 minutes.</p>
               <div className="flex flex-wrap gap-3">
@@ -259,47 +259,13 @@ export default function HomeClient() {
           </div>
         </section>
 
-        {/* CONCRETE PRICE GUIDE — answer-first pricing table */}
-        <section className="py-12 md:py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 md:mb-12">
-              <span className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
-                <ShoppingCart className="w-4 h-4" /> Price Guide
-              </span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">How much does ready-mix concrete cost in Dar es Salaam?</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">Tanzibaba ready-mix concrete costs from {fmtPrice(130000)} per m&sup3; (C10) to {fmtPrice(400000)} per m&sup3; (C50), including 18% VAT. The table below shows the estimated price per grade. Final pricing depends on volume and delivery distance.</p>
-            </div>
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <caption className="sr-only">Estimated ready-mix concrete prices per cubic metre in Dar es Salaam including VAT</caption>
-                  <thead>
-                    <tr className="bg-gray-950 text-white text-left">
-                      <th scope="col" className="px-4 md:px-6 py-3 md:py-4 font-semibold">Grade</th>
-                      <th scope="col" className="px-4 md:px-6 py-3 md:py-4 font-semibold">Strength</th>
-                      <th scope="col" className="px-4 md:px-6 py-3 md:py-4 font-semibold hidden sm:table-cell">Typical use</th>
-                      <th scope="col" className="px-4 md:px-6 py-3 md:py-4 font-semibold text-right">Est. price / m&sup3;</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {concreteGrades.map(g => (
-                      <tr key={g.grade} className="hover:bg-brand-50/50 transition-colors">
-                        <td className="px-4 md:px-6 py-3 font-bold text-gray-900">{g.grade}</td>
-                        <td className="px-4 md:px-6 py-3 text-gray-600">{g.strength}</td>
-                        <td className="px-4 md:px-6 py-3 text-gray-500 hidden sm:table-cell">{g.applications}</td>
-                        <td className="px-4 md:px-6 py-3 text-right font-semibold text-brand-700 whitespace-nowrap">{fmtPrice(g.price)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <p className="text-xs text-gray-400 text-center mt-4">Estimated prices include 18% VAT. Confirm the current price for your grade and delivery location via WhatsApp or the quote form.</p>
-            <div className="text-center mt-6">
-              <Link href="/get-quote" className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-600/30 text-base">
-                Get an Exact Quote <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+        <section className="py-12 md:py-20 bg-brand-50">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <span className="text-brand-700 font-semibold">CONCRETE CALCULATOR · DAR ES SALAAM</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-3 mb-4">Jua kiasi na bei ya zege kwa site yako</h2>
+            <p className="text-lg text-gray-600 mb-6">Calculate concrete volume from your measurements, choose your delivery area and get a distance-based estimate for C15–C40. Compare delivery from Temeke and Mikocheni, with guidance on grades and preparing for your pour.</p>
+            <Link href="/tools/concrete-calculator" className="inline-flex bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl text-lg">Kokotoa zege na bei / Calculate price</Link>
+            <p className="text-sm text-gray-500 mt-4">Final site access, VAT and pump requirements are confirmed in your quotation.</p>
           </div>
         </section>
 

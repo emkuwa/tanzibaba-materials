@@ -15,7 +15,7 @@ export interface HomeFaq {
 export const homeFaqs: HomeFaq[] = [
   {
     q: 'How much does ready-mix concrete cost in Dar es Salaam?',
-    a: `Tanzibaba ready-mix concrete costs from ${fmtPrice(c10?.price || 130000)} per m³ (C10) to ${fmtPrice(c50?.price || 400000)} per m³ (C50), including 18% VAT. The most common residential grade, C25, costs approximately ${fmtPrice(c25?.price || 210000)} per m³. The final price depends on grade, volume and delivery distance — request a quote for an exact price.`,
+    a: 'Use the concrete calculator to estimate C15–C40 prices by delivery distance from Temeke or Mikocheni. Enter your site area and concrete volume. VAT, pump charges and the final delivery route are confirmed in the quotation; locations beyond 40 km require a custom price.',
   },
   {
     q: 'What concrete grades does Tanzibaba supply?',

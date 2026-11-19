@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Free Concrete Volume Calculator | Tanzibaba',
-  description: 'Calculate exact concrete volume for slabs, columns, beams and footings. Free online calculator with waste factor for construction projects in Tanzania.',
+  title: 'Concrete Volume & Dar es Salaam Price Calculator | Tanzibaba',
+  description: 'Kokotoa kiasi cha zege na bei ya delivery Dar es Salaam. Choose your area, estimate C15–C40 concrete prices and learn about concrete grades and curing.',
   keywords: ['concrete calculator', 'concrete volume', 'construction calculator', 'Tanzania', 'ready mix concrete'],
   openGraph: {
-    title: 'Free Concrete Volume Calculator | Tanzibaba',
-    description: 'Calculate exact concrete volume for slabs, columns, beams and footings. Free online calculator with waste factor.',
+    title: 'Concrete Volume & Dar es Salaam Price Calculator | Tanzibaba',
+    description: 'Calculate concrete volume and estimate delivery-based C15–C40 prices for your Dar es Salaam site.',
     url: 'https://materials.tanzibaba.com/tools/concrete-calculator',
     siteName: 'Tanzibaba',
     type: 'website',

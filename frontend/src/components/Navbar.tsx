@@ -28,6 +28,10 @@ const navItems = [
   },
   {
     label: 'Projects', icon: Building2, href: '/projects',
+    children: [
+      { label: 'Construction Projects', href: '/projects' },
+      { label: 'Mining Investment', href: '/mining-investment' },
+    ],
   },
   {
     label: 'AI Tools', icon: Calculator, href: '/tools',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle, Globe, LockKeyhole, Mail, MessageCircle, Mountain, Send } from "lucide-react";
+import { ArrowRight, CheckCircle, LockKeyhole, Send } from "lucide-react";
 
 const minerals = [
   "Graphite & battery minerals",
@@ -30,6 +30,7 @@ const interestTypes = [
 
 export default function InvestorLeadForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [whatsappUrl, setWhatsappUrl] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -44,7 +45,7 @@ export default function InvestorLeadForm() {
   });
 
   const update = (field: string, value: string | boolean) => {
-    setForm((current) => ({ ...current, [field]: value }));
+    setForm((current) => ({ ...current, [field]: value } as typeof current));
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -64,20 +65,9 @@ export default function InvestorLeadForm() {
       "Details: " + (form.message || "Not provided"),
     ].join("\n");
 
-    const whatsappUrl = "https://wa.me/255716002790?text=" + encodeURIComponent(message);
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-    const leadData = {
-      ...form,
-      source: "mining_investment_page",
-      timestamp: new Date().toISOString(),
-    };
-    fetch("/api/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(leadData),
-    }).catch(() => undefined);
-
+    const nextWhatsappUrl = "https://wa.me/255716002790?text=" + encodeURIComponent(message);
+    setWhatsappUrl(nextWhatsappUrl);
+    window.open(nextWhatsappUrl, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -89,7 +79,7 @@ export default function InvestorLeadForm() {
         </div>
         <h3 className="text-2xl font-bold text-gray-950">Your inquiry is ready</h3>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-600">
-          WhatsApp should open with your message. Please press Send there to deliver your inquiry. If it did not open, email <a className="font-semibold text-green-700 underline" href="mailto:info@tanzibaba.co.tz">info@tanzibaba.co.tz</a>.
+          WhatsApp should open with your message. Please press Send there to deliver your inquiry. If it did not open, <a className="font-semibold text-green-700 underline" href={whatsappUrl} target="_blank" rel="noreferrer">open WhatsApp here</a> or email <a className="font-semibold text-green-700 underline" href="mailto:info@tanzibaba.co.tz">info@tanzibaba.co.tz</a>.
         </p>
         <button type="button" onClick={() => setSubmitted(false)} className="mt-6 text-sm font-semibold text-green-800 hover:underline">Submit another inquiry</button>
       </div>

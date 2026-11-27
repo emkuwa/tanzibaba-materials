@@ -4,11 +4,26 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle, LockKeyhole, Send } from "lucide-react";
 
 const minerals = [
-  "Graphite & battery minerals",
-  "Gold & precious metals",
-  "Nickel, copper & base metals",
-  "Rare earths & industrial minerals",
-  "Gemstones",
+  "Gold",
+  "Silver",
+  "Platinum-group elements (PGE)",
+  "Graphite",
+  "Nickel",
+  "Cobalt",
+  "Lithium",
+  "Copper",
+  "Rare earth elements",
+  "Niobium, tantalum & vanadium",
+  "Tin, tungsten, antimony & molybdenum",
+  "Iron ore & other base metals",
+  "Diamonds",
+  "Tanzanite & coloured gemstones",
+  "Heavy mineral sands",
+  "Limestone, gypsum & dolomite",
+  "Phosphate & fertiliser minerals",
+  "Kaolin, clays, feldspar & quartz",
+  "Salt, soda ash & industrial minerals",
+  "Coal, uranium, helium & geothermal",
   "Other mineral interests",
 ];
 
